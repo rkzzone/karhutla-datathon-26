@@ -131,8 +131,8 @@ semua kunci ubin sisi-klien. Batasi kunci ke domain di dasbor CARTO.
 
 Dataset dan bobot model tidak disimpan di repositori ini karena ukurannya.
 
-- Bobot model — *(tautan Hugging Face menyusul)*
-- Subset dataset & manifes split — *(tautan Hugging Face menyusul)*
+- Bobot model — https://huggingface.co/Subhaaannn/flame
+- Subset dataset & manifes split — https://huggingface.co/datasets/Arga23/karhutla-dataset
 
 Citra latih berasal dari benchmark publik **FLAME 2** (Hopkins et al., 2022),
 direkam dengan wahana udara di hutan pinus Arizona. Lisensi dataset terpisah

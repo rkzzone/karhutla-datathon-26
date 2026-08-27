@@ -355,40 +355,48 @@ export async function ambilSizeUpBanyak(alerts, batas = 3) {
   const kosong = { menurutAlert: {}, lengkap: true, jumlah: 0, sumber: 'kosong' }
   if (!alerts?.length || demoState() === 'error-sizeup') return kosong
 
-  if (!LIVE_BASE) {
-    let beku
-    try {
-      beku = await ambilJson('/mock/sizeup_snapshot.json')
-    } catch {
-      // Cuplikan belum pernah dibuat. Lapisan konteks tidak tampil, dan itu
-      // keadaan yang sah — bukan galat yang perlu menghentikan peta.
-      return { ...kosong, sumber: 'tidak_tersedia' }
-    }
-    const menurutAlert = {}
+  // Cuplikan beku adalah DASAR di kedua mode, bukan hanya cadangan saat backend
+  // mati. Kesepuluh titik sudah dihitung dan ikut di dalam bundle, jadi
+  // menggambarnya tidak menambah satu pun panggilan jaringan. Mode langsung
+  // menyegarkan beberapa titik teratas DI ATAS dasar itu — sebelumnya mode
+  // langsung mengabaikan cuplikan sama sekali, sehingga tujuh titik yang
+  // datanya sudah ada di bundle tetap tampil kosong di peta.
+  const menurutAlert = {}
+  let dibekukan = null
+  try {
+    const beku = await ambilJson('/mock/sizeup_snapshot.json')
+    dibekukan = beku?.dibekukan ?? null
     for (const alert of alerts) {
       const isi = beku?.sizeup?.[alert.alert_id]
       if (isi) menurutAlert[alert.alert_id] = { ...isi, is_cuplikan: true }
     }
+  } catch {
+    // Cuplikan belum pernah dibuat. Lapisan konteks tampil seadanya, dan itu
+    // keadaan yang sah — bukan galat yang perlu menghentikan peta.
+  }
+
+  if (!LIVE_BASE) {
     const jumlah = Object.keys(menurutAlert).length
     return {
       menurutAlert,
       jumlah,
       lengkap: jumlah === alerts.length,
-      sumber: 'cuplikan',
-      dibekukan: beku?.dibekukan ?? null,
+      sumber: jumlah ? 'cuplikan' : 'tidak_tersedia',
+      dibekukan,
     }
   }
 
-  const dipilih = alerts.slice(0, batas)
-  const menurutAlert = {}
   // Berurutan, bukan Promise.all: paralel akan menembakkan tiga kueri Overpass
   // dan enam kueri BIG dalam satu tarikan napas, yang justru bentuk beban yang
   // paling cepat diblokir kedua layanan itu.
-  for (const alert of dipilih) {
+  let segar = 0
+  for (const alert of alerts.slice(0, batas)) {
     try {
       menurutAlert[alert.alert_id] = await ambilSizeUp(alert)
+      segar += 1
     } catch {
-      /* satu titik gagal tidak boleh menjatuhkan lapisan konteks seluruhnya */
+      // Satu titik gagal tidak menjatuhkan lapisan konteks, dan tidak menghapus
+      // apa pun: cuplikan titik itu tetap terpasang sebagai dasar.
     }
   }
   const jumlah = Object.keys(menurutAlert).length
@@ -396,7 +404,9 @@ export async function ambilSizeUpBanyak(alerts, batas = 3) {
     menurutAlert,
     jumlah,
     lengkap: jumlah === alerts.length,
-    sumber: 'langsung',
+    sumber: segar ? 'campuran' : 'cuplikan',
+    segar,
+    dibekukan,
   }
 }
 

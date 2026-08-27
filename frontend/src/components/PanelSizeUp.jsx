@@ -437,9 +437,6 @@ export default function PanelSizeUp({ sizeup, galat, memuat, onCoba }) {
               </li>
             ))}
           </ul>
-          <p className="mt-2 text-[0.625rem] leading-relaxed text-haze-500">
-            {blok.peralatan?.catatan}
-          </p>
         </Blok>
 
         {/* Brief: keluaran yang benar-benar masuk ke alur kerja yang sudah ada */}

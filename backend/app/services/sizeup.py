@@ -163,11 +163,6 @@ def sarankan_peralatan(
         "nama": tingkat["nama"],
         "contoh": tingkat["contoh"],
         "alasan": alasan,
-        "catatan": (
-            "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari "
-            "keterangan praktisi polisi hutan; keputusan akhir ada pada tim "
-            "size-up setelah melihat lokasi."
-        ),
     }
 
 

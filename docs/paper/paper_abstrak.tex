@@ -1,0 +1,52 @@
+% =====================================================================
+% Judul, penulis, dan Abstrak
+% Paper semifinal Datathon 2026 · format NeurIPS 2015
+%
+% Judul dipertahankan dari concept paper penyisihan (konsistensi wajib).
+% =====================================================================
+
+\title{Deteksi Dini Kebakaran Hutan dan Lahan Gambut melalui Fusi Multimodal
+RGB--Termal dengan Ketahanan Modalitas Hilang Berbasis Drone}
+
+\author{
+Argama Vanesa N. Sijabat \\
+Matematika, FMIPA \\
+Universitas Indonesia \\
+\texttt{argamasijabat@gmail.com} \\
+\And
+Muhamad Erik Setiawan \\
+Matematika, FMIPA \\
+Universitas Indonesia \\
+\texttt{muhamaderiksetiawan4@gmail.com} \\
+\AND
+Subhan Irsyaduddien Alhaq \\
+Matematika, FMIPA \\
+Universitas Indonesia \\
+\texttt{subhanirsyaduddien@gmail.com} \\
+}
+
+\maketitle
+
+\begin{abstract}
+Kebakaran hutan dan lahan (karhutla) gambut di Indonesia berulang setiap tahun
+dan sulit dideteksi dini karena sistem \emph{hotspot} satelit yang ada tidak
+mampu mengonfirmasi titik api kecil yang tersamar asap tebal atau kanopi gambut.
+Penelitian ini membangun sistem deteksi dini berjenjang berbasis drone dengan
+kontribusi inti berupa model fusi \emph{RGB--termal} berbasis
+\emph{cross-attention} yang dilatih dengan \emph{modality dropout}, diperluas
+menjadi \emph{reliability gating} adaptif yang disupervisi-diri oleh degradasi
+tersintesis. Ketahanan diukur melalui protokol kurva degradasi kontinu pada enam
+level, bukan uji biner, dengan uji McNemar berpasangan dan selang kepercayaan
+pada setiap angka utama. Fusi terbukti lebih tahan daripada jalur RGB-saja
+secara konsisten di tiga partisi data dan unggul atas jalur termal-saja secara
+signifikan pada dua di antaranya, tanpa satu pun kejadian api yang terlewat pada
+seluruh level degradasi. Kami juga melaporkan hasil yang tidak sesuai hipotesis:
+pada kondisi bersih fusi tidak mengungguli jalur RGB-saja, keduanya
+menghasilkan prediksi identik pada setiap sampel, \emph{gating} tidak
+meningkatkan akurasi, kuantisasi INT8 memperlambat inferensi, dan peringkat
+ketahanan berbalik pada partisi uji. Audit label yang kami lakukan sendiri
+menemukan satu kelas yang tidak pernah terpelajari, dan dampaknya dilaporkan.
+Seluruh komponen terintegrasi menjadi konsol operator terpasang dengan hotspot
+satelit langsung. Seluruh citra berasal dari hutan pinus beriklim sedang,
+sehingga klaim untuk lahan gambut tropis tidak dibuat.
+\end{abstract}

@@ -1,0 +1,104 @@
+% =====================================================================
+% Bagian 1 — Pendahuluan  (target 1,25 halaman)
+% MASALAH dan PRODUK wajib konsisten dengan concept paper penyisihan.
+% Urutan kontribusi SENGAJA diubah: yang paling kuat buktinya di depan.
+% =====================================================================
+
+\section{Pendahuluan}
+
+Kebakaran hutan dan lahan (karhutla) gambut di Sumatra dan Kalimantan bukan
+sekadar bencana musiman melainkan persoalan struktural yang berdampak luas pada
+kesehatan masyarakat, ekonomi, dan hubungan diplomatik regional. Kejadian ini
+kronis sejak setidaknya 1997: 2015 tercatat sebagai salah satu yang terburuk
+dengan kerugian ekonomi US\$28 miliar dan enam kejadian 2004--2015 mencapai
+kumulatif US\$93,9 miliar \cite{worldbank2019}; 2019 menghanguskan sekitar
+942.000 hektare dengan kerugian sedikitnya US\$5,2 miliar dan lebih dari
+900.000 laporan gangguan pernapasan, serta menutup 24.773 sekolah dan
+menghentikan pembelajaran 4.692.537 siswa \cite{unicef2019}. Pola berulang pada
+1997, 2015, dan 2019 menunjukkan akar persoalannya adalah \textbf{keterlambatan
+deteksi, bukan ketiadaan kemauan penanganan}: ketiganya baru mendapat perhatian
+luas setelah asap menyelimuti wilayah lintas negara. Karena biaya pemadaman
+meningkat tajam seiring meluasnya area yang terbakar sebelum terdeteksi,
+penajaman deteksi pada fase paling awal adalah titik ungkit dengan dampak
+terbesar.
+
+\subsection{Kesenjangan operasional dan solusi yang diusulkan}
+
+Infrastruktur pemantauan yang tersedia luas berbasis \emph{hotspot} satelit
+seperti FIRMS dan SiPongi. Sistem ini efektif sebagai pemicu awal berbiaya
+rendah pada skala luas, tetapi resolusi spasial dan temporalnya tidak memadai
+untuk mengonfirmasi titik api kecil yang tersamar asap tebal atau kanopi gambut.
+Muncullah kesenjangan operasional antara pemicu kasar berskala satelit dan
+kebutuhan verifikasi visual beresolusi tinggi sebagai dasar pengerahan tim.
+Wawancara dengan narasumber ahli (Bagian~5) menegaskan bentuk kesenjangan ini:
+drone memang telah banyak dipakai, tetapi pemanfaatannya untuk karhutla terbatas
+pada pengambilan citra berkala \emph{setelah} kebakaran diketahui terjadi,
+dengan penyebaran api kemudian diprediksi manual. Fase yang belum tergarap
+justru fase sebelum konfirmasi.
+
+Solusi yang kami tawarkan adalah \textbf{sistem deteksi dini karhutla gambut
+berjenjang} yang mengisi kesenjangan tersebut melalui konfirmasi visual
+beresolusi tinggi berbasis drone. Inti kontribusinya adalah model fusi
+RGB--termal berbasis \emph{cross-attention} dengan \emph{modality dropout} agar
+tetap andal ketika salah satu sensor tidak tersedia atau terganggu, kondisi
+lazim pada asap pekat maupun operasi malam. Keluarannya adalah \emph{alert} dini
+dan peta risiko yang dapat langsung ditindaklanjuti, disajikan melalui konsol
+operator yang berjalan sebagai sistem terpasang, bukan mockup.
+
+Sasarannya dua segmen. Pertama, instansi penanggulangan bencana dan kehutanan
+(Manggala Agni, BNPB, dinas kehutanan daerah), yang memperoleh dasar objektif
+untuk memprioritaskan pengerahan tim. Kedua, pemegang konsesi perkebunan sawit
+dan hutan tanaman industri di lanskap gambut, yang memikul tanggung jawab mutlak
+atas kebakaran di arealnya tanpa perlu pembuktian kesalahan menurut Pasal~88
+UU~32/2009 \cite{uu32_2009}, sehingga adopsi menjawab insentif kepatuhan dan
+bukan sekadar itikad baik. Rincian titik nyeri kedua segmen, beserta sumbernya,
+ada pada Lampiran~\ref{app:pengguna}.
+
+\subsection{Kontribusi}
+
+Kontribusi kami urutkan menurut kekuatan bukti yang benar-benar diperoleh,
+bukan menurut ambisi awal.
+
+\textbf{(1)~Protokol evaluasi ketahanan berbasis kurva degradasi kontinu.}
+Ketahanan diukur sebagai kurva atas enam level degradasi tersintesis dari citra
+nyata, bukan uji biner. Protokol ini menghasilkan dua temuan yang tidak akan
+muncul dari uji biner: evaluasi pada kondisi bersih terbukti \emph{tidak memiliki
+daya pisah} pada tolok ukur ini, ketiga konfigurasi modalitas mencapai batas
+atas yang sama persis pada partisi uji, dan peringkat ketahanan antar-modalitas
+\emph{berbalik} antar-partisi.
+\textbf{(2)~Perluasan \emph{modality dropout} menjadi \emph{reliability gating}},
+dari regularisasi pasif menjadi \emph{gating} adaptif yang disupervisi-diri oleh
+label degradasi hasil pipeline augmentasi sehingga tidak memerlukan anotasi
+tambahan, dengan skor keandalan per modalitas yang sampai ke operator sebagai
+informasi keputusan. Kami melaporkan secara terbuka bahwa \emph{gating}
+\textbf{tidak meningkatkan akurasi klasifikasi}.
+\textbf{(3)~Ablation lokalisasi supervisi-lemah versus supervisi-penuh}, salah
+satunya tanpa label piksel sama sekali, syarat praktis untuk ekspansi ke lanskap
+yang belum teranotasi.
+\textbf{(4)~Sistem terpasang ujung-ke-ujung} dengan integrasi hotspot satelit
+langsung, disertai audit kejujuran representasi: komponen simulasi berlabel, dan
+besaran yang belum terukur ditampilkan kosong alih-alih diisi angka rekaan.
+
+\subsection{Batasan penelitian}
+\label{sec:batasan}
+
+Agar seluruh klaim dapat diverifikasi dalam jendela waktu kompetisi, penelitian
+ini dibatasi dan pembatasannya kami nyatakan di muka. \textbf{(i)}~Tidak ada data
+gambut tropis: pelatihan dan evaluasi memakai FLAME~2 beserta anotasi piksel
+RFFNet (kebakaran bernyala, hutan pinus Arizona), sehingga sistem yang dirancang
+untuk rezim membara ini divalidasi pada proksi terukur dan belum tervalidasi
+untuk gambut. \textbf{(ii)}~Kondisi lingkungan pada proses prediksi dibatasi pada kondisi yang
+direpresentasikan dalam dataset FLAME~2, yaitu lingkungan kebakaran hutan yang
+diamati melalui citra udara menggunakan UAV. Prediksi dilakukan berdasarkan
+karakteristik visual yang terdapat pada citra, sehingga kondisi lingkungan
+seperti cuaca, suhu, kelembapan, kecepatan angin, dan karakteristik lingkungan
+lainnya tidak digunakan sebagai variabel masukan secara eksplisit. Model
+ditujukan untuk melakukan deteksi berdasarkan informasi visual pada citra dan
+tidak dimaksudkan untuk memprediksi kejadian kebakaran berdasarkan faktor
+lingkungan secara langsung. \textbf{(iii)}~Tidak ada pengujian pada perangkat
+tepi fisik; klaim latensi terbatas pada proksi CPU x86. \textbf{(iv)}~Tidak ada
+baseline eksternal; seluruh perbandingan bersifat internal antar-konfigurasi
+modalitas dari model yang sama. \textbf{(v)}~Satu benih acak tanpa pengulangan,
+sehingga selisih kecil berada dalam batas derau; setiap angka utama disertai
+selang kepercayaan dan uji signifikansi berpasangan. \textbf{(vi)}~Lingkup
+dibatasi pada Lapisan~0--1.

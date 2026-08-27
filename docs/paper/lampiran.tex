@@ -1,0 +1,238 @@
+% =====================================================================
+% Lampiran — TIDAK dihitung dalam batas 12 halaman.
+% Berisi detail yang dipindahkan dari isi utama agar isi utama tetap ketat.
+% =====================================================================
+
+\appendix
+
+\section{Konfigurasi Pelatihan dan \emph{Trade-off} Rancangan}
+\label{app:konfig}
+
+\paragraph{Praproses.} Masukan diseragamkan ke $224 \times 224$; RGB dinormalkan
+dengan statistik ImageNet dan termal dengan rerata/simpangan $0{,}5$. Augmentasi
+geometris (pencerminan horizontal, rotasi $\pm 10^\circ$) diterapkan identik pada
+RGB, termal, dan mask agar keselarasan spasial terjaga.
+
+\paragraph{Konfigurasi pelatihan.} Pengoptimal AdamW; laju pembelajaran
+$3 \times 10^{-4}$; \emph{weight decay} $0{,}01$; penjadwalan \emph{cosine};
+ukuran \emph{batch} 16; maksimum 40 epoch dengan penghentian dini berkesabaran
+10; benih acak 42. \emph{Modality dropout} $p = 0{,}2$, dipilih dari grid
+$\{0{,}1;\ 0{,}2;\ 0{,}3\}$. \emph{Gate} keandalan dilatih 30 epoch dengan bobot
+\emph{loss} regresi 1{,}0 terhadap \emph{loss} klasifikasi. \emph{Head}
+segmentasi dilatih 30 epoch di atas \emph{encoder} beku, laju pembelajaran
+$5 \times 10^{-4}$. Seluruh pelatihan berjalan pada satu sesi GPU kelas
+menengah; satu run memakan 20--60 menit.
+
+\paragraph{Penyelarasan grid token.} \emph{Encoder} RGB menghasilkan grid
+$16 \times 16$ (256 token) dan \emph{encoder} termal $14 \times 14$ (196 token).
+Keduanya diselaraskan lewat interpolasi bilinear sebelum fusi agar indeks token
+merujuk lokasi fisik yang sama.
+
+\paragraph{\emph{Trade-off} yang disengaja.}
+\begin{itemize}
+\item \textbf{Ubin $224 \times 224$ alih-alih $336 \times 336$.} Resolusi lebih
+tinggi menaikkan akurasi objek kecil, persis target deteksi dini, tetapi
+memperlambat inferensi. Kami memilih kelayakan inferensi.
+\item \textbf{Membekukan 9 dari 12 blok \emph{backbone}.} Konvergensi cepat dan
+hemat memori pada data terbatas, dengan biaya kapasitas adaptasi domain yang
+lebih rendah, justru dimensi yang paling dibutuhkan untuk pindah ke gambut.
+\item \textbf{Grid $p$ kecil.} Kompromi terhadap keterbatasan waktu, bukan
+pencarian hiperparameter ekstensif.
+\item \textbf{Dua lapis fusi.} Demi latensi; fusi tetap menjadi penyumbang
+parameter terlatih terbesar (7,1 juta dari 13,9 juta).
+\item \textbf{Satu benih acak.} Menukar ketelitian statistik dengan cakupan
+eksperimen dalam jendela 12 hari.
+\end{itemize}
+
+\section{Definisi Metrik dan Uji Statistik}
+\label{app:metrik}
+
+Presisi $P = \mathrm{TP}/(\mathrm{TP}+\mathrm{FP})$, \emph{recall}
+$R = \mathrm{TP}/(\mathrm{TP}+\mathrm{FN})$, $\mathrm{F1} = 2PR/(P+R)$,
+dilaporkan per kelas beserta rerata makro. Kelas tanpa dukungan dikeluarkan dari
+rerata makro; melibatkannya menghasilkan angka yang menyesatkan (lihat
+Subbagian~4.2). IoU $= |A \cap B|/|A \cup B|$, diagregasi menjadi mIoU sebagai
+rerata antar kelas dengan sampel tanpa kemunculan kelas diabaikan, bukan
+dihitung nol. \emph{Pointing game accuracy} mengukur proporsi sampel yang
+titik atensi tertingginya jatuh di dalam wilayah anotasi. Selisih ketahanan
+$\Delta_m = M(\text{fusi}) - M(\text{modalitas } m)$.
+
+Selang kepercayaan memakai metode Wilson pada tingkat 95\%. Perbandingan
+antar-konfigurasi memakai uji McNemar eksak dua sisi atas pasangan diskordan,
+karena seluruh konfigurasi dievaluasi pada sampel yang sama; membandingkan
+selang kepercayaan yang tumpang tindih akan terlalu konservatif untuk desain
+berpasangan. Latensi dilaporkan sebagai median dari sekurang-kurangnya 100
+pengukuran setelah 10 kali pemanasan.
+
+\section{Rincian Efisiensi dan Kuantisasi}
+\label{app:efisiensi}
+
+\begin{table}[h]
+\caption{Ukuran, kompleksitas, dan latensi. Seluruh latensi diukur pada laptop
+Lenovo ThinkPad T480, Windows, ONNX Runtime, presisi fp32 kecuali disebutkan
+lain, satu bingkai penuh $224 \times 224$.}
+\centering
+\small
+\begin{tabular}{lr}
+\hline
+\textbf{Besaran} & \textbf{Nilai} \\
+\hline
+Parameter total & 30.626.467 \\
+Parameter terlatih & 13.896.355 \\
+FLOPs per \emph{forward} (thop) & 18{,}68 G \\
+Ukuran \emph{checkpoint} fp32 & 116{,}94 MB \\
+Ukuran ONNX fp32 $\rightarrow$ INT8 & 117{,}10 $\rightarrow$ 36{,}53 MB ($-68{,}8\%$) \\
+Latensi ONNX fp32 & 117{,}5 ms median; p95 159{,}3; rentang antar-pemanggilan 101{,}7--140{,}2 \\
+Latensi ONNX INT8 & 390{,}8 ms median (\emph{speedup} $0{,}36\times$) \\
+Latensi PyTorch \emph{eager}, Intel Core Ultra 7 255H & 44{,}7 ms median; p90 47{,}1 \\
+\hline
+\end{tabular}
+\end{table}
+
+Model beroperasi pada bingkai penuh, bukan per ubin, sehingga angka di atas
+sudah merupakan latensi per bingkai dan tidak perlu dikalikan jumlah ubin.
+Tidak ada perangkat tepi fisik yang diuji; angka ini adalah proksi CPU x86.
+Dampak kuantisasi terhadap akurasi tidak dapat ditetapkan karena evaluasi yang
+tersedia dijalankan pada partisi yang dibangun dari rentang bingkai berstatus
+sementara dan menghasilkan metrik degeneratif.
+
+\section{Evaluasi Heuristik dan Audit Aksesibilitas}
+\label{app:heuristik}
+
+Antarmuka dikembangkan melalui 19 putaran evaluasi terdokumentasi yang
+menghasilkan sepuluh temuan, seluruhnya menyebabkan perubahan antarmuka. Empat
+temuan hanya dapat ditemukan lewat pengukuran, bukan penilaian visual:
+
+\begin{enumerate}
+\item Tiga dari enam warna tingkat risiko gagal ambang kontras WCAG~AA 4{,}5:1
+terhadap permukaan kartu (2{,}93:1; 3{,}24:1; 3{,}53:1). Perbaikan memisahkan
+tiap tingkat risiko menjadi dua nilai, satu untuk isian, satu khusus teks.
+\item Simulasi buta warna dengan perhitungan $\Delta E$ atas seluruh pasangan
+seri menemukan kombinasi hijau-tua dan merah-tua menghasilkan $\Delta E = 4{,}3$
+pada protanopia. Salah satu seri diganti, dan identitas seri tidak lagi
+bergantung warna semata.
+\item Median sigmoid keluaran \emph{head} segmentasi berada di sekitar $0{,}69$,
+sehingga tumpang-tindih lokalisasi menutupi hampir seluruh bingkai. Ambang
+persentil-90 diterapkan sebelum render.
+\item Selisih keyakinan pada pita kartu tidak terbaca pada rentang tebal
+4--10~px; rentang dinaikkan dan ditambahkan takik pada batas isian.
+\end{enumerate}
+
+Satu cacat diperkenalkan oleh evaluator sendiri pada putaran kedua dan
+tertangkap pada putaran ketiga, dicatat apa adanya karena menunjukkan putaran
+evaluasi berulang memang menangkap regresi, bukan sekadar memoles.
+
+\section{Estimasi Biaya Penerapan}
+\label{app:biaya}
+
+\begin{table}[h]
+\caption{Estimasi biaya penerapan. Harga ritel merupakan daftar publik yang
+dapat berubah dan perlu diverifikasi ulang sebelum dipakai sebagai dasar
+pengadaan.}
+\centering
+\small
+\begin{tabular}{lll}
+\hline
+\textbf{Komponen} & \textbf{Estimasi} & \textbf{Sifat} \\
+\hline
+Drone RGB (armada eksisting) & Rp 0 tambahan & modal, sudah ada \\
+Drone RGB+termal, mis.\ DJI Mavic 3T & Rp 79{,}55 juta/unit & modal, opsional \\
+Perangkat tepi kelas Jetson Orin Nano & Rp 9{,}5--12{,}9 juta/unit & modal, sekali beli \\
+Pelatihan model, satu siklus & Rp 0 (kuota GPU gratis) & operasional \\
+Inferensi operasional & Rp 0 marginal (\emph{on-device}) & operasional \\
+API hotspot satelit & Rp 0 & operasional \\
+Hosting papan pantau & Rp 0--156 ribu/bulan & berulang \\
+\hline
+\end{tabular}
+\end{table}
+
+Harga drone termal merupakan daftar ritel resmi Indonesia per Agustus 2026
+(Galaxy Camera, mitra resmi DJI, sudah termasuk PPN); harga perangkat tepi
+merupakan rentang daftar ritel pada Blibli dan Tokopedia. Keduanya dapat berubah
+dan wajib diverifikasi ulang sebelum dipakai sebagai dasar pengadaan.
+
+Belum dihitung dan dinyatakan terbuka: biaya operator dan pelatihan personel,
+perawatan serta penggantian baterai drone, perizinan penerbangan, dan integrasi
+ke sistem instansi yang sudah berjalan.
+
+\section{Integrasi Pemicu Satelit}
+\label{app:firms}
+
+Lapisan pemicu menarik data hotspot NASA FIRMS VIIRS SNPP NRT melalui proksi
+sisi server pada bounding box Sumatra tengah--selatan dan Kalimantan
+($-4{,}5^\circ$ s.d.\ $+1{,}5^\circ$ lintang; $100^\circ$ s.d.\ $117^\circ$
+bujur). VIIRS dipilih ketimbang MODIS karena resolusi spasialnya 375~m
+dibanding 1~km, sehingga titik panas kecil yang khas pada kebakaran gambut
+tahap awal berpeluang lebih besar terdeteksi.
+
+Respons dipangkas ke 400 titik ber-FRP tertinggi karena pada puncak musim
+kemarau area tersebut mengembalikan lebih dari 2.000 titik yang menenggelamkan
+\emph{alert} model di peta; jumlah total tetap dinyatakan di antarmuka. Pada
+verifikasi 9~Agustus~2026, 2.467 titik terdeteksi dengan FRP 15{,}1--128{,}9~MW,
+waktu respons 1{,}03 detik tanpa \emph{cache} dan 0{,}14 detik dengan
+\emph{cache}. Kunci API disimpan sebagai variabel lingkungan di sisi server,
+tidak pernah dikirim ke peramban maupun masuk log.
+
+Keterbatasan: data bersifat \emph{near real-time} (tersedia beberapa jam setelah
+lintasan), resolusi 375~m dapat melewatkan kebakaran bawah permukaan, VIIRS
+bersifat optik sehingga terhalang awan tebal, hotspot menandai anomali termal
+dan bukan kebakaran, belum ada validasi silang antara hotspot dan keluaran
+model, area pantau bersifat tetap, dan kuota berlaku per kunci API.
+
+\section{Antarmuka Purwarupa}
+\label{app:antarmuka}
+
+Konsol operator terdiri atas empat halaman: peta operasi (hotspot satelit,
+penanda \emph{alert}, sensor simulasi berlabel, rute patroli), panel
+\emph{alert} (daftar terurut risiko dengan lencana modalitas di tiap kartu),
+rincian \emph{alert} (RGB dan termal berdampingan, tumpang-tindih lokalisasi,
+keandalan modalitas, jejak keputusan), dan halaman informasi model untuk
+pembaca teknis (tabel hasil, kurva degradasi, metrik lokalisasi).
+
+Tangkapan layar diambil dari \emph{build} produksi dengan data nyata: seluruh
+\emph{alert} merupakan keluaran model, hotspot berasal dari layanan satelit
+langsung, dan angka evaluasi berasal dari berkas hasil eksperimen. Catatan
+provenans pada halaman rincian menyatakan bahwa bingkai citra berasal dari
+FLAME~2 (Arizona) dan koordinat merupakan penempatan simulasi.
+
+\section{Risiko dan Mitigasi}
+\label{app:risiko}
+
+\begin{table}[!htbp]
+\caption{Risiko dan mitigasi. Status membedakan yang sudah diterapkan pada
+purwarupa dari yang masih berupa rancangan.}
+\label{tab:risiko}
+\centering
+\small
+\begin{tabular}{p{1.7cm}p{4.6cm}p{4.4cm}p{1.4cm}}
+\hline
+\textbf{Risiko} & \textbf{Konteks} & \textbf{Mitigasi} & \textbf{Status} \\
+\hline
+Privasi & Patroli melintasi permukiman dan lahan garapan masyarakat &
+Pembatasan masa simpan citra; pengaburan wajah dan pelat kendaraan; jalur
+patroli menghindari permukiman & rancangan \\
+Bias & Dilatih pada hutan pinus beriklim sedang; kelas api-tanpa-asap tidak
+pernah terpelajari &
+Batas domain dinyatakan terbuka di paper dan antarmuka; adaptasi domain ringan
+per wilayah & sebagian \\
+Halusinasi & Tidak berlaku langsung, model diskriminatif, bukan generatif.
+Risiko analognya keyakinan berlebih di luar distribusi &
+Skor keandalan per modalitas ditampilkan ke operator; batas domain eksplisit;
+kalibrasi formal belum & sebagian \\
+Keamanan & Lokasi kebakaran di areal konsesi sensitif secara komersial dan
+hukum; API dan papan pantau adalah permukaan serangan &
+Kunci API di sisi server, tidak pernah masuk log; galat tidak bocor ke layar
+operator. Autentikasi, kontrol akses berbasis peran, dan log akses belum ada &
+sebagian \\
+Keselamatan & Kegagalan mendeteksi jauh lebih mahal daripada alarm palsu &
+Titik operasi condong ke \emph{recall}; fusi menekan alarm palsu termal ke nol;
+keputusan operator jadi umpan balik kalibrasi & sudah \\
+Penyalah\-gunaan & Dapat dialihfungsikan jadi alat pengawasan terhadap
+masyarakat sekitar &
+Keluaran dibatasi pada deteksi kebakaran; log akses; pemisahan kendali data
+antar pihak & rancangan \\
+\hline
+\end{tabular}
+\end{table}
+
+\input{lampiran_tambahan}

@@ -1,0 +1,95 @@
+{
+  "catatan": "Rencana rute patroli CONTOH — titik sektor, nama regu, dan jadwalnya karangan untuk demo, bukan rencana posko sungguhan. Yang nyata adalah GEOMETRI jalurnya: jalan yang benar-benar ada di OpenStreetMap, beserta jarak dan durasi tempuh yang dihitung OSRM di atasnya. Ganti seluruh berkas ini dengan rencana posko saat integrasi lapangan.",
+  "rute": [
+    {
+      "rute_id": "PGR-01",
+      "nama": "Pengerahan regu ke 069A612C",
+      "regu": "Regu darat posko",
+      "status": "berjalan",
+      "alert_id": "069a612c-837e-5c12-a046-8d3cdde0034e",
+      "titik_rencana": [
+        [
+          -2.2542,
+          113.8192
+        ],
+        [
+          -2.2478,
+          113.8017
+        ]
+      ],
+      "jalur": [
+        [
+          -2.2542,
+          113.8192
+        ],
+        [
+          -2.2478,
+          113.8017
+        ]
+      ],
+      "tersambung_jalan": false,
+      "penempelan_terjauh_m": 2697,
+      "geometri_sumber": "garis lurus — tidak ada jalan terpetakan ke titik ini"
+    },
+    {
+      "rute_id": "PGR-02",
+      "nama": "Pengerahan regu ke 35151B84",
+      "regu": "Regu darat posko",
+      "status": "dijadwalkan",
+      "alert_id": "35151b84-a204-581d-b47f-bb0b005214cc",
+      "titik_rencana": [
+        [
+          -2.2542,
+          113.8192
+        ],
+        [
+          -2.2386,
+          113.8039
+        ]
+      ],
+      "jalur": [
+        [
+          -2.2542,
+          113.8192
+        ],
+        [
+          -2.2386,
+          113.8039
+        ]
+      ],
+      "tersambung_jalan": false,
+      "penempelan_terjauh_m": 2697,
+      "geometri_sumber": "garis lurus — tidak ada jalan terpetakan ke titik ini"
+    },
+    {
+      "rute_id": "PGR-03",
+      "nama": "Pengerahan regu ke D79301CC",
+      "regu": "Regu darat posko",
+      "status": "dijadwalkan",
+      "alert_id": "d79301cc-ac7e-5efa-99fa-22d161d1f75b",
+      "titik_rencana": [
+        [
+          -2.2542,
+          113.8192
+        ],
+        [
+          -2.2369,
+          113.8014
+        ]
+      ],
+      "jalur": [
+        [
+          -2.2542,
+          113.8192
+        ],
+        [
+          -2.2369,
+          113.8014
+        ]
+      ],
+      "tersambung_jalan": false,
+      "penempelan_terjauh_m": 2697,
+      "geometri_sumber": "garis lurus — tidak ada jalan terpetakan ke titik ini"
+    }
+  ]
+}

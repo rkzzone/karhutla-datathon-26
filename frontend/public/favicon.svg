@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="ironbow" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#6B6259"/>
+      <stop offset="0.38" stop-color="#C1392B"/>
+      <stop offset="0.7" stop-color="#E8752C"/>
+      <stop offset="1" stop-color="#F5C242"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="#14120F"/>
+  <rect x="11" y="5" width="10" height="22" rx="5" fill="url(#ironbow)"/>
+</svg>

@@ -1,0 +1,313 @@
+% =====================================================================
+% Bagian 4 — Results and Discussion
+% Paper semifinal Datathon 2026 · format NeurIPS 2015
+%
+% Setiap angka di bagian ini punya rujukan berkas di docs/. Sel bertanda
+% \needdata{} belum punya data dan WAJIB diisi atau dihapus sebelum submit.
+% =====================================================================
+
+% \needdata didefinisikan di main.tex
+
+\section{Results and Discussion}
+
+Bagian ini melaporkan seluruh hasil eksperimen, termasuk tiga temuan yang tidak
+sesuai hipotesis awal. Pelaporan hasil negatif merupakan komitmen eksplisit pada
+kriteria \emph{go/no-go} \emph{concept paper} penyisihan, dan kami
+mempertahankannya: menyembunyikan hasil yang merugikan akan merusak validitas
+seluruh protokol evaluasi yang justru menjadi kontribusi utama penelitian ini.
+
+\subsection{Partisi data, anti-kebocoran, dan reproduktibilitas}
+
+Pra-pelatihan \emph{encoder} termal memakai 53.011 pasangan RGB--termal FLAME~2
+(item~\#9, 254p). Sebelum pelatihan dimulai, 440 indeks bingkai yang menjadi
+partisi validasi dan uji RFFNet dikecualikan otomatis dari himpunan latih
+FLAME~2; verifikasi anti-kebocoran dijalankan sebagai gerbang keras, dan seluruh
+440 bingkai ditemukan padanannya ($\text{missing} = 0$) sehingga tidak ada
+bingkai uji yang lolos ke pelatihan. \emph{Fine-tuning} dan evaluasi memakai
+anotasi piksel RFFNet dengan partisi resmi repositori, 552 latih, 240 validasi,
+200 uji, yang kami verifikasi ulang tidak beririsan sama sekali. Partisi uji
+diperlakukan sebagai \emph{held-out} dan dibuka hanya untuk pelaporan akhir.
+
+Sebagai uji reproduktibilitas, kurva degradasi pada partisi validasi dihitung
+ulang memakai kerangka evaluasi yang ditulis terpisah dari kerangka aslinya
+dengan benih acak yang sama. Keenam titik $\tau$ tereproduksi hingga digit
+terakhir, sehingga hasil tidak bergantung pada detail implementasi harness
+tertentu.
+
+\subsection{Audit label: satu kelas yang tidak pernah terpelajari}
+
+Kami mengaudit aturan penurunan label dari mask anotasi dan menemukan kekeliruan
+pada kerangka evaluasi: predikat keberadaan asap dihitung sebagai dua
+pemeriksaan independen atas seluruh citra alih-alih konjungsi per piksel,
+sehingga setiap citra yang memuat api otomatis dianggap memuat asap dan kelas
+\texttt{fire\_no\_smoke} tidak terjangkau secara konstruksi. Aturan yang
+benar, konjungsi per piksel, identik dengan yang dipakai saat
+pelatihan, menghasilkan distribusi pada Tabel~\ref{tab:distribusi}.
+
+\begin{table}[!htbp]
+\caption{Distribusi kelas setelah koreksi aturan label, dan dampaknya terhadap
+akurasi yang dilaporkan.}
+\label{tab:distribusi}
+\centering
+\begin{tabular}{lrrrrr}
+\hline
+\textbf{Partisi} & \textbf{no\_fire} & \textbf{fire\_no\_smoke} & \textbf{fire\_smoke}
+& \textbf{$n$} & \textbf{Pergeseran akurasi} \\
+\hline
+Latih     & 127 & 1  & 424 & 552 & $-0{,}18$ poin \\
+Validasi  & 60  & 4  & 176 & 240 & $-1{,}67$ poin \\
+Uji       & 50  & 30 & 120 & 200 & $-15{,}00$ poin \\
+\hline
+\end{tabular}
+\end{table}
+
+Dua konsekuensi harus dinyatakan terbuka. \textbf{Pertama, satu kelas tidak
+pernah terpelajari.} Partisi latih hanya memuat satu sampel
+\texttt{fire\_no\_smoke}, dan pemeriksaan atas seluruh keluaran model, 17.856
+prediksi mencakup tiga konfigurasi modalitas, tiga partisi, dan enam level
+degradasi, menunjukkan model \emph{tidak pernah sekali pun} mengeluarkan kelas
+tersebut. Karena partisi uji memuat 30 sampel kelas itu, batas atas akurasinya
+adalah 85{,}00\%, dan angka tersebut tercapai persis. Sistem ini karenanya
+\textbf{tidak dapat membedakan api tanpa asap}, keterbatasan yang justru
+menyentuh rezim paling dekat dengan pembakaran membara, sasaran rancangan utama
+penelitian ini. \textbf{Kedua, partisi resmi tidak distratifikasi}: proporsi
+kelas tersebut adalah 0{,}18\% pada latih, 1{,}67\% pada validasi, dan 15{,}00\%
+pada uji. Pergeseran distribusi sebesar ini merupakan properti tolok ukur, bukan
+pilihan kami, tetapi membatasi seberapa jauh akurasi pada satu partisi dapat
+digeneralisasi ke partisi lain.
+
+Koreksi label ini menggeser akurasi absolut secara seragam pada setiap level
+$\tau$ dan setiap konfigurasi modalitas; bentuk kurva degradasi, selisih
+antar-konfigurasi, dan seluruh hasil uji signifikansi \textbf{tidak berubah}.
+
+\subsection{Fusi tidak mengungguli unimodal pada kondisi bersih}
+
+Tabel~\ref{tab:bersih} melaporkan hasil pada $\tau = 0$. Hipotesis~\#1
+\emph{concept paper} ("fusi $>$ unimodal") \textbf{tidak terkonfirmasi}
+terhadap jalur RGB.
+
+\begin{table}[!htbp]
+\caption{Akurasi pada kondisi bersih ($\tau = 0$) dengan selang kepercayaan
+Wilson 95\%. Uji McNemar berpasangan dua sisi dihitung atas sampel yang sama.}
+\label{tab:bersih}
+\centering
+\begin{tabular}{llrrl}
+\hline
+\textbf{Partisi} & \textbf{Konfigurasi} & \textbf{Akurasi} & \textbf{CI 95\%}
+& \textbf{McNemar vs.\ fusi} \\
+\hline
+Validasi & Fusi penuh   & 98{,}33\% & [95{,}8; 99{,}4] & (acuan) \\
+         & RGB saja     & 98{,}33\% & [95{,}8; 99{,}4] & 0 diskordan; $p = 1{,}000$ \\
+         & Termal saja  & 95{,}00\% & [91{,}5; 97{,}1] & 8 diskordan; $p = 0{,}0078$ \\
+\hline
+Uji      & Fusi penuh   & 85{,}00\% & [79{,}4; 89{,}3] & (acuan) \\
+         & RGB saja     & 85{,}00\% & [79{,}4; 89{,}3] & 0 diskordan; $p = 1{,}000$ \\
+         & Termal saja  & 85{,}00\% & [79{,}4; 89{,}3] & 0 diskordan; $p = 1{,}000$ \\
+\hline
+\end{tabular}
+\end{table}
+
+Fusi dan RGB-saja bukan sekadar mencapai akurasi yang kebetulan sama: keduanya
+menghasilkan \textbf{prediksi yang identik pada setiap sampel} di ketiga
+partisi, nol pasangan diskordan. Pada kondisi bersih, membuang kanal termal
+tidak mengubah satu pun keputusan model. Sebaliknya, keunggulan fusi atas
+termal-saja pada partisi latih dan validasi signifikan secara statistik
+($p = 0{,}00098$ dan $p = 0{,}0078$).
+
+Kami menilai temuan ini bukan kegagalan model melainkan properti tolok ukurnya.
+Pada partisi uji, ketiga konfigurasi mencapai batas atas yang sama persis, yang
+berarti evaluasi kondisi bersih pada tolok ukur ini \emph{tidak memiliki daya
+pisah} untuk mendukung klaim arsitektural apa pun. Justru inilah pembenaran
+empiris bagi kontribusi metodologis kami: perbedaan antar-konfigurasi hanya
+muncul ketika ketahanan diuji secara kontinu.
+
+\subsection{Kurva degradasi: ketahanan, dan satu pembalikan}
+
+Degradasi disintesis dari citra nyata pada kedua modalitas secara serentak
+dengan intensitas $\tau \in [0,1]$ yang sama: lapisan asap sintetis
+\emph{alpha-blend} termodulasi derau spasial pada kanal RGB, serta
+\emph{drift} pola tetap (NUC), derau Gaussian, dan pengaburan pada kanal
+termal. Seluruh degradasi diterapkan di ruang piksel mentah sebelum
+normalisasi. Kanal termal \textbf{tidak pernah} disintesis dari RGB, batasan
+ini dipegang konsisten dengan kritik kami terhadap pendekatan termal sintetis
+pada Bagian~2.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{kurva_degradasi_terkoreksi.pdf}
+\caption{Kurva degradasi pada partisi validasi dan uji, setelah koreksi label
+Subbagian~4.2. Identitas seri disandikan lewat warna, gaya garis, dan penanda
+sekaligus sehingga tetap terbaca pada cetakan hitam-putih. Pada partisi
+validasi, fusi mempertahankan akurasi tertinggi di seluruh level degradasi.
+Pada partisi uji, jalur termal-saja sama sekali tidak terpengaruh, prediksinya
+identik di keenam level, sementara fusi tetap lebih tahan daripada RGB-saja.}
+\label{fig:kurva}
+\end{figure}
+
+Penurunan akurasi dari $\tau = 0$ ke $\tau = 1$, dalam poin persentase untuk
+fusi / RGB-saja / termal-saja, adalah $1{,}45$ / $3{,}26$ / $2{,}72$ pada
+partisi latih, $\mathbf{1{,}67}$ / $5{,}42$ / $4{,}58$ pada validasi, dan
+$\mathbf{4{,}50}$ / $6{,}50$ / $0{,}00$ pada uji.
+
+Satu klaim bertahan konsisten di ketiga partisi: \textbf{fusi lebih tahan
+daripada jalur RGB-saja}. Pada validasi fusi mempertahankan akurasi penuh hingga
+$\tau = 0{,}6$ sementara RGB-saja sudah turun 2{,}92 poin di titik yang sama.
+
+Namun klaim yang lebih kuat, bahwa fusi adalah konfigurasi paling tahan,
+\textbf{tidak bertahan pada partisi uji}. Di sana jalur termal-saja tidak
+mengalami penurunan sama sekali. Pemeriksaan pada tingkat sampel menunjukkan
+prediksi termal-saja pada partisi uji \emph{identik di keenam level $\tau$};
+tidak satu pun keputusan berubah. Pada partisi latih dan validasi, prediksi
+jalur yang sama berubah pada 5--17 sampel.
+
+Kami tidak menafsirkan kedataran ini sebagai ketahanan sejati. Penjelasan yang
+lebih hemat adalah bahwa margin keputusan jalur termal pada 200 sampel uji
+tersebut melampaui apa yang mampu digerus oleh operator degradasi kami,
+sehingga yang terukur adalah kelemahan operator, bukan keunggulan modalitas.
+Konsekuensi metodologisnya jelas dan kami nyatakan sebagai keterbatasan:
+intensitas operator degradasi termal perlu dikalibrasi terhadap margin
+keputusan model, bukan ditetapkan \emph{a priori}.
+
+Pembalikan peringkat antar-partisi ini sekaligus memperkuat argumen protokol.
+Uji ketahanan biner, membandingkan fusi penuh melawan modalitas tunggal pada
+satu partisi, akan melaporkan kesimpulan yang berlawanan tergantung partisi
+mana yang kebetulan dipakai. Kurva kontinu pada beberapa partisi memperlihatkan
+ketidakstabilan itu, yang justru merupakan informasi.
+
+\subsection{Reliability gating tidak meningkatkan akurasi}
+
+\emph{Gate} keandalan dilatih dengan supervisi regresi terhadap $1 - \tau$,
+memakai label degradasi yang dihasilkan sendiri oleh pipeline augmentasi
+terkendali, sehingga tidak memerlukan anotasi tambahan. Galat validasi regresi
+mencapai $0{,}0860$, dan skor yang dihasilkan berada pada rentang nyata yang
+lebar (RGB 15--80\%, termal 22--83\%), bukan terpusat di sekitar nilai
+\emph{default}.
+
+Meskipun demikian, \textbf{gating tidak meningkatkan akurasi klasifikasi}. Pada
+$\tau \in \{0{,}0;\ 0{,}3;\ 1{,}0\}$ akurasi dengan dan tanpa gating identik,
+dan pada $\tau = 0{,}6$ konfigurasi ber-gating lebih rendah satu sampel dari 240
+(0{,}42 poin, derau satu sampel). Karena akurasi pada tolok ukur ini nyaris
+tidak memiliki ruang gerak, eksperimen ini tidak dapat memisahkan "gating tidak
+bermanfaat" dari "tolok ukur tidak mampu mengukurnya", dan kami melaporkan
+keduanya sebagai kemungkinan yang belum terpisahkan. Nilai gating yang dapat
+kami pertahankan bersifat operasional: skor keandalan per modalitas tampil pada
+setiap kartu \emph{alert} sehingga operator mengetahui deteksi tersebut
+bersandar pada sensor mana, mengubah \emph{modality dropout} dari regularisasi
+pasif menjadi informasi yang sampai ke pengambil keputusan. Angka ablation ini
+dihitung sebelum koreksi label Subbagian~4.2; koreksi tersebut menggeser kedua
+lengan perbandingan secara seragam sehingga perbandingan antar-lengan tidak
+terpengaruh.
+
+\subsection{Lokalisasi dan kesenjangan domain}
+
+Dua jalur lokalisasi dievaluasi pada partisi uji. Jalur A (\emph{attention
+rollout}, tanpa label piksel) mencapai \emph{pointing game accuracy} $0{,}6133$
+($92/150$ sampel ber-api; CI 95\% $[53{,}3; 68{,}7]$); Jalur B (\emph{head}
+segmentasi, dengan label piksel) mencapai mIoU $0{,}5328$. Keduanya
+\textbf{tidak diukur pada metrik yang sama}, sehingga ini bukan perbandingan
+langsung dan tidak boleh dibaca sebagai salah satu jalur lebih baik. Yang dapat
+disimpulkan lebih terbatas namun relevan secara praktis: jalur tanpa label
+menunjuk area api pada mayoritas sampel, sehingga ekspansi ke lanskap tanpa
+anotasi piksel tetap memungkinkan. Untuk penerapan kami memilih \emph{head}
+segmentasi karena mIoU-nya lebih meyakinkan dibanding ambang \emph{pointing
+game} yang belum dikalibrasi.
+
+Pada 100 sampel \emph{holdout} FLAME~3 yang tidak beririsan dengan subset
+adaptasi, akurasi \emph{zero-shot} mencapai \textbf{92\%} (CI 95\%
+$[85{,}0; 95{,}9]$) tanpa adaptasi apa pun. Adaptasi LoRA dengan
+$N = 10/25/50/100$ sampel menghasilkan $92\%$, $95\%$, $100\%$, dan $86\%$,
+\textbf{tidak monoton}, dan pengulangan menghasilkan pola berbeda karena benih
+acak pada inisialisasi bobot dan urutan \emph{batch} tidak dikunci. Kami
+karenanya \textbf{tidak} mengklaim hubungan antara jumlah sampel adaptasi dan
+performa. Yang dapat dipertahankan hanyalah generalisasi \emph{zero-shot} yang
+kuat lintas-dataset, yang menunjukkan kesenjangan domain FLAME~2
+$\rightarrow$ FLAME~3 lebih kecil dari dugaan awal untuk tugas ini. Perlu
+ditegaskan bahwa keduanya berlokasi di Amerika Serikat dan beriklim sedang,
+sehingga angka ini bukan bukti transfer ke gambut tropis.
+
+\subsection{Efisiensi dan kelayakan inferensi tepi}
+
+Model memiliki 30.626.467 parameter (13.896.355 terlatih), menuntut 18{,}68
+GFLOPs per \emph{forward}, dan berjalan pada median \textbf{117{,}5 ms per
+bingkai} dengan ONNX Runtime fp32 di laptop Lenovo ThinkPad T480. Karena model
+beroperasi pada bingkai penuh dan bukan per ubin, angka itu sudah merupakan
+latensi per bingkai. Sasaran rancangan $<100$ ms per ubin tercapai pada satu
+dari dua konfigurasi CPU yang diuji (Lampiran~\ref{app:efisiensi}).
+
+Dua catatan pembatas. \textbf{Pertama, tidak ada perangkat tepi fisik yang
+diuji.} Tidak tersedia akses ke Jetson, Raspberry Pi, maupun ponsel selama
+pengerjaan. Angka di atas adalah proksi CPU x86, dan kami tidak mengklaim
+validasi pada kelas perangkat mana pun.
+
+\textbf{Kedua, kuantisasi INT8 memperlambat inferensi.} Ukuran model turun
+68{,}8\% (117{,}10 $\rightarrow$ 36{,}53 MB), tetapi latensi justru naik menjadi
+$0{,}36\times$ kecepatan fp32.
+Penjelasan yang paling mungkin adalah biaya konversi tipe data pada lapisan
+\emph{attention} Transformer melebihi penghematan aritmetikanya pada CPU. Ini
+hasil negatif dan kami laporkan apa adanya. Dampak kuantisasi terhadap akurasi
+\textbf{tidak dapat ditetapkan}: evaluasi yang tersedia dijalankan pada partisi
+yang dibangun dari rentang bingkai berstatus sementara, dan menghasilkan
+metrik degeneratif yang tidak dapat ditafsirkan.
+
+\subsection{Analisis kegagalan}
+
+Seluruh kesalahan pada kondisi bersih di partisi latih dan validasi berasal
+dari satu jalur dan satu arah: \textbf{jalur termal-saja menghasilkan alarm
+palsu} (11 pada latih, 8 pada validasi), sementara jalur fusi dan RGB tidak
+menghasilkan satu pun. Tidak ada kejadian api yang terlewat oleh konfigurasi
+mana pun, \emph{recall} deteksi kejadian api bernilai 1{,}000 di seluruh
+partisi dan seluruh level $\tau$. Untuk sistem peringatan dini, modalitas yang
+tersisa gagal ke arah yang secara operasional lebih murah.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=0.56\textwidth]{kasus_gagal_2.png}
+\caption{Dua dari empat alarm palsu jalur termal-saja pada partisi validasi.
+Label sebenarnya \texttt{no\_fire}, diprediksi \texttt{fire\_smoke}. Keempatnya
+memuat permukaan tanah gundul yang terpanaskan matahari, terang luas pada kanal
+termal, sementara kanal RGB tidak memperlihatkan nyala maupun asap dan mask
+anotasi kosong. Jalur fusi dan RGB tidak melakukan kesalahan pada bingkai-bingkai
+ini.}
+\label{fig:gagal}
+\end{figure}
+
+Gambar~\ref{fig:gagal} memperlihatkan empat kesalahan tersebut. Mekanismenya
+konsisten: keempat bingkai memuat \textbf{permukaan tanah gundul yang terpanaskan
+matahari}, yang pada kanal termal tampak sebagai area terang luas, sementara
+kanal RGB memperlihatkan tidak ada nyala maupun asap. Jalur termal-saja
+membaca panas permukaan sebagai api; konteks RGB menyelesaikannya.
+
+Temuan ini memvalidasi secara empiris justifikasi rancangan yang kami tetapkan
+\emph{sebelum} eksperimen dijalankan, bahwa konteks RGB berfungsi menekan
+\emph{false positive} dari titik panas non-api. Ia juga identik dengan moda
+kegagalan yang melekat pada pemicu satelit: FIRMS menandai anomali termal, dan
+tungku industri, suar gas, serta tanah panas ikut terdeteksi. Relevansinya
+terhadap lahan gambut langsung: permukaan gambut kering yang terbuka memanas
+ekstrem pada siang hari, sehingga sistem yang bersandar pada termal saja akan
+menghasilkan alarm palsu tepat pada lanskap yang menjadi sasaran rancangan.
+
+Keyakinan model menyertai arah yang benar: pada jalur termal-saja, keyakinan
+rata-rata saat keliru adalah $0{,}691$ dibanding $0{,}994$ saat benar. Model
+kurang yakin justru ketika salah, yang mendukung pemilihan titik operasi
+berbasis ambang keyakinan.
+
+\subsection{Ancaman terhadap validitas}
+
+\textbf{Domain:} seluruh citra berasal dari \emph{prescribed burn} hutan pinus di
+Arizona, tanpa satu pun bingkai gambut tropis; sistem dirancang untuk rezim
+membara dan divalidasi pada proksi terukur, dan belum tervalidasi untuk gambut.
+\textbf{Ukuran sampel dan benih:} seluruh angka berasal dari satu benih acak
+tanpa pengulangan, dan pada partisi validasi satu sampel bernilai 0{,}42 poin,
+sehingga selisih di bawah satu poin berada dalam batas derau, karenanya setiap
+angka utama disertai selang Wilson dan setiap perbandingan memakai McNemar
+berpasangan. \textbf{Plafon tolok ukur:} akurasi validasi terbaik tercapai pada
+epoch pertama pelatihan, dan ketiga konfigurasi mencapai batas atas yang sama
+pada partisi uji. \textbf{Tidak ada baseline eksternal:} perbandingan terhadap
+bobot RFFNet terlatih tidak terlaksana dalam jendela waktu kompetisi, sehingga
+seluruh perbandingan bersifat internal antar-konfigurasi modalitas dari model
+yang sama. \textbf{Operator degradasi tidak terkalibrasi:} intensitasnya
+ditetapkan \emph{a priori} dan pada partisi uji terbukti tidak cukup kuat untuk
+menggeser satu pun keputusan jalur termal. \textbf{Pra-pelatihan termal lemah:}
+\emph{encoder} termal hanya mencapai akurasi validasi $0{,}5148$ pada tahap
+pra-pelatihan FLAME~2, yang kami catat sebagai kemungkinan penyebab terbatasnya
+kontribusi kanal termal pada kondisi bersih.

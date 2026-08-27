@@ -1,0 +1,131 @@
+% =====================================================================
+% Bagian 3 — Metodologi  (target 2,0 halaman)
+% Konfigurasi pelatihan, praproses, dan daftar trade-off dipindahkan ke
+% Lampiran A. Definisi metrik ke Lampiran B.
+% =====================================================================
+
+\section{Metodologi}
+
+Kontribusi inti beroperasi pada Lapisan~1 (konfirmasi drone) dari arsitektur
+berjenjang: Lapisan~0 (pemicu satelit) merupakan integrasi antarmuka pihak
+ketiga, dan Lapisan~2 (menara pemantau tetap) tetap berstatus rancangan
+konseptual yang tidak divalidasi data uji.
+
+\subsection{Akuisisi data berjenjang dan pemisahan partisi}
+
+Pelatihan berjalan dua tahap, bukan memilih salah satu sumber. Tahap
+pra-pelatihan memakai \textbf{53.011 pasangan} RGB--termal FLAME~2
+\cite{flame2_2022} berlabel per bingkai, untuk membentuk representasi awal
+\emph{encoder} termal yang tidak memiliki \emph{backbone} terlatih berskala
+besar. Tahap \emph{fine-tuning} memakai \textbf{anotasi piksel RFFNet}
+\cite{rffnet2026} (lisensi MIT) atas subset FLAME~2, dengan partisi resmi
+repositori: 552 latih, 240 validasi, 200 uji.
+
+Karena kedua sumber beririsan, pemisahan partisi menjadi gerbang keras. Seluruh
+440 indeks bingkai yang menjadi partisi validasi dan uji RFFNet dikecualikan
+dari himpunan latih FLAME~2 melalui daftar eksklusi yang diverifikasi otomatis
+pada setiap skrip pelatihan. Pencocokan antar-sumber memakai indeks bingkai,
+bukan nama berkas, karena skema penamaan kedua sumber berbeda. Praproses dan
+augmentasi dirinci pada Lampiran~\ref{app:konfig}.
+
+\subsection{Arsitektur}
+
+Berbeda dengan \emph{concept paper} penyisihan yang menyajikan target rancangan,
+seluruh angka pada Tabel~\ref{tab:arsitektur} merupakan nilai aktual yang
+dihitung dari \emph{checkpoint} terlatih.
+
+\begin{table}[!htbp]
+\caption{Spesifikasi arsitektur dan jumlah parameter aktual.}
+\label{tab:arsitektur}
+\centering
+\small
+\begin{tabular}{llrr}
+\hline
+\textbf{Komponen} & \textbf{Spesifikasi} & \textbf{Parameter} & \textbf{Terlatih} \\
+\hline
+\emph{Encoder} RGB & DINOv2 ViT-S/14, 9 dari 12 blok dibekukan & 22.056.576 & 5.326.464 \\
+\emph{Encoder} termal & CNN 4 blok, dilatih dari nol & 1.273.256 & 1.273.256 \\
+Fusi & \emph{Cross-attention} 2 arah, 2 lapis, 6 \emph{head} & 7.100.928 & 7.100.928 \\
+\emph{Head} klasifikasi & MLP, 3 kelas & 197.635 & 197.635 \\
+\emph{Gate} keandalan & Dua MLP terpisah, keluaran sigmoid & 115.202 & 115.202 \\
+\emph{Head} segmentasi & \emph{Decoder} ringan & 856.261 & 856.261 \\
+\hline
+\textbf{Total} & & \textbf{30.626.467} & \textbf{13.896.355} \\
+\hline
+\end{tabular}
+\end{table}
+
+Fusi bekerja dua arah, RGB melakukan \emph{attend} ke termal dan sebaliknya
+pada setiap lapis, sehingga konteks RGB dapat menekan \emph{false positive}
+titik panas non-api sementara termal menonjolkan area yang tersamar asap.
+Analisis kegagalan pada Subbagian~4.9 memberikan bukti empiris bagi mekanisme
+pertama. Beberapa keputusan rancangan mengorbankan sesuatu, resolusi ubin,
+pembekuan blok, jumlah lapis fusi, dan luas pencarian $p$, dan
+\emph{trade-off}-nya diuraikan pada Lampiran~\ref{app:konfig}.
+
+\subsection{Dari \emph{dropout} pasif ke \emph{gating} adaptif}
+
+Selama pelatihan, salah satu \emph{embedding} modalitas dijatuhkan secara acak
+per sampel dengan probabilitas $p$; konfigurasi final memakai $p = 0{,}2$ dari
+grid $\{0{,}1;\ 0{,}2;\ 0{,}3\}$. Modul ini aktif hanya pada mode pelatihan.
+
+\emph{Modality dropout} membuat model tahan terhadap kehilangan sensor, tetapi
+tidak memberi tahu siapa pun modalitas mana yang sedang diandalkan. Kami
+memperluasnya menjadi \emph{gating} adaptif: sebuah \emph{gate} ringan
+memprediksi skor keandalan $\in [0,1]$ per modalitas dari token sebelum fusi,
+lalu skor tersebut memodulasi bobot \emph{attention} sekaligus mengisi medan
+keandalan pada keluaran sistem. Supervisinya diperoleh gratis dari pipeline
+augmentasi, target regresi adalah $1 - \tau$, dengan $\tau$ level degradasi
+yang memang kami kendalikan sendiri, sehingga tidak ada anotasi tambahan yang
+diperlukan. Berbeda dengan protokol kurva degradasi, $\tau_{\text{RGB}}$ dan
+$\tau_{\text{termal}}$ di sini disampel \emph{independen} per sampel, karena
+\emph{gate} harus menilai tiap modalitas terpisah: asap hanya mengganggu RGB,
+\emph{drift} kalibrasi hanya mengganggu termal, dan keduanya jarang terjadi
+bersamaan.
+
+\subsection{Dua jalur lokalisasi}
+
+\textbf{Jalur A} memakai \emph{attention rollout} atas bobot \emph{attention}
+fusi, tanpa label piksel sama sekali, dengan ambang persentil-90 untuk mengubah
+peta atensi menjadi wilayah. \textbf{Jalur B} melatih \emph{head} segmentasi di
+atas \emph{encoder} yang dibekukan, memakai mask piksel RFFNet. Jalur A relevan
+secara praktis karena lanskap baru umumnya tidak memiliki anotasi piksel.
+
+\subsection{Protokol evaluasi}
+
+Ketahanan diukur sebagai kurva kontinu atas $\tau \in \{0{,}0;\ 0{,}2;\ 0{,}4;\
+0{,}6;\ 0{,}8;\ 1{,}0\}$, bukan uji biner fusi-melawan-unimodal. Pada kanal RGB,
+degradasi berupa lapisan asap sintetis yang dicampur secara \emph{alpha blend}
+dengan opasitas termodulasi derau spasial frekuensi rendah. Pada kanal termal,
+degradasi menggabungkan \emph{drift} pola tetap khas sensor mikrobolometer yang
+butuh kalibrasi ulang, derau Gaussian, dan pengaburan. Seluruh degradasi
+diterapkan pada citra nyata di ruang piksel mentah \emph{sebelum} normalisasi;
+kanal termal \textbf{tidak pernah} disintesis dari RGB, konsisten dengan kritik
+kami terhadap pendekatan termal sintetis pada Bagian~2.
+
+Konfigurasi unimodal direalisasikan dengan menolkan token modalitas yang
+dijatuhkan pada model yang sama, sehingga ketiga kurva berasal dari satu bobot
+model, bukan dari tiga model yang dilatih terpisah. Ini mengukur ketahanan
+terhadap kehilangan sensor saat inferensi, bukan membandingkan tiga arsitektur.
+
+Karena ukuran partisi kecil, setiap angka utama disertai selang kepercayaan
+Wilson 95\%, dan perbandingan antar-konfigurasi memakai \textbf{uji McNemar
+berpasangan} dua sisi, bukan perbandingan selang yang tumpang tindih, karena
+seluruh konfigurasi dievaluasi pada sampel yang sama. Definisi lengkap seluruh
+metrik ada pada Lampiran~\ref{app:metrik}. Karena kegagalan mendeteksi kebakaran
+dini jauh lebih mahal daripada alarm palsu, ambang keputusan dipilih pada titik
+yang memaksimalkan \emph{recall} dengan presisi tetap di atas batas minimum,
+bukan pada titik yang memaksimalkan F1.
+
+\subsection{Sistem terpasang}
+
+Model diintegrasikan ke konsol operator empat halaman dengan kontrak keluaran
+tunggal yang disepakati lintas-tim sebelum implementasi dimulai, memuat label
+dan keyakinan prediksi, skor keandalan per modalitas, jalur peta lokalisasi
+beserta metodenya, sumber pemicu, dan keputusan operator. Lapisan pemicu satelit
+menarik data hotspot NASA FIRMS VIIRS SNPP NRT melalui proksi sisi server
+(Lampiran~\ref{app:firms}). Alur pengguna ujung-ke-ujung, dari pemicu sampai
+keputusan tercatat, beserta penanganan empat kondisi gagal, diuraikan pada
+Lampiran~\ref{app:alur}; rancangan antarmuka pada Lampiran~\ref{app:antarmuka};
+dan diagram alur eksperimen serta arsitektur sistem, keduanya dipertahankan dari
+\emph{concept paper} penyisihan, pada Lampiran~\ref{app:diagram}.

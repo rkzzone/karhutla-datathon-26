@@ -1,0 +1,98 @@
+{
+  "n": 240,
+  "mcnemar": {
+    "fusi_penuh_vs_rgb_saja": {
+      "hanya_a_benar": 0,
+      "hanya_b_benar": 0,
+      "n_diskordan": 0,
+      "p_value": 1.0,
+      "n_prediksi_berbeda": 0,
+      "signifikan_0.05": false
+    },
+    "fusi_penuh_vs_termal_saja": {
+      "hanya_a_benar": 8,
+      "hanya_b_benar": 0,
+      "n_diskordan": 8,
+      "p_value": 0.0078125,
+      "n_prediksi_berbeda": 8,
+      "signifikan_0.05": true
+    },
+    "rgb_saja_vs_termal_saja": {
+      "hanya_a_benar": 8,
+      "hanya_b_benar": 0,
+      "n_diskordan": 8,
+      "p_value": 0.0078125,
+      "n_prediksi_berbeda": 8,
+      "signifikan_0.05": true
+    }
+  },
+  "metrik_2kelas": {
+    "fusi_penuh": {
+      "macro_f1": 0.9999999994888891,
+      "macro_precision": 0.999999999988889,
+      "macro_recall": 0.999999999988889,
+      "kelas_dipakai": [
+        "no_fire",
+        "fire_smoke"
+      ],
+      "macro_f1_3kelas_menyesatkan": 0.6666666663259261
+    },
+    "rgb_saja": {
+      "macro_f1": 0.9999999994888891,
+      "macro_precision": 0.999999999988889,
+      "macro_recall": 0.999999999988889,
+      "kelas_dipakai": [
+        "no_fire",
+        "fire_smoke"
+      ],
+      "macro_f1_3kelas_menyesatkan": 0.6666666663259261
+    },
+    "termal_saja": {
+      "macro_f1": 0.9534161485587676,
+      "macro_precision": 0.9787234042431574,
+      "macro_recall": 0.9333333333233333,
+      "kelas_dipakai": [
+        "no_fire",
+        "fire_smoke"
+      ],
+      "macro_f1_3kelas_menyesatkan": 0.6356107657058451
+    }
+  },
+  "analisis_galat": {
+    "fusi_penuh": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "salah_kelas_api": 0,
+      "recall_kejadian_api": 1.0
+    },
+    "rgb_saja": {
+      "false_negative": 0,
+      "false_positive": 0,
+      "salah_kelas_api": 0,
+      "recall_kejadian_api": 1.0
+    },
+    "termal_saja": {
+      "false_negative": 0,
+      "false_positive": 8,
+      "salah_kelas_api": 0,
+      "recall_kejadian_api": 1.0
+    }
+  },
+  "keyakinan": {
+    "fusi_penuh": {
+      "rata2_saat_benar": 0.9999698083333333,
+      "rata2_saat_salah": null,
+      "n_salah": 0
+    },
+    "rgb_saja": {
+      "rata2_saat_benar": 0.9971023708333333,
+      "rata2_saat_salah": null,
+      "n_salah": 0
+    },
+    "termal_saja": {
+      "rata2_saat_benar": 0.994330599137931,
+      "rata2_saat_salah": 0.691149125,
+      "n_salah": 8
+    }
+  }
+}

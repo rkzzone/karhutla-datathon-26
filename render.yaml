@@ -1,0 +1,32 @@
+# Blueprint Render — backend konsol operator karhutla.
+#
+# Pakai: Render Dashboard -> New -> Blueprint -> pilih repo ini.
+# Render membaca berkas ini dan membuat service-nya sendiri.
+#
+# MAP_KEY sengaja `sync: false` -> Render MEMINTA nilainya saat setup dan
+# menyimpannya sebagai secret. Jangan pernah menuliskannya di berkas ini;
+# berkas ini masuk git.
+services:
+  - type: web
+    name: karhutla-api
+    runtime: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    plan: free
+    region: singapore # terdekat ke Indonesia
+    healthCheckPath: /api/health
+    envVars:
+      - key: MAP_KEY
+        sync: false # diisi manual di dashboard, disimpan sebagai secret
+      - key: FRONTEND_ORIGIN
+        value: https://kh-i5oonu-oa69f4.vercel.app
+      - key: MODEL_SERVICE_URL
+        value: "" # kosong = alert dibaca dari hasil batch yang di-commit
+      - key: AOI_MIN_LAT
+        value: "-4.5"
+      - key: AOI_MAX_LAT
+        value: "1.5"
+      - key: AOI_MIN_LON
+        value: "100.0"
+      - key: AOI_MAX_LON
+        value: "117.0"

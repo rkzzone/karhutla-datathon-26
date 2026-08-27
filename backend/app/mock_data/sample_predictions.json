@@ -1,0 +1,262 @@
+[
+  {
+    "alert_id": "35151b84-a204-581d-b47f-bb0b005214cc",
+    "timestamp": "2026-08-08T08:40:00+07:00",
+    "location": {
+      "lat": -2.2386,
+      "lon": 113.8039
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.6467,
+      "thermal": 0.6486
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_001.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_001.jpg",
+      "thermal_url": "samples/thermal_001.jpg"
+    },
+    "source_trigger": "satellite_firms",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "069a612c-837e-5c12-a046-8d3cdde0034e",
+    "timestamp": "2026-08-08T08:23:00+07:00",
+    "location": {
+      "lat": -2.2478,
+      "lon": 113.8017
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.7325,
+      "thermal": 0.7477
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_002.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_002.jpg",
+      "thermal_url": "samples/thermal_002.jpg"
+    },
+    "source_trigger": "iot_ground",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "d79301cc-ac7e-5efa-99fa-22d161d1f75b",
+    "timestamp": "2026-08-08T08:06:00+07:00",
+    "location": {
+      "lat": -2.2369,
+      "lon": 113.8014
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.703,
+      "thermal": 0.5425
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_003.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_003.jpg",
+      "thermal_url": "samples/thermal_003.jpg"
+    },
+    "source_trigger": "satellite_firms",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "36dfc5ae-06f9-536c-9094-045bdc98f6db",
+    "timestamp": "2026-08-08T07:49:00+07:00",
+    "location": {
+      "lat": -2.2365,
+      "lon": 113.7992
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.6825,
+      "thermal": 0.2252
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_004.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_004.jpg",
+      "thermal_url": "samples/thermal_004.jpg"
+    },
+    "source_trigger": "patrol_scheduled",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "2299e4e7-c592-51b5-9875-505f00736dfe",
+    "timestamp": "2026-08-08T07:32:00+07:00",
+    "location": {
+      "lat": -2.2366,
+      "lon": 113.7991
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.4468,
+      "thermal": 0.5442
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_005.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_005.jpg",
+      "thermal_url": "samples/thermal_005.jpg"
+    },
+    "source_trigger": "satellite_firms",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "246d59dd-b09f-5c22-a2c0-4d84dc699a83",
+    "timestamp": "2026-08-08T07:15:00+07:00",
+    "location": {
+      "lat": -2.236,
+      "lon": 113.7955
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.6392,
+      "thermal": 0.7607
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_006.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_006.jpg",
+      "thermal_url": "samples/thermal_006.jpg"
+    },
+    "source_trigger": "patrol_scheduled",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "4373cd70-a92c-5f3a-ae81-b70aaee5b3c2",
+    "timestamp": "2026-08-08T06:58:00+07:00",
+    "location": {
+      "lat": -2.2164,
+      "lon": 113.8303
+    },
+    "prediction": {
+      "label": "fire_smoke",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.1548,
+      "thermal": 0.8273
+    },
+    "localization": {
+      "heatmap_path": "heatmaps/attn_007.png",
+      "method": "segmentation_head"
+    },
+    "images": {
+      "rgb_url": "samples/rgb_007.jpg",
+      "thermal_url": "samples/thermal_007.jpg"
+    },
+    "source_trigger": "iot_ground",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "3a335929-bd02-53ed-a938-28bf71eb6ba6",
+    "timestamp": "2026-08-08T06:41:00+07:00",
+    "location": {
+      "lat": -2.2845,
+      "lon": 113.7708
+    },
+    "prediction": {
+      "label": "no_fire",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.7707,
+      "thermal": 0.4492
+    },
+    "localization": {
+      "heatmap_path": null,
+      "method": null
+    },
+    "images": {
+      "rgb_url": "samples/rgb_008.jpg",
+      "thermal_url": "samples/thermal_008.jpg"
+    },
+    "source_trigger": "iot_ground",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "db032e72-91b7-5181-b1f6-4a2c0e8dee29",
+    "timestamp": "2026-08-08T06:07:00+07:00",
+    "location": {
+      "lat": -2.2611,
+      "lon": 113.8203
+    },
+    "prediction": {
+      "label": "no_fire",
+      "confidence": 1.0
+    },
+    "modality_reliability": {
+      "rgb": 0.7988,
+      "thermal": 0.64
+    },
+    "localization": {
+      "heatmap_path": null,
+      "method": null
+    },
+    "images": {
+      "rgb_url": "samples/rgb_010.jpg",
+      "thermal_url": "samples/thermal_010.jpg"
+    },
+    "source_trigger": "patrol_scheduled",
+    "operator_decision": null
+  },
+  {
+    "alert_id": "41738f46-a087-5464-b66b-827af3d284b9",
+    "timestamp": "2026-08-08T06:24:00+07:00",
+    "location": {
+      "lat": -2.2331,
+      "lon": 113.7967
+    },
+    "prediction": {
+      "label": "no_fire",
+      "confidence": 0.9999
+    },
+    "modality_reliability": {
+      "rgb": 0.641,
+      "thermal": 0.4709
+    },
+    "localization": {
+      "heatmap_path": null,
+      "method": null
+    },
+    "images": {
+      "rgb_url": "samples/rgb_009.jpg",
+      "thermal_url": "samples/thermal_009.jpg"
+    },
+    "source_trigger": "satellite_firms",
+    "operator_decision": null
+  }
+]

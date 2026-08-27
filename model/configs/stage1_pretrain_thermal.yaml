@@ -1,0 +1,37 @@
+# Stage 1 -- Pra-pelatihan encoder termal (lihat ../runs/README.md)
+# Jalankan: python src/train.py --config configs/stage1_pretrain_thermal.yaml
+# atau di notebooks_kaggle/01_pretrain_thermal.ipynb
+
+stage: 1
+run_id: stage1_YYYYMMDD_pretrain-thermal   # ganti YYYYMMDD saat run beneran, lalu disalin ke runs/{run_id}/config.yaml
+
+seed: 42
+
+data:
+  # Path di bawah diisi otomatis dari configs/kaggle_paths.yaml lewat apply_kaggle_paths()
+  # di notebook -- nilai di sini cuma fallback/dokumentasi kalau dijalankan tanpa notebook.
+  labels_path: /kaggle/input/datasets/abangbuan/frame-pair-labels-txt/10) Frame Pair Labels.txt
+  manifest_path: /kaggle/input/orang-c-manifests/flame2_train.csv   # manifest resmi tim data -- WAJIB, bukan scan folder
+  dataset_root: /kaggle/input/datasets/abangbuan/flame2-254p-rgb-thermal   # folder yg langsung berisi "254p RGB Images/" dst
+  # WAJIB (Gerbang 1) -- dari tim data, Stage 0. Training menolak jalan kalau file ini belum ada.
+  excluded_csv: /kaggle/input/orang-c-manifests/flame2_excluded_leakage.csv
+  val_fraction: 0.1
+  image_size: 224
+
+model:
+  embedding_dim: 384
+  rgb_frozen_blocks: 9        # dari 12 total blok DINOv2 ViT-S/14
+  n_classes: 3                # fire_smoke | fire_no_smoke | no_fire, sesuai kontrak API
+
+training:
+  batch_size: 64
+  epochs: 20
+  lr: 0.0003
+  weight_decay: 0.01
+  modality_dropout_p: 0.2     # tetap aktif walau Stage 1 blm fokus ke fusi -- filosofi konsisten sejak awal
+  early_stop_patience: 10
+
+checkpoint:
+  save_every_n_epochs: 2      # WAJIB -- sesi Kaggle maks 12 jam (Bagian 9 catatan 4)
+  out_dir: runs/stage1_YYYYMMDD_pretrain-thermal
+  final_path: weights_final/thermal_encoder_pretrained.pth

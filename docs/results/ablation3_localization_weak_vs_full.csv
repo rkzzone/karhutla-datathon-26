@@ -1,0 +1,3 @@
+method,pointing_game_accuracy,miou
+attention_rollout (Jalur A),0.6133,
+segmentation_head (Jalur B),,0.5328

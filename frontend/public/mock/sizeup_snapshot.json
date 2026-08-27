@@ -1,0 +1,2481 @@
+{
+  "is_cuplikan": true,
+  "dibekukan": "2026-08-27T11:29:07.894731+07:00",
+  "jumlah": 10,
+  "sumber": [
+    "Open-Meteo",
+    "OpenStreetMap"
+  ],
+  "sizeup": {
+    "35151b84-a204-581d-b47f-bb0b005214cc": {
+      "koordinat": {
+        "lat": -2.2386,
+        "lon": 113.8039
+      },
+      "alert_id": "35151b84-a204-581d-b47f-bb0b005214cc",
+      "diambil": "2026-08-27T11:23:41.080095+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:00",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.0,
+          "kelembapan_persen": 45,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.0,
+          "arah_angin_deg": 150,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 330,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.7
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.8
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": true
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 30.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 92.1,
+            "dmc": 84.1,
+            "dc": 291.0,
+            "isi": 9.7,
+            "bui": 97.6
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 5.1,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": false
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 2.7,
+              "arah_deg": 220.2,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 2.82,
+              "arah_deg": 208.4,
+              "lat": -2.2609068,
+              "lon": 113.7918216,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 1.25,
+              "arah_deg": 331.6,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 1.4,
+              "arah_deg": 24.7,
+              "lat": -2.2271315,
+              "lon": 113.8091701,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 3.7,
+              "arah_deg": 88.6,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Duar Anyar",
+              "jarak_km": 4.47,
+              "arah_deg": 51.6,
+              "lat": -2.2136502,
+              "lon": 113.8354464,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "track",
+              "jenis_nama": "Jalan setapak/kebun",
+              "nama": null,
+              "jarak_km": 4.89,
+              "arah_deg": 37.6,
+              "lat": -2.2037375,
+              "lon": 113.830788,
+              "kendaraan_berat": false
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat sungai 2.7 km",
+            "akses kendaraan terdekat jalan permukiman 1.25 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:23 WIB\nTitik: 2.2386°S 113.8039°E\nID alert: 35151b84-a204-581d-b47f-bb0b005214cc\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 65% · termal 65% — dua modalitas seimbang\n\nCuaca (Open-Meteo): 33.0 °C · RH 45% · angin 9.0 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 30.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 92.1 · DMC 84.1 · DC 291.0 · ISI 9.7 · BUI 97.6\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 5.1 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai 2.7 km arah barat daya; Sungai Sebangau 2.82 km arah barat daya\nAkses terdekat: Jalan permukiman 1.25 km arah barat laut; Jalan servis 1.4 km arah timur laut; Jalan D.A. Tawa 3.7 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat sungai 2.7 km; akses kendaraan terdekat jalan permukiman 1.25 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "069a612c-837e-5c12-a046-8d3cdde0034e": {
+      "koordinat": {
+        "lat": -2.2478,
+        "lon": 113.8017
+      },
+      "alert_id": "069a612c-837e-5c12-a046-8d3cdde0034e",
+      "diambil": "2026-08-27T11:24:10.158041+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.2,
+          "kelembapan_persen": 44,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.7,
+          "arah_angin_deg": 149,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 329,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 1.3
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.2
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": false
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 31.3,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 91.9,
+            "dmc": 91.6,
+            "dc": 306.1,
+            "isi": 9.6,
+            "bui": 104.8
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 5.91,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 1.8,
+              "arah_deg": 193.4,
+              "lat": -2.2635709,
+              "lon": 113.7979424,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 1.82,
+              "arah_deg": 235.2,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 2.15,
+              "arah_deg": 350.6,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 2.44,
+              "arah_deg": 19.9,
+              "lat": -2.2271315,
+              "lon": 113.8091701,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 4.09,
+              "arah_deg": 74.2,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat Sungai Sebangau 1.8 km",
+            "akses kendaraan terdekat jalan permukiman 2.15 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:24 WIB\nTitik: 2.2478°S 113.8017°E\nID alert: 069a612c-837e-5c12-a046-8d3cdde0034e\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 73% · termal 75% — dua modalitas seimbang\n\nCuaca (Open-Meteo): 33.2 °C · RH 44% · angin 9.7 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 31.3 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 91.9 · DMC 91.6 · DC 306.1 · ISI 9.6 · BUI 104.8\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 5.91 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai Sebangau 1.8 km arah selatan; Sungai 1.82 km arah barat daya\nAkses terdekat: Jalan permukiman 2.15 km arah utara; Jalan servis 2.44 km arah utara; Jalan D.A. Tawa 4.09 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat Sungai Sebangau 1.8 km; akses kendaraan terdekat jalan permukiman 2.15 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "d79301cc-ac7e-5efa-99fa-22d161d1f75b": {
+      "koordinat": {
+        "lat": -2.2369,
+        "lon": 113.8014
+      },
+      "alert_id": "d79301cc-ac7e-5efa-99fa-22d161d1f75b",
+      "diambil": "2026-08-27T11:24:45.830137+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.4,
+          "kelembapan_persen": 43,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.1,
+          "arah_angin_deg": 150,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 330,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.7
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.8
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": false
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 30.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 92.1,
+            "dmc": 84.1,
+            "dc": 291.0,
+            "isi": 9.7,
+            "bui": 97.6
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 4.8,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 2.69,
+              "arah_deg": 213.0,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 2.87,
+              "arah_deg": 202.8,
+              "lat": -2.2607085,
+              "lon": 113.7913656,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 0.97,
+              "arah_deg": 340.8,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 1.39,
+              "arah_deg": 38.3,
+              "lat": -2.2271128,
+              "lon": 113.8091379,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 3.97,
+              "arah_deg": 91.5,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Duar Anyar",
+              "jarak_km": 4.58,
+              "arah_deg": 55.7,
+              "lat": -2.2136502,
+              "lon": 113.8354464,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "track",
+              "jenis_nama": "Jalan setapak/kebun",
+              "nama": null,
+              "jarak_km": 4.93,
+              "arah_deg": 41.5,
+              "lat": -2.2037375,
+              "lon": 113.830788,
+              "kendaraan_berat": false
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat sungai 2.69 km",
+            "akses kendaraan terdekat jalan permukiman 0.97 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:24 WIB\nTitik: 2.2369°S 113.8014°E\nID alert: d79301cc-ac7e-5efa-99fa-22d161d1f75b\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 70% · termal 54% — bersandar pada RGB\n\nCuaca (Open-Meteo): 33.4 °C · RH 43% · angin 9.1 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 30.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 92.1 · DMC 84.1 · DC 291.0 · ISI 9.7 · BUI 97.6\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 4.8 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai 2.69 km arah barat daya; Sungai Sebangau 2.87 km arah barat daya\nAkses terdekat: Jalan permukiman 0.97 km arah utara; Jalan servis 1.39 km arah timur laut; Jalan D.A. Tawa 3.97 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat sungai 2.69 km; akses kendaraan terdekat jalan permukiman 0.97 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "36dfc5ae-06f9-536c-9094-045bdc98f6db": {
+      "koordinat": {
+        "lat": -2.2365,
+        "lon": 113.7992
+      },
+      "alert_id": "36dfc5ae-06f9-536c-9094-045bdc98f6db",
+      "diambil": "2026-08-27T11:25:26.237798+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.4,
+          "kelembapan_persen": 43,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.1,
+          "arah_angin_deg": 150,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 330,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.7
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.8
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": true
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 30.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 92.1,
+            "dmc": 84.1,
+            "dc": 291.0,
+            "isi": 9.7,
+            "bui": 97.6
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 4.65,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 2.6,
+              "arah_deg": 208.0,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 2.83,
+              "arah_deg": 197.9,
+              "lat": -2.2607085,
+              "lon": 113.7913656,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 0.87,
+              "arah_deg": 355.1,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 1.52,
+              "arah_deg": 46.6,
+              "lat": -2.2271128,
+              "lon": 113.8091379,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 4.22,
+              "arah_deg": 92.0,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Duar Anyar",
+              "jarak_km": 4.76,
+              "arah_deg": 57.8,
+              "lat": -2.2136502,
+              "lon": 113.8354464,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat sungai 2.6 km",
+            "akses kendaraan terdekat jalan permukiman 0.87 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:25 WIB\nTitik: 2.2365°S 113.7992°E\nID alert: 36dfc5ae-06f9-536c-9094-045bdc98f6db\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 68% · termal 23% — bersandar pada RGB\n\nCuaca (Open-Meteo): 33.4 °C · RH 43% · angin 9.1 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 30.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 92.1 · DMC 84.1 · DC 291.0 · ISI 9.7 · BUI 97.6\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 4.65 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai 2.6 km arah barat daya; Sungai Sebangau 2.83 km arah selatan\nAkses terdekat: Jalan permukiman 0.87 km arah utara; Jalan servis 1.52 km arah timur laut; Jalan D.A. Tawa 4.22 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat sungai 2.6 km; akses kendaraan terdekat jalan permukiman 0.87 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "2299e4e7-c592-51b5-9875-505f00736dfe": {
+      "koordinat": {
+        "lat": -2.2366,
+        "lon": 113.7991
+      },
+      "alert_id": "2299e4e7-c592-51b5-9875-505f00736dfe",
+      "diambil": "2026-08-27T11:25:57.223125+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.4,
+          "kelembapan_persen": 43,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.1,
+          "arah_angin_deg": 150,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 330,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.7
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.8
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": true
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 30.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 92.1,
+            "dmc": 84.1,
+            "dc": 291.0,
+            "isi": 9.7,
+            "bui": 97.6
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 4.66,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 2.59,
+              "arah_deg": 207.9,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 2.82,
+              "arah_deg": 197.8,
+              "lat": -2.2607085,
+              "lon": 113.7913656,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 0.88,
+              "arah_deg": 355.9,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 1.54,
+              "arah_deg": 46.6,
+              "lat": -2.2271128,
+              "lon": 113.8091379,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 4.23,
+              "arah_deg": 91.8,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Duar Anyar",
+              "jarak_km": 4.78,
+              "arah_deg": 57.7,
+              "lat": -2.2136502,
+              "lon": 113.8354464,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat sungai 2.59 km",
+            "akses kendaraan terdekat jalan permukiman 0.88 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:25 WIB\nTitik: 2.2366°S 113.7991°E\nID alert: 2299e4e7-c592-51b5-9875-505f00736dfe\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 45% · termal 54% — dua modalitas seimbang\n\nCuaca (Open-Meteo): 33.4 °C · RH 43% · angin 9.1 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 30.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 92.1 · DMC 84.1 · DC 291.0 · ISI 9.7 · BUI 97.6\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 4.66 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai 2.59 km arah barat daya; Sungai Sebangau 2.82 km arah selatan\nAkses terdekat: Jalan permukiman 0.88 km arah utara; Jalan servis 1.54 km arah timur laut; Jalan D.A. Tawa 4.23 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat sungai 2.59 km; akses kendaraan terdekat jalan permukiman 0.88 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "246d59dd-b09f-5c22-a2c0-4d84dc699a83": {
+      "koordinat": {
+        "lat": -2.236,
+        "lon": 113.7955
+      },
+      "alert_id": "246d59dd-b09f-5c22-a2c0-4d84dc699a83",
+      "diambil": "2026-08-27T11:26:32.302009+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.4,
+          "kelembapan_persen": 43,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.1,
+          "arah_angin_deg": 150,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 330,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.7
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.8
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": true
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 30.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 92.1,
+            "dmc": 84.1,
+            "dc": 291.0,
+            "isi": 9.7,
+            "bui": 97.6
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 4.44,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 2.49,
+              "arah_deg": 199.0,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 2.79,
+              "arah_deg": 189.5,
+              "lat": -2.2607085,
+              "lon": 113.7913656,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 0.88,
+              "arah_deg": 22.5,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 1.81,
+              "arah_deg": 56.9,
+              "lat": -2.2271128,
+              "lon": 113.8091379,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 4.63,
+              "arah_deg": 92.5,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat sungai 2.49 km",
+            "akses kendaraan terdekat jalan permukiman 0.88 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:26 WIB\nTitik: 2.2360°S 113.7955°E\nID alert: 246d59dd-b09f-5c22-a2c0-4d84dc699a83\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 64% · termal 76% — dua modalitas seimbang\n\nCuaca (Open-Meteo): 33.4 °C · RH 43% · angin 9.1 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 30.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 92.1 · DMC 84.1 · DC 291.0 · ISI 9.7 · BUI 97.6\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 4.44 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai 2.49 km arah selatan; Sungai Sebangau 2.79 km arah selatan\nAkses terdekat: Jalan permukiman 0.88 km arah timur laut; Jalan servis 1.81 km arah timur laut; Jalan D.A. Tawa 4.63 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat sungai 2.49 km; akses kendaraan terdekat jalan permukiman 0.88 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "4373cd70-a92c-5f3a-ae81-b70aaee5b3c2": {
+      "koordinat": {
+        "lat": -2.2164,
+        "lon": 113.8303
+      },
+      "alert_id": "4373cd70-a92c-5f3a-ae81-b70aaee5b3c2",
+      "diambil": "2026-08-27T11:27:02.213495+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.4,
+          "kelembapan_persen": 44,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.1,
+          "arah_angin_deg": 144,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 324,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.1,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.6
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.5
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": false
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 29.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 91.7,
+            "dmc": 89.6,
+            "dc": 281.2,
+            "isi": 9.1,
+            "bui": 99.8
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 5.77,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50304",
+          "nama": "Perkebunan / Kebun",
+          "sni": "Perkebunan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "drain",
+              "jenis_nama": "Parit",
+              "nama": null,
+              "jarak_km": 2.83,
+              "arah_deg": 41.9,
+              "lat": -2.1974739,
+              "lon": 113.847314,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "drain",
+              "jenis_nama": "Parit",
+              "nama": "irigasi Jl. Hiu Putih",
+              "jarak_km": 2.93,
+              "arah_deg": 42.2,
+              "lat": -2.1968591,
+              "lon": 113.8480437,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "drain",
+              "jenis_nama": "Parit",
+              "nama": "irigasi",
+              "jarak_km": 3.16,
+              "arah_deg": 43.2,
+              "lat": -2.1957046,
+              "lon": 113.8497496,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "water",
+              "jenis_nama": "Badan air",
+              "nama": null,
+              "jarak_km": 3.79,
+              "arah_deg": 18.1,
+              "lat": -2.1839561,
+              "lon": 113.8408881,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "stream",
+              "jenis_nama": "Anak sungai",
+              "nama": null,
+              "jarak_km": 4.44,
+              "arah_deg": 71.1,
+              "lat": -2.2034334,
+              "lon": 113.8681158,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 2.35,
+              "arah_deg": 143.9,
+              "lat": -2.2335063,
+              "lon": 113.84279,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "trunk",
+              "jenis_nama": "Jalan nasional",
+              "nama": "Jalan Mahir Mahar",
+              "jarak_km": 2.73,
+              "arah_deg": 55.7,
+              "lat": -2.2025896,
+              "lon": 113.8505673,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "unclassified",
+              "jenis_nama": "Jalan desa",
+              "nama": "Jalan Banteng",
+              "jarak_km": 2.75,
+              "arah_deg": 57.7,
+              "lat": -2.2031611,
+              "lon": 113.8512218,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "secondary",
+              "jenis_nama": "Jalan sekunder",
+              "nama": "Jalan Hiu Putih",
+              "jarak_km": 2.84,
+              "arah_deg": 41.9,
+              "lat": -2.1973904,
+              "lon": 113.8473511,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 3.16,
+              "arah_deg": 46.5,
+              "lat": -2.1968452,
+              "lon": 113.8509402,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "tertiary",
+              "jenis_nama": "Jalan tersier",
+              "nama": "Jalan Mahir Mahar Raya",
+              "jarak_km": 3.19,
+              "arah_deg": 25.5,
+              "lat": -2.1904716,
+              "lon": 113.8426803,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat parit 2.83 km",
+            "akses kendaraan terdekat jalan permukiman 2.35 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:27 WIB\nTitik: 2.2164°S 113.8303°E\nID alert: 4373cd70-a92c-5f3a-ae81-b70aaee5b3c2\nDeteksi: Api + asap · keyakinan 100%\nKeandalan modalitas: RGB 15% · termal 83% — bersandar pada termal\n\nCuaca (Open-Meteo): 33.4 °C · RH 44% · angin 9.1 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 29.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 91.7 · DMC 89.6 · DC 281.2 · ISI 9.1 · BUI 99.8\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 5.77 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Perkebunan / Kebun\n\nSumber air terdekat: Parit 2.83 km arah timur laut; Parit irigasi Jl. Hiu Putih 2.93 km arah timur laut; Parit irigasi 3.16 km arah timur laut\nAkses terdekat: Jalan D.A. Tawa 2.35 km arah tenggara; Jalan Mahir Mahar 2.73 km arah timur laut; Jalan Banteng 2.75 km arah timur laut\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat parit 2.83 km; akses kendaraan terdekat jalan permukiman 2.35 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "3a335929-bd02-53ed-a938-28bf71eb6ba6": {
+      "koordinat": {
+        "lat": -2.2845,
+        "lon": 113.7708
+      },
+      "alert_id": "3a335929-bd02-53ed-a938-28bf71eb6ba6",
+      "diambil": "2026-08-27T11:27:32.335340+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.2,
+          "kelembapan_persen": 44,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.7,
+          "arah_angin_deg": 149,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 329,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 1.3
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.2
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": false
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 31.3,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 91.9,
+            "dmc": 91.6,
+            "dc": 306.1,
+            "isi": 9.6,
+            "bui": 104.8
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.04.1003",
+          "kode_kecamatan": "62.71.04",
+          "kode_kabupaten": "62.71",
+          "desa": "Kereng Bangkirai",
+          "kecamatan": "Sabangau",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 7.64,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.04.1003",
+          "desa": "Kereng Bangkirai",
+          "kecamatan": "Sabangau",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.3271913617,
+          "lon": 113.8246988645,
+          "waktu_prakiraan": "2026-08-27 12:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 35,
+          "kelembapan_persen": 35,
+          "angin_kmj": 11,
+          "arah_angin_deg": 147,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 20,
+          "dari_cache": false
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 12,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 2.29,
+              "arah_deg": 311.6,
+              "lat": -2.2708608,
+              "lon": 113.7554133,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 3.24,
+              "arah_deg": 32.2,
+              "lat": -2.2598937,
+              "lon": 113.7863351,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "drain",
+              "jenis_nama": "Parit",
+              "nama": null,
+              "jarak_km": 9.44,
+              "arah_deg": 76.8,
+              "lat": -2.2651476,
+              "lon": 113.853525,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "stream",
+              "jenis_nama": "Anak sungai",
+              "nama": null,
+              "jarak_km": 11.03,
+              "arah_deg": 88.5,
+              "lat": -2.2818197,
+              "lon": 113.8700107,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 12,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 6.93,
+              "arah_deg": 26.4,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 9.02,
+              "arah_deg": 54.8,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "track",
+              "jenis_nama": "Jalan setapak/kebun",
+              "nama": null,
+              "jarak_km": 9.79,
+              "arah_deg": 62.6,
+              "lat": -2.243963,
+              "lon": 113.8489929,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Yos Sudarso Ujung",
+              "jarak_km": 10.04,
+              "arah_deg": 60.0,
+              "lat": -2.239388,
+              "lon": 113.8490331,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Alson III",
+              "jarak_km": 10.63,
+              "arah_deg": 57.2,
+              "lat": -2.2326848,
+              "lon": 113.8511995,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan G. Obos",
+              "jarak_km": 10.68,
+              "arah_deg": 68.5,
+              "lat": -2.2493419,
+              "lon": 113.8602597,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat Sungai Sebangau 2.29 km",
+            "akses kendaraan terdekat jalan permukiman 6.93 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:27 WIB\nTitik: 2.2845°S 113.7708°E\nID alert: 3a335929-bd02-53ed-a938-28bf71eb6ba6\nDeteksi: Tidak ada api · keyakinan 100%\nKeandalan modalitas: RGB 77% · termal 45% — bersandar pada RGB\n\nCuaca (Open-Meteo): 33.2 °C · RH 44% · angin 9.7 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 31.3 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 91.9 · DMC 91.6 · DC 306.1 · ISI 9.6 · BUI 104.8\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Kereng Bangkirai / Sabangau / Kota Palangkaraya, 7.64 km dari titik): Cerah Berawan · 35 °C · RH 35% · angin 11 km/j — berlaku 2026-08-27 12:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai Sebangau 2.29 km arah barat laut; Sungai 3.24 km arah timur laut; Parit 9.44 km arah timur\nAkses terdekat: Jalan permukiman 6.93 km arah timur laut; Jalan D.A. Tawa 9.02 km arah timur laut; Jalan setapak/kebun 9.79 km arah timur laut\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat Sungai Sebangau 2.29 km; akses kendaraan terdekat jalan permukiman 6.93 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "db032e72-91b7-5181-b1f6-4a2c0e8dee29": {
+      "koordinat": {
+        "lat": -2.2611,
+        "lon": 113.8203
+      },
+      "alert_id": "db032e72-91b7-5181-b1f6-4a2c0e8dee29",
+      "diambil": "2026-08-27T11:28:16.104651+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.2,
+          "kelembapan_persen": 44,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.7,
+          "arah_angin_deg": 149,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 329,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 1.3
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.2
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": false
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 31.3,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 91.9,
+            "dmc": 91.6,
+            "dc": 306.1,
+            "isi": 9.6,
+            "bui": 104.8
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.04.1003",
+          "kode_kecamatan": "62.71.04",
+          "kode_kabupaten": "62.71",
+          "desa": "Kereng Bangkirai",
+          "kecamatan": "Sabangau",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 7.37,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.04.1003",
+          "desa": "Kereng Bangkirai",
+          "kecamatan": "Sabangau",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.3271913617,
+          "lon": 113.8246988645,
+          "waktu_prakiraan": "2026-08-27 12:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 35,
+          "kelembapan_persen": 35,
+          "angin_kmj": 11,
+          "arah_angin_deg": 147,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 20,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50304",
+          "nama": "Perkebunan / Kebun",
+          "sni": "Perkebunan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 1.28,
+              "arah_deg": 214.0,
+              "lat": -2.2706678,
+              "lon": 113.8138318,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 3.59,
+              "arah_deg": 277.0,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "drain",
+              "jenis_nama": "Parit",
+              "nama": null,
+              "jarak_km": 3.72,
+              "arah_deg": 97.0,
+              "lat": -2.2651476,
+              "lon": 113.853525,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 3.08,
+              "arah_deg": 105.7,
+              "lat": -2.2686122,
+              "lon": 113.8469866,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 3.15,
+              "arah_deg": 104.6,
+              "lat": -2.268223,
+              "lon": 113.8477178,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 3.2,
+              "arah_deg": 35.9,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "track",
+              "jenis_nama": "Jalan setapak/kebun",
+              "nama": null,
+              "jarak_km": 3.71,
+              "arah_deg": 59.1,
+              "lat": -2.243963,
+              "lon": 113.8489929,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Yos Sudarso Ujung",
+              "jarak_km": 4.0,
+              "arah_deg": 52.9,
+              "lat": -2.239388,
+              "lon": 113.8490331,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan G. Obos",
+              "jarak_km": 4.27,
+              "arah_deg": 74.6,
+              "lat": -2.2508858,
+              "lon": 113.8573104,
+              "kendaraan_berat": true
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat Sungai Sebangau 1.28 km",
+            "akses kendaraan terdekat jalan permukiman 3.08 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:28 WIB\nTitik: 2.2611°S 113.8203°E\nID alert: db032e72-91b7-5181-b1f6-4a2c0e8dee29\nDeteksi: Tidak ada api · keyakinan 100%\nKeandalan modalitas: RGB 80% · termal 64% — bersandar pada RGB\n\nCuaca (Open-Meteo): 33.2 °C · RH 44% · angin 9.7 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 31.3 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 91.9 · DMC 91.6 · DC 306.1 · ISI 9.6 · BUI 104.8\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Kereng Bangkirai / Sabangau / Kota Palangkaraya, 7.37 km dari titik): Cerah Berawan · 35 °C · RH 35% · angin 11 km/j — berlaku 2026-08-27 12:00:00\nPenutup lahan (BIG 1:250.000): Perkebunan / Kebun\n\nSumber air terdekat: Sungai Sebangau 1.28 km arah barat daya; Sungai 3.59 km arah barat; Parit 3.72 km arah timur\nAkses terdekat: Jalan permukiman 3.08 km arah timur; Jalan servis 3.15 km arah timur; Jalan D.A. Tawa 3.2 km arah timur laut\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat Sungai Sebangau 1.28 km; akses kendaraan terdekat jalan permukiman 3.08 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    },
+    "41738f46-a087-5464-b66b-827af3d284b9": {
+      "koordinat": {
+        "lat": -2.2331,
+        "lon": 113.7967
+      },
+      "alert_id": "41738f46-a087-5464-b66b-827af3d284b9",
+      "diambil": "2026-08-27T11:28:51.906262+07:00",
+      "is_cuplikan": true,
+      "blok": {
+        "cuaca": {
+          "status": "ada",
+          "catatan_kerucut": "Proyeksi arah angin, bukan prediksi rambatan model. Tidak memperhitungkan bahan bakar, kelerengan, maupun kelembapan gambut.",
+          "sumber": "Open-Meteo",
+          "sumber_url": "https://open-meteo.com/",
+          "waktu_pengamatan": "2026-08-27T11:15",
+          "zona_waktu": "Asia/Jakarta",
+          "suhu_c": 33.4,
+          "kelembapan_persen": 43,
+          "hujan_mm": 0.0,
+          "angin_kmj": 9.1,
+          "arah_angin_deg": 150,
+          "arah_angin_mata": "tenggara",
+          "arah_rambatan_deg": 330,
+          "arah_rambatan_mata": "barat laut",
+          "riwayat_hujan": {
+            "hari_kering_berturut": 3,
+            "terpotong_jendela": false,
+            "jendela_hari": 8,
+            "hujan_24jam_mm": 0.0,
+            "hujan_7hari_mm": 2.6,
+            "ambang_hari_kering_mm": 1.0,
+            "harian": [
+              {
+                "tanggal": "2026-08-21",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-22",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-23",
+                "hujan_mm": 0.7
+              },
+              {
+                "tanggal": "2026-08-24",
+                "hujan_mm": 1.8
+              },
+              {
+                "tanggal": "2026-08-25",
+                "hujan_mm": 0.0
+              },
+              {
+                "tanggal": "2026-08-26",
+                "hujan_mm": 0.1
+              },
+              {
+                "tanggal": "2026-08-27",
+                "hujan_mm": 0.0
+              }
+            ]
+          },
+          "dari_cache": false
+        },
+        "bahaya": {
+          "status": "ada",
+          "sistem": "Fire Weather Index (FWI) — Sistem Kanada, van Wagner 1987",
+          "fwi": 30.5,
+          "tingkat": 4,
+          "nama": "Ekstrem",
+          "ambang": "FWI ≥ 26",
+          "komponen": {
+            "ffmc": 92.1,
+            "dmc": 84.1,
+            "dc": 291.0,
+            "isi": 9.7,
+            "bui": 97.6
+          },
+          "hari_dipakai": 60,
+          "tanggal_akhir": "2026-08-27",
+          "penyesuaian_ekuator": {
+            "Le": 9.0,
+            "Lf": 1.4
+          },
+          "nilai_awal": {
+            "ffmc": 85.0,
+            "dmc": 6.0,
+            "dc": 15.0
+          },
+          "catatan": "Dihitung tim ini dari persamaan terbit van Wagner (1987) atas 60 hari data tengah hari Open-Meteo, dengan penyesuaian panjang hari ekuatorial (Le 9.0, Lf 1.4). Sistem yang sama diadopsi SPBK BMKG, tetapi angka ini BUKAN keluaran BMKG dan masukannya bukan pengamatan stasiun BMKG.",
+          "catatan_spinup": "Kode kadar air dimulai dari nilai awal standar dan dijalankan maju 60 hari. FFMC dan DMC sudah konvergen; DC bermemori sekitar 50 hari sehingga masih menyimpan sebagian pengaruh nilai awal — dan DC ikut menentukan BUI serta FWI."
+        },
+        "wilayah": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "BAPANAS/Batas_Administrasi — Batas Wilayah Kelurahan/Desa",
+          "kode_desa": "62.71.03.1003",
+          "kode_kecamatan": "62.71.03",
+          "kode_kabupaten": "62.71",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kabupaten": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "dari_cache": false
+        },
+        "bmkg": {
+          "status": "ada",
+          "jarak_titik_acuan_km": 4.19,
+          "sumber": "BMKG",
+          "sumber_url": "https://api.bmkg.go.id/publik/prakiraan-cuaca",
+          "kode_desa": "62.71.03.1003",
+          "desa": "Bukit Tunggal",
+          "kecamatan": "Jekan Raya",
+          "kotkab": "Kota Palangkaraya",
+          "provinsi": "Kalimantan Tengah",
+          "lat": -2.1985632222,
+          "lon": 113.781552151,
+          "waktu_prakiraan": "2026-08-27 11:00:00",
+          "analisis": "2026-08-27T00:00:00",
+          "suhu_c": 34,
+          "kelembapan_persen": 39,
+          "angin_kmj": 10.4,
+          "arah_angin_deg": 144,
+          "arah_angin_ringkas": "SE",
+          "hujan_mm": 0,
+          "cuaca": "Cerah Berawan",
+          "jarak_pandang": "< 9 km",
+          "jumlah_langkah": 21,
+          "dari_cache": true
+        },
+        "penutup_lahan": {
+          "status": "ada",
+          "sumber": "Badan Informasi Geospasial (BIG)",
+          "sumber_layanan": "PTRA/Atlas_250K_PenutupLahan — Penutup Lahan Skala 1:250.000",
+          "skala": "1:250.000",
+          "kode": "50202",
+          "nama": "Hutan Rimba",
+          "sni": "Hutan",
+          "indikasi_lahan_basah": false,
+          "dari_cache": false
+        },
+        "sumber_air": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": null,
+              "jarak_km": 2.84,
+              "arah_deg": 199.4,
+              "lat": -2.257152,
+              "lon": 113.7882248,
+              "kanal_gambut": false
+            },
+            {
+              "jenis": "river",
+              "jenis_nama": "Sungai",
+              "nama": "Sungai Sebangau",
+              "jarak_km": 3.13,
+              "arah_deg": 190.9,
+              "lat": -2.2607085,
+              "lon": 113.7913656,
+              "kanal_gambut": false
+            }
+          ]
+        },
+        "akses": {
+          "status": "ada",
+          "sumber": "OpenStreetMap",
+          "sumber_url": "https://www.openstreetmap.org/copyright",
+          "radius_km": 5,
+          "daftar": [
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": null,
+              "jarak_km": 0.53,
+              "arah_deg": 22.6,
+              "lat": -2.228686,
+              "lon": 113.7985351,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "service",
+              "jenis_nama": "Jalan servis",
+              "nama": null,
+              "jarak_km": 1.53,
+              "arah_deg": 64.1,
+              "lat": -2.2270806,
+              "lon": 113.8091192,
+              "kendaraan_berat": false
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan D.A. Tawa",
+              "jarak_km": 4.52,
+              "arah_deg": 96.6,
+              "lat": -2.237804,
+              "lon": 113.8371509,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "residential",
+              "jenis_nama": "Jalan permukiman",
+              "nama": "Jalan Duar Anyar",
+              "jarak_km": 4.82,
+              "arah_deg": 63.3,
+              "lat": -2.2136502,
+              "lon": 113.8354464,
+              "kendaraan_berat": true
+            },
+            {
+              "jenis": "track",
+              "jenis_nama": "Jalan setapak/kebun",
+              "nama": null,
+              "jarak_km": 5.0,
+              "arah_deg": 49.2,
+              "lat": -2.2037375,
+              "lon": 113.830788,
+              "kendaraan_berat": false
+            }
+          ]
+        },
+        "peralatan": {
+          "status": "ada",
+          "tingkat": "semi_mekanis",
+          "nama": "Semi-mekanis",
+          "contoh": "jet shooter, embung plastik sebagai penyambung",
+          "alasan": [
+            "sumber air terdekat sungai 2.84 km",
+            "akses kendaraan terdekat jalan permukiman 0.53 km",
+            "air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan"
+          ],
+          "catatan": "Saran, bukan perintah. Kosakata tingkatan peralatan berasal dari keterangan praktisi polisi hutan; keputusan akhir ada pada tim size-up setelah melihat lokasi."
+        }
+      },
+      "brief": "SIZE-UP — DRAF, WAJIB DIVERIFIKASI TIM SIZE-UP\nDisusun 27 Aug 2026 11:28 WIB\nTitik: 2.2331°S 113.7967°E\nID alert: 41738f46-a087-5464-b66b-827af3d284b9\nDeteksi: Tidak ada api · keyakinan 100%\nKeandalan modalitas: RGB 64% · termal 47% — bersandar pada RGB\n\nCuaca (Open-Meteo): 33.4 °C · RH 43% · angin 9.1 km/j dari tenggara\nKekeringan: 3 hari berturut tanpa hujan (ambang 1.0 mm/hari) · hujan 24 jam 0.0 mm\nProyeksi arah angin: dorongan ke barat laut. Bukan prediksi rambatan model.\nIndeks bahaya kebakaran (FWI, Sistem Kanada): 30.5 — Ekstrem (FWI ≥ 26)\n  Komponen: FFMC 92.1 · DMC 84.1 · DC 291.0 · ISI 9.7 · BUI 97.6\n  Dihitung sendiri dari persamaan terbit atas data Open-Meteo. Sistem yang sama diadopsi SPBK BMKG, tapi ini bukan keluaran BMKG.\nPrakiraan resmi BMKG (Bukit Tunggal / Jekan Raya / Kota Palangkaraya, 4.19 km dari titik): Cerah Berawan · 34 °C · RH 39% · angin 10.4 km/j — berlaku 2026-08-27 11:00:00\nPenutup lahan (BIG 1:250.000): Hutan Rimba\n\nSumber air terdekat: Sungai 2.84 km arah selatan; Sungai Sebangau 3.13 km arah selatan\nAkses terdekat: Jalan permukiman 0.53 km arah timur laut; Jalan servis 1.53 km arah timur laut; Jalan D.A. Tawa 4.52 km arah timur\nSaran tingkat peralatan: Semi-mekanis (jet shooter, embung plastik sebagai penyambung)\n  Dasar: sumber air terdekat sungai 2.84 km; akses kendaraan terdekat jalan permukiman 0.53 km; air ≤ 5.0 km tapi syarat mekanis tidak terpenuhi → pemadaman basah lewat penyambungan\n\nCuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).\nDraf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan.",
+      "catatan_provenans": "Cuaca (Open-Meteo), prakiraan resmi (BMKG), wilayah dan penutup lahan (Badan Informasi Geospasial), serta sumber air dan akses (OpenStreetMap) semuanya ditarik nyata untuk koordinat ini. Koordinatnya sendiri adalah penempatan simulasi di lahan gambut Indonesia, di atas citra benchmark FLAME 2 (Arizona).",
+      "catatan_brief": "Draf untuk verifikasi tim size-up. Sistem tidak menyatakan api padam dan tidak menentukan arah serangan."
+    }
+  }
+}

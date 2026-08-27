@@ -1,0 +1,140 @@
+{
+  "simulasi": true,
+  "catatan": "Data sensor disimulasikan untuk demo — bukan bacaan lapangan.",
+  "waktu_server": "2026-08-03T08:20:00+07:00",
+  "jumlah": 6,
+  "node": [
+    {
+      "node_id": "IOT-KTG-01",
+      "nama": "Kanal Blok C, Pulang Pisau",
+      "lat": -2.2448,
+      "lon": 113.8028,
+      "waktu": "2026-08-03T08:20:00+07:00",
+      "bacaan": {
+        "suhu_c": 43.2,
+        "kelembapan_persen": 26.4,
+        "pm25_ugm3": 71.8,
+        "kelembapan_gambut_persen": 29.1
+      },
+      "ambang": {
+        "suhu_c": 41.0,
+        "kelembapan_persen": 30.0,
+        "pm25_ugm3": 55.0,
+        "kelembapan_gambut_persen": 35.0
+      },
+      "status": "kritis",
+      "baterai_persen": 88,
+      "simulasi": true
+    },
+    {
+      "node_id": "IOT-KTG-02",
+      "nama": "Sekat Bakar 4, Pulang Pisau",
+      "lat": -2.2153,
+      "lon": 113.8334,
+      "waktu": "2026-08-03T08:20:00+07:00",
+      "bacaan": {
+        "suhu_c": 38.6,
+        "kelembapan_persen": 33.9,
+        "pm25_ugm3": 48.2,
+        "kelembapan_gambut_persen": 33.4
+      },
+      "ambang": {
+        "suhu_c": 41.0,
+        "kelembapan_persen": 30.0,
+        "pm25_ugm3": 55.0,
+        "kelembapan_gambut_persen": 35.0
+      },
+      "status": "waspada",
+      "baterai_persen": 76,
+      "simulasi": true
+    },
+    {
+      "node_id": "IOT-OKI-01",
+      "nama": "Menara Pantau OKI",
+      "lat": -2.2862,
+      "lon": 113.7735,
+      "waktu": "2026-08-03T08:20:00+07:00",
+      "bacaan": {
+        "suhu_c": 42.1,
+        "kelembapan_persen": 28.7,
+        "pm25_ugm3": 62.5,
+        "kelembapan_gambut_persen": 31.8
+      },
+      "ambang": {
+        "suhu_c": 41.0,
+        "kelembapan_persen": 30.0,
+        "pm25_ugm3": 55.0,
+        "kelembapan_gambut_persen": 35.0
+      },
+      "status": "kritis",
+      "baterai_persen": 64,
+      "simulasi": true
+    },
+    {
+      "node_id": "IOT-JBI-01",
+      "nama": "Gambut Muaro Jambi",
+      "lat": -2.2965,
+      "lon": 113.8925,
+      "waktu": "2026-08-03T08:20:00+07:00",
+      "bacaan": {
+        "suhu_c": 36.9,
+        "kelembapan_persen": 41.2,
+        "pm25_ugm3": 39.4,
+        "kelembapan_gambut_persen": 34.2
+      },
+      "ambang": {
+        "suhu_c": 41.0,
+        "kelembapan_persen": 30.0,
+        "pm25_ugm3": 55.0,
+        "kelembapan_gambut_persen": 35.0
+      },
+      "status": "waspada",
+      "baterai_persen": 91,
+      "simulasi": true
+    },
+    {
+      "node_id": "IOT-RIA-01",
+      "nama": "Konsesi Siak Blok 2",
+      "lat": -2.16,
+      "lon": 113.7648,
+      "waktu": "2026-08-03T08:20:00+07:00",
+      "bacaan": {
+        "suhu_c": 31.4,
+        "kelembapan_persen": 58.3,
+        "pm25_ugm3": 21.7,
+        "kelembapan_gambut_persen": 52.6
+      },
+      "ambang": {
+        "suhu_c": 41.0,
+        "kelembapan_persen": 30.0,
+        "pm25_ugm3": 55.0,
+        "kelembapan_gambut_persen": 35.0
+      },
+      "status": "normal",
+      "baterai_persen": 82,
+      "simulasi": true
+    },
+    {
+      "node_id": "IOT-KBR-01",
+      "nama": "Kubu Raya Selatan",
+      "lat": -2.1881,
+      "lon": 113.9338,
+      "waktu": "2026-08-03T08:20:00+07:00",
+      "bacaan": {
+        "suhu_c": 33.8,
+        "kelembapan_persen": 49.1,
+        "pm25_ugm3": 28.9,
+        "kelembapan_gambut_persen": 44.7
+      },
+      "ambang": {
+        "suhu_c": 41.0,
+        "kelembapan_persen": 30.0,
+        "pm25_ugm3": 55.0,
+        "kelembapan_gambut_persen": 35.0
+      },
+      "status": "normal",
+      "baterai_persen": 69,
+      "simulasi": true
+    }
+  ]
+}

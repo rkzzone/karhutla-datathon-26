@@ -1,0 +1,290 @@
+% =====================================================================
+% Lampiran tambahan — menutup sub-kriteria rubrik yang belum punya
+% tempat eksplisit: 1a (pengguna & pain point), 2a/2b/2c (adopsi,
+% kelayakan, skalabilitas), 4a (alur pengguna ujung-ke-ujung),
+% serta diagram sistem dari concept paper penyisihan.
+%
+% Disisipkan di lampiran.tex, TIDAK dihitung dalam batas 12 halaman.
+% =====================================================================
+
+\section{Pengguna Sasaran dan Titik Nyeri Operasional}
+\label{app:pengguna}
+
+\subsection*{Segmen pengguna}
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabular}{p{2.6cm}p{4.2cm}p{5.2cm}}
+\hline
+\textbf{Segmen} & \textbf{Siapa} & \textbf{Yang berubah bila sistem dipakai} \\
+\hline
+Instansi penanggulangan &
+Manggala Agni, BNPB, dinas kehutanan daerah &
+Dasar objektif untuk memilih hotspot mana yang diverifikasi lebih dulu, sebelum
+tim dan bahan bakar dikeluarkan \\
+Pemegang konsesi &
+Perusahaan perkebunan sawit dan hutan tanaman industri di lanskap gambut &
+Bukti pemantauan mandiri atas areal yang menjadi tanggung jawab mutlaknya
+menurut Pasal~88 UU~32/2009 \\
+Operator papan pantau &
+Petugas posko, bukan tenaga pembelajaran mesin &
+Antarmuka berbahasa Indonesia dengan prioritas terurut, keandalan per sensor,
+dan tiga tombol keputusan \\
+\hline
+\end{tabular}
+\caption{Segmen pengguna sasaran dan perubahan yang dijanjikan sistem.}
+\end{table}
+
+\subsection*{Titik nyeri, sumbernya, dan jawaban sistem}
+
+Empat titik nyeri di bawah berasal dari wawancara narasumber ahli
+(Bagian~5) dan dari karakteristik infrastruktur pemantauan yang berlaku umum.
+Titik nyeri yang tidak memiliki sumber terverifikasi tidak kami cantumkan.
+
+\begin{enumerate}
+\item \textbf{Hotspot satelit memicu, tetapi tidak mengonfirmasi.} FIRMS
+menandai anomali termal beresolusi 375~m; tungku industri, suar gas, dan tanah
+panas ikut terdeteksi. Tim lapangan tidak punya dasar objektif untuk memilih
+mana yang dikejar duluan. \emph{Jawaban sistem}: lapisan konfirmasi visual
+beresolusi tinggi yang mengubah anomali termal menjadi penilaian ber-keyakinan,
+bukan sekadar titik di peta.
+
+\item \textbf{Drone dipakai setelah kebakaran diketahui, bukan sebelumnya.}
+Narasumber menyatakan pemanfaatan drone selama ini terbatas pada pengambilan
+citra berkala, misalnya tiap satu jam, sesudah kebakaran terjadi, dengan
+penyebaran api diprediksi manual. \emph{Jawaban sistem}: menempatkan model pada
+fase verifikasi awal, sehingga keluarannya menjadi masukan keputusan pengerahan,
+bukan dokumentasi pasca-kejadian.
+
+\item \textbf{Daya tahan baterai membatasi cakupan patroli.} Sekitar 30 menit
+tanpa beban tambahan, dan lebih singkat bila drone juga mengirim data mentah.
+\emph{Jawaban sistem}: inferensi berjalan di perangkat dan yang dikirim hanya
+\emph{alert}, bukan aliran video, sehingga anggaran daya untuk komunikasi
+ditekan.
+
+\item \textbf{Sensor dapat gagal justru saat paling dibutuhkan.} Asap pekat
+membutakan kanal optik; \emph{drift} kalibrasi mengganggu kanal termal; sebagian
+armada tidak membawa sensor termal sama sekali. \emph{Jawaban sistem}: pelatihan
+dengan \emph{modality dropout} sehingga sistem tetap memberi keluaran saat satu
+kanal hilang, disertai skor keandalan yang menyatakan sedang bersandar pada
+sensor mana.
+\end{enumerate}
+
+\section{Jalur Adopsi, Kelayakan Implementasi, dan Skalabilitas}
+\label{app:adopsi}
+
+\subsection*{Jalur adopsi, empat tahap}
+
+Jalur di bawah disusun agar tiap tahap menghasilkan sesuatu yang dapat dinilai
+sebelum tahap berikutnya dibiayai, bukan sebagai rencana sekali jalan.
+
+\begin{enumerate}
+\item \textbf{Menumpang alur yang sudah berjalan.} Instansi sudah memakai
+FIRMS dan SiPongi. Sistem ini tidak menggantikannya, melainkan menambahkan
+lapisan konfirmasi sesudah pemicu. Tidak ada proses eksisting yang harus
+dihentikan agar sistem dapat dipakai.
+\item \textbf{Pilot satu posko.} Satu posko, armada drone yang sudah dimiliki,
+papan pantau di peramban. Keluaran yang dinilai: berapa banyak hotspot yang
+tersaring sebelum tim berangkat, dan seberapa sering operator menyetujui
+penilaian sistem.
+\item \textbf{Perluasan wilayah.} Area pantau bersifat parameter, bukan kode,
+sehingga penambahan wilayah tidak memerlukan perubahan model.
+\item \textbf{Adaptasi lanskap.} Lanskap dengan karakteristik visual berbeda
+ditangani melalui siklus adaptasi domain ringan per wilayah, bukan pelatihan
+ulang dari nol.
+\end{enumerate}
+
+Peran operasional dipisahkan tegas: operator posko menjalankan sistem harian dan
+mengambil keputusan; tenaga teknis hanya dibutuhkan pada tahap pemasangan dan
+siklus adaptasi. Sistem tidak menuntut instansi memelihara kompetensi
+pembelajaran mesin secara permanen.
+
+\subsection*{Kelayakan implementasi}
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabular}{p{3.0cm}p{8.8cm}}
+\hline
+\textbf{Aspek} & \textbf{Status terverifikasi} \\
+\hline
+Anggaran komputasi &
+Seluruh pelatihan Stage 1--7 berjalan pada kuota GPU gratis, satu run 20--60
+menit. Arsitektur memang diturunkan dari asumsi satu GPU kelas menengah:
+\emph{backbone} kecil, 9 dari 12 blok dibekukan, ubin $224 \times 224$. \\
+Ketersediaan data &
+Seluruh data pelatihan berasal dari sumber publik gratis dengan lisensi jelas
+(FLAME~2 CC~BY~4.0, anotasi RFFNet MIT, FLAME~3). Tidak ada dependensi data
+berbayar. \\
+Kebutuhan inferensi &
+117,5~ms per bingkai pada CPU laptop kelas menengah tanpa akselerator, presisi
+fp32. Berjalan tanpa GPU. \\
+Dependensi eksternal &
+Hanya API hotspot satelit publik gratis dan basemap peta. Kegagalan salah
+satunya tidak melumpuhkan halaman: lapisan lain tetap tersaji. \\
+Kebutuhan jaringan &
+Inferensi tidak memerlukan jaringan. Jaringan hanya dibutuhkan untuk lapisan
+hotspot dan basemap. \\
+Kendala hukum dan privasi &
+Dibahas pada Bagian~6; mitigasi yang belum berjalan dinyatakan sebagai
+rancangan, bukan disajikan sebagai perlindungan yang sudah ada. \\
+\hline
+\end{tabular}
+\caption{Aspek kelayakan implementasi dan status verifikasinya.}
+\end{table}
+
+\subsection*{Skalabilitas}
+
+Skalabilitas kami nyatakan berdasarkan tiga hasil yang terukur, bukan janji.
+
+\textbf{Pertama, biaya marginal per patroli mendekati nol.} Inferensi berjalan
+di perangkat sendiri tanpa API berbayar, sehingga menambah frekuensi atau
+cakupan patroli tidak menambah biaya perangkat lunak sama sekali. Biaya
+berulang satu-satunya adalah hosting papan pantau.
+
+\textbf{Kedua, perpindahan ke dataset dan lokasi lain tidak menuntut pelatihan
+ulang.} Akurasi \emph{zero-shot} 92\% ke FLAME~3, tanpa satu pun sampel
+adaptasi, menunjukkan representasi yang dipelajari tidak terkunci pada satu
+himpunan data. Batasnya jelas dan kami nyatakan: kedua dataset berada di
+Amerika Serikat dan beriklim sedang, sehingga angka ini bukan bukti transfer ke
+gambut tropis.
+
+\textbf{Ketiga, perluasan ke lanskap baru tidak menuntut anotasi piksel.} Jalur
+lokalisasi tanpa label mencapai \emph{pointing game accuracy} 0,6133 pada
+partisi uji. Anotasi piksel adalah komponen termahal dalam menyiapkan wilayah
+baru, dan hasil ini menunjukkan lokalisasi tetap berjalan tanpanya, meski dengan
+mutu yang lebih rendah daripada jalur bersupervisi penuh.
+
+Yang membatasi skalabilitas dan tidak kami tutupi: adaptasi \emph{few-shot}
+dengan LoRA menghasilkan kurva yang tidak monoton dan tidak stabil antar-run,
+sehingga jumlah sampel yang dibutuhkan untuk pindah ke domain baru
+\textbf{belum dapat kami tetapkan}.
+
+\section{Alur Pengguna Ujung-ke-Ujung}
+\label{app:alur}
+
+Alur inti berikut berjalan penuh pada purwarupa dan dapat ditelusuri pada
+\emph{deployment}.
+
+\begin{enumerate}
+\item \textbf{Pemicu.} Hotspot satelit ditarik langsung untuk area pantau
+Sumatra dan Kalimantan, atau penugasan patroli terjadwal. Titik ditampilkan di
+peta operasi dengan pembeda sumber dan legenda tetap.
+\item \textbf{Penilaian.} Bingkai RGB dan termal dari patroli diproses model
+fusi. Keluarannya mengikuti satu kontrak tunggal: label dan keyakinan prediksi,
+skor keandalan per modalitas, jalur peta lokalisasi beserta metodenya, sumber
+pemicu, dan medan keputusan operator.
+\item \textbf{Prioritas.} Panel \emph{alert} menampilkan daftar terurut menurut
+risiko. Tiap kartu membawa lencana modalitas, sehingga operator langsung tahu
+penilaian itu bersandar pada sensor mana.
+\item \textbf{Verifikasi.} Halaman rincian menyandingkan bingkai RGB dan termal
+dengan tumpang-tindih lokalisasi yang dapat diatur opasitasnya, keandalan per
+modalitas, dan catatan provenans citra.
+\item \textbf{Keputusan.} Operator memilih satu dari tiga tindakan:
+ditindaklanjuti, ditunda, atau alarm palsu. Pilihan tercatat pada jejak
+keputusan dan menjadi umpan balik untuk kalibrasi ambang.
+\end{enumerate}
+
+\paragraph{Penanganan kegagalan.} Empat kondisi gagal ditangani dan dapat
+diperagakan: layanan hotspot tidak merespons menghasilkan pesan berbahasa
+Indonesia disertai penyajian salinan terakhir yang berhasil, dan peta tetap
+dapat dipakai karena lapisan lain tidak terpengaruh; galat parsing menghasilkan
+pesan fungsional, bukan jejak galat teknis di layar operator; citra yang tidak
+tersedia menghasilkan penampung, bukan gambar rusak; dan hilangnya satu
+modalitas \textbf{bukan kondisi galat} melainkan jalur yang dirancang, sistem
+tetap memberi prediksi dan lencana keandalan berubah menyatakan pergeseran
+sandaran.
+
+Butir terakhir adalah titik temu antara kontribusi teknis dan pengalaman
+pengguna: perilaku yang pada sistem lain akan menjadi kegagalan, di sini menjadi
+keluaran yang dapat dibaca operator.
+
+\section{Rancangan Awal dan Perubahannya setelah Eksperimen}
+\label{app:diagram}
+
+Kedua diagram pada lampiran ini adalah \textbf{rancangan yang diajukan pada
+\emph{concept paper} penyisihan}, disertakan tanpa penyuntingan agar rancangan
+awal dan hasil akhir dapat dibandingkan langsung. Keduanya
+\textbf{bukan gambaran sistem sebagaimana terwujud}. Tabel~\ref{tab:perubahan}
+memerinci setiap komponen yang berubah, tidak terlaksana, atau bertambah, dan
+tabel itulah yang berlaku bila terjadi perbedaan dengan gambar.
+
+\begin{table}[!htbp]
+\centering
+\small
+\begin{tabular}{p{4.6cm}p{7.6cm}}
+\hline
+\textbf{Pada rancangan awal} & \textbf{Yang benar-benar terjadi} \\
+\hline
+\multicolumn{2}{l}{\emph{Data dan protokol}} \\
+Dataset FLAME, FLAME~2, dan D-Fire &
+FLAME~2 untuk pra-pelatihan, anotasi piksel RFFNet untuk \emph{fine-tuning},
+FLAME~3 untuk uji kesenjangan domain. FLAME~1 dan D-Fire tidak dipakai \\
+Pemisahan per-adegan &
+Partisi resmi RFFNet berbasis daftar, dengan anti-kebocoran lewat eksklusi 440
+indeks bingkai dari himpunan latih FLAME~2 \\
+\hline
+\multicolumn{2}{l}{\emph{Model}} \\
+\emph{Head} deteksi \emph{anchor-free} dengan keluaran kotak pembatas &
+Tidak dibangun. Keluaran model adalah label tiga kelas beserta keyakinan, dan
+masker segmentasi \\
+Pembanding \emph{backbone} ViT-B/16 (Ablation~\#4) &
+Tidak dijalankan; Ablation~\#4 tidak terlaksana \\
+\emph{Encoder} termal $\pm 2{,}5$ juta parameter &
+1.273.256 parameter \\
+\emph{Encoder} RGB $\pm 21$ juta ($\pm 5$ juta terlatih) &
+22.056.576 parameter, 5.326.464 di antaranya terlatih \\
+Tidak tergambar &
+\textbf{Bertambah}: \emph{reliability gate} (Stage~5, 115.202 parameter), dua
+jalur lokalisasi (Stage~6), dan adaptasi domain LoRA (Stage~7) \\
+\hline
+\multicolumn{2}{l}{\emph{Masukan dan penerapan}} \\
+Kotak "informasi lain (cuaca, riwayat lahan)" pada lapisan verifikasi &
+\textbf{Tidak diimplementasikan.} Model hanya menerima citra RGB dan termal;
+variabel lingkungan bukan masukan, sesuai batasan~(ii) pada
+Subbagian~\ref{sec:batasan} \\
+Masukan berupa ubin $224 \times 224$ &
+Model beroperasi pada bingkai penuh, sehingga latensi per-ubin sama dengan
+latensi per-bingkai \\
+Target latensi $<100$ ms/ubin pada perangkat tepi kelas Jetson, diverifikasi
+melalui Ablation~\#4 &
+\textbf{Tidak ada perangkat Jetson yang diuji} dan Ablation~\#4 tidak
+dijalankan. Yang terukur: 117{,}5 ms per bingkai, ONNX fp32, laptop Lenovo
+ThinkPad T480 \\
+Mesin data sintetis \emph{diffusion} (ditandai \emph{roadmap}) &
+Tetap di luar jalur kritis dan tidak dikerjakan, sesuai rencana \\
+\hline
+\end{tabular}
+\caption{Perbedaan antara rancangan pada \emph{concept paper} penyisihan dan
+sistem yang terwujud. Bila gambar dan tabel ini berbeda, tabel ini yang
+berlaku.}
+\label{tab:perubahan}
+\end{table}
+
+Kami menyajikan perbandingan ini secara terbuka alih-alih menyunting gambar
+lama, karena selisih antara rancangan dan hasil adalah bagian dari laporan:
+empat komponen tidak terlaksana, tiga komponen bertambah, dan satu asumsi
+masukan dibatalkan.
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{diagramalureksperimen.png}
+\caption{	extbf{Rancangan awal} alur eksperimen sebagaimana diajukan pada
+\emph{concept paper} penyisihan, bukan alur sebagaimana terlaksana. Komponen
+yang tidak terlaksana (pembanding ViT-B/16, Ablation~\#4, \emph{head} deteksi)
+dan yang bertambah dirinci pada Tabel~ef{tab:perubahan}.}
+\label{fig:alur}
+\end{figure}
+
+\begin{figure}[!htbp]
+\centering
+\includegraphics[width=\textwidth]{arsitektursistem.png}
+\caption{	extbf{Rancangan awal} arsitektur sistem dan \emph{pipeline} model
+dari \emph{concept paper} penyisihan. Bagian atas menunjukkan alur keputusan
+operasional dari pemicu satelit hingga penerusan \emph{alert}; panel bawah
+memerinci jalur model. Jumlah parameter, \emph{head} deteksi, kotak masukan
+cuaca, dan target latensi Jetson pada gambar ini 	extbf{tidak terwujud atau
+berbeda}; lihat Tabel~ef{tab:perubahan}.}
+\label{fig:arsitektur}
+\end{figure}

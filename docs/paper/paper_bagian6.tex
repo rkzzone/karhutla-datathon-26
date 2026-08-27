@@ -1,0 +1,74 @@
+% =====================================================================
+% Bagian 6 — Responsible AI dan Keterbatasan  (target 1,25 halaman)
+% Enam kategori rubrik disajikan sebagai tabel padat, bukan tujuh paragraf.
+% Kolom "Status" WAJIB dipertahankan — ia yang memisahkan mitigasi yang
+% sudah berjalan dari yang baru rancangan.
+% =====================================================================
+
+\section{Responsible AI dan Keterbatasan}
+\label{sec:keterbatasan}
+
+\subsection{Risiko dan mitigasi}
+
+Sistem ini mengeluarkan penilaian yang memicu pengerahan tim ke lapangan, pada
+lanskap tempat kepemilikan lahan, tanggung jawab hukum, dan kepentingan
+masyarakat bersinggungan.
+
+Enam kategori risiko beserta mitigasinya dirinci pada Tabel~\ref{tab:risiko}
+(Lampiran~\ref{app:risiko}), dengan kolom status yang memisahkan mitigasi yang
+\textbf{sudah berjalan} pada purwarupa dari yang \textbf{baru rancangan}; tanpa
+pembedaan itu, daftar mitigasi akan terbaca sebagai perlindungan yang sudah ada.
+Yang sudah berjalan: kunci API tersimpan di sisi server dan tidak pernah masuk
+log, galat tidak bocor ke layar operator, fusi menekan alarm palsu termal ke nol,
+dan keputusan akhir tetap di tangan operator. Yang masih rancangan: pengaburan
+wajah dan pelat kendaraan, autentikasi papan pantau, kontrol akses berbasis
+peran, log akses, serta pembatasan formal terhadap penggunaan ulang data untuk
+pengawasan masyarakat.
+
+Tiga catatan memerlukan penegasan. \textbf{Halusinasi} tidak berlaku karena model
+bersifat diskriminatif; risiko analognya, keyakinan berlebih di luar distribusi
+latih, memberi indikasi awal yang menenangkan: pada jalur termal-saja, keyakinan
+rata-rata saat model keliru adalah $0{,}691$ dibanding $0{,}994$ saat benar.
+\textbf{Keselamatan} didukung bukti langsung: \emph{recall} deteksi kejadian api
+bernilai $1{,}000$ pada seluruh partisi dan level degradasi, dan seluruh
+kesalahan berupa alarm palsu yang mekanismenya teridentifikasi
+(Subbagian~4.9), risiko yang nyata untuk gambut, karena permukaan gambut kering
+terbuka memanas ekstrem pada siang hari. \textbf{Generalisasi \emph{zero-shot}
+92\% ke FLAME~3 bukan bukti transfer ke gambut tropis}: kedua dataset berada di
+Amerika Serikat dan beriklim sedang.
+
+Beberapa keputusan antarmuka ditujukan khusus agar sistem tidak tampak lebih
+matang daripada kenyataannya, dan seluruhnya sudah berjalan: sensor darat
+berlabel "simulasi" di setiap titik kemunculannya; blok latensi perangkat tepi
+menampilkan "---" alih-alih angka rekaan; keadaan data yang belum dianalisis
+tampil sebagai label eksplisit, bukan nilai kosong yang menyerupai galat;
+catatan provenans menyatakan bingkai citra berasal dari FLAME~2 (Arizona) dengan
+koordinat penempatan simulasi; dan penanda sumber data membedakan data karangan,
+keluaran model, serta layanan hidup, ditulis otomatis oleh skrip inferensi
+sehingga tidak dapat tertinggal basi. Sistem memberi prioritas, bukan
+keputusan, operator menetapkan tindak lanjut melalui tiga pilihan yang terekam
+pada jejak keputusan.
+
+\subsection{Keterbatasan}
+
+Ancaman terhadap validitas eksperimen diuraikan pada Subbagian~4.11; berikut
+keterbatasan pada tingkat sistem dan penerapan. \textbf{Domain:} tidak ada satu
+pun bingkai gambut tropis dalam seluruh pelatihan maupun evaluasi; sistem
+dirancang untuk rezim membara dan divalidasi pada proksi terukur, dan belum
+tervalidasi untuk gambut. \textbf{Variabel lingkungan:} kecepatan angin, suhu,
+kelembapan, dan jenis vegetasi tidak menjadi masukan, keterbatasan yang
+diidentifikasi narasumber ahli, sehingga keluaran berlaku pada asumsi kondisi
+yang tidak diverifikasi. \textbf{Pemicu satelit:} data bersifat \emph{near
+real-time} beresolusi 375~m, terhalang tutupan awan, menandai anomali termal
+alih-alih kebakaran, dan belum divalidasi silang dengan keluaran model
+(Lampiran~\ref{app:firms}). \textbf{Komponen yang belum nyata:} sensor darat
+simulasi, rute patroli contoh, inferensi \emph{batch} luring, dan keputusan
+operator tersimpan di memori proses. \textbf{Validasi pengguna:} tiga partisipan
+mahasiswa alih-alih operator posko dan tanpa tekanan waktu, satu narasumber
+ahli, serta evaluasi heuristik oleh pembangun produk sendiri. \textbf{Pengukuran
+tepi:} tidak ada perangkat tepi fisik yang diuji, dan dampak kuantisasi terhadap
+akurasi tidak dapat ditetapkan.
+
+Kami memilih menyatakan keterbatasan ini secara rinci alih-alih meringkasnya.
+Sistem yang menentukan ke mana tim pemadam dikerahkan tidak layak dinilai dari
+klaim yang tidak dapat ditelusuri.

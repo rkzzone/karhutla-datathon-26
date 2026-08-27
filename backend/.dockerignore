@@ -1,0 +1,16 @@
+# Rahasia — MAP_KEY diisi lewat environment variable penyedia, tidak pernah
+# ikut ke dalam image.
+.env
+.env.*
+
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Skrip inference butuh torch + checkpoint tim model; keduanya tidak ada di
+# runtime dan tidak perlu masuk image.
+scripts/
+
+Dockerfile
+.dockerignore

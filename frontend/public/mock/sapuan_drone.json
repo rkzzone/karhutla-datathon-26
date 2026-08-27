@@ -1,0 +1,2375 @@
+{
+  "catatan": "Rencana sapuan verifikasi drone, dihitung aturan deterministik (Orienteering Problem: sisipan serakah + 2-opt) — bukan keluaran model. Jalur berupa garis lurus karena drone terbang; jalan tidak relevan baginya. Titik di luar daftar bukan berarti aman, hanya belum terjangkau penerbangan ini.",
+  "pangkalan": {
+    "nama": "Posko lapangan Kereng Bangkirai",
+    "lat": -2.2542,
+    "lon": 113.8192
+  },
+  "asumsi": {
+    "daya_tahan_menit": 30.0,
+    "laju_mps": 15.0,
+    "hover_detik_per_titik": 60.0,
+    "marjin_cadangan": 0.2,
+    "sumber_daya_tahan": "keterangan Dr. Supriyanto, 7 Agustus 2026",
+    "sumber_laju_dan_hover": "asumsi tim ini, TIDAK diukur"
+  },
+  "anggaran_menit": 24.0,
+  "jarak_km": 9.6,
+  "durasi_menit": 23.7,
+  "urutan": [
+    {
+      "id": "FIRMS-0024",
+      "lat": -2.23938,
+      "lon": 113.80316,
+      "frp_mw": 12.15,
+      "kecerahan_k": 325.11,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 12.15,
+      "jarak_pangkalan_km": 2.43
+    },
+    {
+      "id": "FIRMS-0036",
+      "lat": -2.23705,
+      "lon": 113.80036,
+      "frp_mw": 13.76,
+      "kecerahan_k": 330.48,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 13.76,
+      "jarak_pangkalan_km": 2.83
+    },
+    {
+      "id": "FIRMS-0050",
+      "lat": -2.23604,
+      "lon": 113.79816,
+      "frp_mw": 20.21,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 20.21,
+      "jarak_pangkalan_km": 3.09
+    },
+    {
+      "id": "FIRMS-0073",
+      "lat": -2.2321,
+      "lon": 113.79625,
+      "frp_mw": 20.13,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 20.13,
+      "jarak_pangkalan_km": 3.54
+    },
+    {
+      "id": "FIRMS-0076",
+      "lat": -2.23233,
+      "lon": 113.79513,
+      "frp_mw": 20.01,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 20.01,
+      "jarak_pangkalan_km": 3.61
+    },
+    {
+      "id": "FIRMS-0068",
+      "lat": -2.23541,
+      "lon": 113.79427,
+      "frp_mw": 20.21,
+      "kecerahan_k": 356.16,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 20.21,
+      "jarak_pangkalan_km": 3.47
+    },
+    {
+      "id": "FIRMS-0052",
+      "lat": -2.23668,
+      "lon": 113.79697,
+      "frp_mw": 20.13,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 20.13,
+      "jarak_pangkalan_km": 3.15
+    },
+    {
+      "id": "FIRMS-0004",
+      "lat": -2.25295,
+      "lon": 113.8126,
+      "frp_mw": 7.71,
+      "kecerahan_k": 331.84,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.71,
+      "jarak_pangkalan_km": 0.75
+    },
+    {
+      "id": "FIRMS-0001",
+      "lat": -2.25677,
+      "lon": 113.81796,
+      "frp_mw": 7.71,
+      "kecerahan_k": 331.2,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.71,
+      "jarak_pangkalan_km": 0.32
+    },
+    {
+      "id": "FIRMS-0005",
+      "lat": -2.26135,
+      "lon": 113.81868,
+      "frp_mw": 16.28,
+      "kecerahan_k": 341.22,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 16.28,
+      "jarak_pangkalan_km": 0.8
+    },
+    {
+      "id": "FIRMS-0006",
+      "lat": -2.2606,
+      "lon": 113.82331,
+      "frp_mw": 7.47,
+      "kecerahan_k": 332.61,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.47,
+      "jarak_pangkalan_km": 0.85
+    },
+    {
+      "id": "FIRMS-0002",
+      "lat": -2.25602,
+      "lon": 113.82259,
+      "frp_mw": 11.5,
+      "kecerahan_k": 330.83,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 11.5,
+      "jarak_pangkalan_km": 0.43
+    },
+    {
+      "id": "FIRMS-0000",
+      "lat": -2.2542,
+      "lon": 113.81925,
+      "frp_mw": 4.16,
+      "kecerahan_k": 306.71,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.16,
+      "jarak_pangkalan_km": 0.01
+    }
+  ],
+  "di_luar_jangkauan": [
+    {
+      "id": "FIRMS-0003",
+      "lat": -2.2589,
+      "lon": 113.81846,
+      "frp_mw": 2.79,
+      "kecerahan_k": 310.15,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.79,
+      "jarak_pangkalan_km": 0.53
+    },
+    {
+      "id": "FIRMS-0007",
+      "lat": -2.2636,
+      "lon": 113.81767,
+      "frp_mw": 2.79,
+      "kecerahan_k": 313.32,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.79,
+      "jarak_pangkalan_km": 1.06
+    },
+    {
+      "id": "FIRMS-0008",
+      "lat": -2.26437,
+      "lon": 113.81756,
+      "frp_mw": 4.08,
+      "kecerahan_k": 322.35,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.08,
+      "jarak_pangkalan_km": 1.15
+    },
+    {
+      "id": "FIRMS-0009",
+      "lat": -2.26911,
+      "lon": 113.82184,
+      "frp_mw": 3.03,
+      "kecerahan_k": 307.39,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.03,
+      "jarak_pangkalan_km": 1.68
+    },
+    {
+      "id": "FIRMS-0010",
+      "lat": -2.26976,
+      "lon": 113.82475,
+      "frp_mw": 6.48,
+      "kecerahan_k": 344.5,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.48,
+      "jarak_pangkalan_km": 1.84
+    },
+    {
+      "id": "FIRMS-0011",
+      "lat": -2.27093,
+      "lon": 113.81931,
+      "frp_mw": 9.02,
+      "kecerahan_k": 329.69,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 9.02,
+      "jarak_pangkalan_km": 1.86
+    },
+    {
+      "id": "FIRMS-0012",
+      "lat": -2.26992,
+      "lon": 113.82678,
+      "frp_mw": 3.03,
+      "kecerahan_k": 326.81,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.03,
+      "jarak_pangkalan_km": 1.94
+    },
+    {
+      "id": "FIRMS-0013",
+      "lat": -2.26902,
+      "lon": 113.82939,
+      "frp_mw": 6.48,
+      "kecerahan_k": 341.77,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.48,
+      "jarak_pangkalan_km": 2.0
+    },
+    {
+      "id": "FIRMS-0014",
+      "lat": -2.26975,
+      "lon": 113.82865,
+      "frp_mw": 3.89,
+      "kecerahan_k": 341.99,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.89,
+      "jarak_pangkalan_km": 2.02
+    },
+    {
+      "id": "FIRMS-0015",
+      "lat": -2.27263,
+      "lon": 113.82421,
+      "frp_mw": 3.66,
+      "kecerahan_k": 323.01,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.66,
+      "jarak_pangkalan_km": 2.12
+    },
+    {
+      "id": "FIRMS-0016",
+      "lat": -2.27333,
+      "lon": 113.82229,
+      "frp_mw": 9.1,
+      "kecerahan_k": 327.19,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 9.1,
+      "jarak_pangkalan_km": 2.15
+    },
+    {
+      "id": "FIRMS-0017",
+      "lat": -2.23997,
+      "lon": 113.80582,
+      "frp_mw": 10.02,
+      "kecerahan_k": 332.47,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 10.02,
+      "jarak_pangkalan_km": 2.17
+    },
+    {
+      "id": "FIRMS-0018",
+      "lat": -2.27072,
+      "lon": 113.83172,
+      "frp_mw": 4.91,
+      "kecerahan_k": 325.25,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.91,
+      "jarak_pangkalan_km": 2.3
+    },
+    {
+      "id": "FIRMS-0019",
+      "lat": -2.27037,
+      "lon": 113.83253,
+      "frp_mw": 3.89,
+      "kecerahan_k": 319.22,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.89,
+      "jarak_pangkalan_km": 2.33
+    },
+    {
+      "id": "FIRMS-0020",
+      "lat": -2.27325,
+      "lon": 113.82809,
+      "frp_mw": 3.72,
+      "kecerahan_k": 330.46,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.72,
+      "jarak_pangkalan_km": 2.34
+    },
+    {
+      "id": "FIRMS-0022",
+      "lat": -2.25062,
+      "lon": 113.798,
+      "frp_mw": 5.65,
+      "kecerahan_k": 342.22,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.65,
+      "jarak_pangkalan_km": 2.39
+    },
+    {
+      "id": "FIRMS-0021",
+      "lat": -2.2373,
+      "lon": 113.80593,
+      "frp_mw": 4.36,
+      "kecerahan_k": 320.54,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.36,
+      "jarak_pangkalan_km": 2.39
+    },
+    {
+      "id": "FIRMS-0023",
+      "lat": -2.27462,
+      "lon": 113.826,
+      "frp_mw": 3.03,
+      "kecerahan_k": 312.09,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.03,
+      "jarak_pangkalan_km": 2.39
+    },
+    {
+      "id": "FIRMS-0025",
+      "lat": -2.24154,
+      "lon": 113.80099,
+      "frp_mw": 7.05,
+      "kecerahan_k": 322.96,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.05,
+      "jarak_pangkalan_km": 2.46
+    },
+    {
+      "id": "FIRMS-0026",
+      "lat": -2.2736,
+      "lon": 113.83012,
+      "frp_mw": 6.48,
+      "kecerahan_k": 334.52,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.48,
+      "jarak_pangkalan_km": 2.47
+    },
+    {
+      "id": "FIRMS-0027",
+      "lat": -2.24072,
+      "lon": 113.80119,
+      "frp_mw": 10.02,
+      "kecerahan_k": 345.7,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 10.02,
+      "jarak_pangkalan_km": 2.5
+    },
+    {
+      "id": "FIRMS-0028",
+      "lat": -2.24604,
+      "lon": 113.79729,
+      "frp_mw": 5.65,
+      "kecerahan_k": 333.24,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.65,
+      "jarak_pangkalan_km": 2.6
+    },
+    {
+      "id": "FIRMS-0029",
+      "lat": -2.23539,
+      "lon": 113.80511,
+      "frp_mw": 10.02,
+      "kecerahan_k": 335.21,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 10.02,
+      "jarak_pangkalan_km": 2.61
+    },
+    {
+      "id": "FIRMS-0030",
+      "lat": -2.23379,
+      "lon": 113.80649,
+      "frp_mw": 4.36,
+      "kecerahan_k": 313.45,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.36,
+      "jarak_pangkalan_km": 2.67
+    },
+    {
+      "id": "FIRMS-0032",
+      "lat": -2.23683,
+      "lon": 113.80178,
+      "frp_mw": 7.05,
+      "kecerahan_k": 341.01,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.05,
+      "jarak_pangkalan_km": 2.73
+    },
+    {
+      "id": "FIRMS-0031",
+      "lat": -2.23667,
+      "lon": 113.80205,
+      "frp_mw": 4.36,
+      "kecerahan_k": 342.32,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.36,
+      "jarak_pangkalan_km": 2.73
+    },
+    {
+      "id": "FIRMS-0033",
+      "lat": -2.24306,
+      "lon": 113.79704,
+      "frp_mw": 2.96,
+      "kecerahan_k": 311.55,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.96,
+      "jarak_pangkalan_km": 2.76
+    },
+    {
+      "id": "FIRMS-0034",
+      "lat": -2.23596,
+      "lon": 113.80161,
+      "frp_mw": 13.68,
+      "kecerahan_k": 350.08,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 13.68,
+      "jarak_pangkalan_km": 2.82
+    },
+    {
+      "id": "FIRMS-0035",
+      "lat": -2.24012,
+      "lon": 113.79806,
+      "frp_mw": 7.48,
+      "kecerahan_k": 329.9,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 7.48,
+      "jarak_pangkalan_km": 2.82
+    },
+    {
+      "id": "FIRMS-0037",
+      "lat": -2.24147,
+      "lon": 113.79658,
+      "frp_mw": 7.93,
+      "kecerahan_k": 333.94,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.93,
+      "jarak_pangkalan_km": 2.88
+    },
+    {
+      "id": "FIRMS-0039",
+      "lat": -2.23615,
+      "lon": 113.80048,
+      "frp_mw": 10.02,
+      "kecerahan_k": 354.7,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 10.02,
+      "jarak_pangkalan_km": 2.89
+    },
+    {
+      "id": "FIRMS-0038",
+      "lat": -2.2472,
+      "lon": 113.79418,
+      "frp_mw": 7.48,
+      "kecerahan_k": 337.1,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 7.48,
+      "jarak_pangkalan_km": 2.89
+    },
+    {
+      "id": "FIRMS-0040",
+      "lat": -2.23955,
+      "lon": 113.7976,
+      "frp_mw": 2.96,
+      "kecerahan_k": 344.24,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.96,
+      "jarak_pangkalan_km": 2.9
+    },
+    {
+      "id": "FIRMS-0041",
+      "lat": -2.24534,
+      "lon": 113.79417,
+      "frp_mw": 11.55,
+      "kecerahan_k": 328.35,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 11.55,
+      "jarak_pangkalan_km": 2.95
+    },
+    {
+      "id": "FIRMS-0043",
+      "lat": -2.24072,
+      "lon": 113.79601,
+      "frp_mw": 7.05,
+      "kecerahan_k": 313.24,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.05,
+      "jarak_pangkalan_km": 2.98
+    },
+    {
+      "id": "FIRMS-0042",
+      "lat": -2.23316,
+      "lon": 113.8026,
+      "frp_mw": 4.36,
+      "kecerahan_k": 348.06,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.36,
+      "jarak_pangkalan_km": 2.98
+    },
+    {
+      "id": "FIRMS-0044",
+      "lat": -2.24042,
+      "lon": 113.79602,
+      "frp_mw": 11.95,
+      "kecerahan_k": 343.14,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 11.95,
+      "jarak_pangkalan_km": 3.0
+    },
+    {
+      "id": "FIRMS-0045",
+      "lat": -2.23065,
+      "lon": 113.80557,
+      "frp_mw": 13.68,
+      "kecerahan_k": 338.89,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 13.68,
+      "jarak_pangkalan_km": 3.03
+    },
+    {
+      "id": "FIRMS-0046",
+      "lat": -2.24679,
+      "lon": 113.79269,
+      "frp_mw": 5.65,
+      "kecerahan_k": 341.89,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.65,
+      "jarak_pangkalan_km": 3.06
+    },
+    {
+      "id": "FIRMS-0047",
+      "lat": -2.23005,
+      "lon": 113.80598,
+      "frp_mw": 4.67,
+      "kecerahan_k": 313.0,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.67,
+      "jarak_pangkalan_km": 3.06
+    },
+    {
+      "id": "FIRMS-0048",
+      "lat": -2.23212,
+      "lon": 113.80256,
+      "frp_mw": 7.55,
+      "kecerahan_k": 344.34,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.55,
+      "jarak_pangkalan_km": 3.07
+    },
+    {
+      "id": "FIRMS-0049",
+      "lat": -2.23081,
+      "lon": 113.80441,
+      "frp_mw": 16.11,
+      "kecerahan_k": 351.09,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 16.11,
+      "jarak_pangkalan_km": 3.08
+    },
+    {
+      "id": "FIRMS-0051",
+      "lat": -2.23218,
+      "lon": 113.80212,
+      "frp_mw": 12.15,
+      "kecerahan_k": 331.14,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 12.15,
+      "jarak_pangkalan_km": 3.1
+    },
+    {
+      "id": "FIRMS-0053",
+      "lat": -2.24243,
+      "lon": 113.79314,
+      "frp_mw": 2.96,
+      "kecerahan_k": 321.77,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.96,
+      "jarak_pangkalan_km": 3.18
+    },
+    {
+      "id": "FIRMS-0054",
+      "lat": -2.23601,
+      "lon": 113.79681,
+      "frp_mw": 7.05,
+      "kecerahan_k": 349.49,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.05,
+      "jarak_pangkalan_km": 3.21
+    },
+    {
+      "id": "FIRMS-0055",
+      "lat": -2.2369,
+      "lon": 113.79585,
+      "frp_mw": 7.93,
+      "kecerahan_k": 351.64,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.93,
+      "jarak_pangkalan_km": 3.23
+    },
+    {
+      "id": "FIRMS-0057",
+      "lat": -2.23138,
+      "lon": 113.8009,
+      "frp_mw": 13.68,
+      "kecerahan_k": 355.37,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 13.68,
+      "jarak_pangkalan_km": 3.25
+    },
+    {
+      "id": "FIRMS-0056",
+      "lat": -2.24093,
+      "lon": 113.79316,
+      "frp_mw": 7.48,
+      "kecerahan_k": 329.63,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 7.48,
+      "jarak_pangkalan_km": 3.25
+    },
+    {
+      "id": "FIRMS-0058",
+      "lat": -2.22965,
+      "lon": 113.80316,
+      "frp_mw": 12.41,
+      "kecerahan_k": 351.3,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 12.41,
+      "jarak_pangkalan_km": 3.26
+    },
+    {
+      "id": "FIRMS-0059",
+      "lat": -2.23892,
+      "lon": 113.7937,
+      "frp_mw": 2.96,
+      "kecerahan_k": 312.54,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.96,
+      "jarak_pangkalan_km": 3.3
+    },
+    {
+      "id": "FIRMS-0061",
+      "lat": -2.23253,
+      "lon": 113.79872,
+      "frp_mw": 20.21,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 20.21,
+      "jarak_pangkalan_km": 3.31
+    },
+    {
+      "id": "FIRMS-0060",
+      "lat": -2.24222,
+      "lon": 113.79197,
+      "frp_mw": 7.93,
+      "kecerahan_k": 342.43,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.93,
+      "jarak_pangkalan_km": 3.31
+    },
+    {
+      "id": "FIRMS-0062",
+      "lat": -2.23157,
+      "lon": 113.79977,
+      "frp_mw": 16.11,
+      "kecerahan_k": 355.17,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 16.11,
+      "jarak_pangkalan_km": 3.32
+    },
+    {
+      "id": "FIRMS-0063",
+      "lat": -2.23384,
+      "lon": 113.79703,
+      "frp_mw": 11.0,
+      "kecerahan_k": 345.09,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 11.0,
+      "jarak_pangkalan_km": 3.35
+    },
+    {
+      "id": "FIRMS-0064",
+      "lat": -2.22943,
+      "lon": 113.80209,
+      "frp_mw": 4.67,
+      "kecerahan_k": 354.07,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.67,
+      "jarak_pangkalan_km": 3.35
+    },
+    {
+      "id": "FIRMS-0065",
+      "lat": -2.23813,
+      "lon": 113.79324,
+      "frp_mw": 13.76,
+      "kecerahan_k": 355.56,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 13.76,
+      "jarak_pangkalan_km": 3.39
+    },
+    {
+      "id": "FIRMS-0066",
+      "lat": -2.24802,
+      "lon": 113.78926,
+      "frp_mw": 8.37,
+      "kecerahan_k": 356.84,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 8.37,
+      "jarak_pangkalan_km": 3.4
+    },
+    {
+      "id": "FIRMS-0067",
+      "lat": -2.2274,
+      "lon": 113.80332,
+      "frp_mw": 7.55,
+      "kecerahan_k": 324.81,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.55,
+      "jarak_pangkalan_km": 3.46
+    },
+    {
+      "id": "FIRMS-0069",
+      "lat": -2.22985,
+      "lon": 113.79937,
+      "frp_mw": 13.76,
+      "kecerahan_k": 327.31,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 13.76,
+      "jarak_pangkalan_km": 3.49
+    },
+    {
+      "id": "FIRMS-0070",
+      "lat": -2.2313,
+      "lon": 113.7976,
+      "frp_mw": 7.55,
+      "kecerahan_k": 342.75,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 7.55,
+      "jarak_pangkalan_km": 3.5
+    },
+    {
+      "id": "FIRMS-0071",
+      "lat": -2.2399,
+      "lon": 113.79102,
+      "frp_mw": 4.76,
+      "kecerahan_k": 306.04,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.76,
+      "jarak_pangkalan_km": 3.51
+    },
+    {
+      "id": "FIRMS-0072",
+      "lat": -2.23739,
+      "lon": 113.79237,
+      "frp_mw": 20.13,
+      "kecerahan_k": 348.23,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 20.13,
+      "jarak_pangkalan_km": 3.52
+    },
+    {
+      "id": "FIRMS-0074",
+      "lat": -2.2332,
+      "lon": 113.79505,
+      "frp_mw": 11.95,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 11.95,
+      "jarak_pangkalan_km": 3.56
+    },
+    {
+      "id": "FIRMS-0075",
+      "lat": -2.23765,
+      "lon": 113.79125,
+      "frp_mw": 7.93,
+      "kecerahan_k": 343.65,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.93,
+      "jarak_pangkalan_km": 3.61
+    },
+    {
+      "id": "FIRMS-0077",
+      "lat": -2.22592,
+      "lon": 113.80265,
+      "frp_mw": 4.67,
+      "kecerahan_k": 304.82,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.67,
+      "jarak_pangkalan_km": 3.64
+    },
+    {
+      "id": "FIRMS-0078",
+      "lat": -2.24145,
+      "lon": 113.78885,
+      "frp_mw": 11.95,
+      "kecerahan_k": 327.76,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 11.95,
+      "jarak_pangkalan_km": 3.66
+    },
+    {
+      "id": "FIRMS-0079",
+      "lat": -2.2319,
+      "lon": 113.79483,
+      "frp_mw": 20.21,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 20.21,
+      "jarak_pangkalan_km": 3.67
+    },
+    {
+      "id": "FIRMS-0080",
+      "lat": -2.23519,
+      "lon": 113.79182,
+      "frp_mw": 4.76,
+      "kecerahan_k": 333.12,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.76,
+      "jarak_pangkalan_km": 3.7
+    },
+    {
+      "id": "FIRMS-0082",
+      "lat": -2.23465,
+      "lon": 113.79213,
+      "frp_mw": 11.0,
+      "kecerahan_k": 357.34,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 11.0,
+      "jarak_pangkalan_km": 3.71
+    },
+    {
+      "id": "FIRMS-0081",
+      "lat": -2.24174,
+      "lon": 113.78826,
+      "frp_mw": 8.37,
+      "kecerahan_k": 332.96,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 8.37,
+      "jarak_pangkalan_km": 3.71
+    },
+    {
+      "id": "FIRMS-0083",
+      "lat": -2.23478,
+      "lon": 113.79037,
+      "frp_mw": 3.57,
+      "kecerahan_k": 329.81,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.57,
+      "jarak_pangkalan_km": 3.86
+    },
+    {
+      "id": "FIRMS-0084",
+      "lat": -2.23282,
+      "lon": 113.79164,
+      "frp_mw": 20.13,
+      "kecerahan_k": 350.51,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 20.13,
+      "jarak_pangkalan_km": 3.88
+    },
+    {
+      "id": "FIRMS-0085",
+      "lat": -2.23811,
+      "lon": 113.78776,
+      "frp_mw": 5.42,
+      "kecerahan_k": 334.2,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.42,
+      "jarak_pangkalan_km": 3.92
+    },
+    {
+      "id": "FIRMS-0087",
+      "lat": -2.23308,
+      "lon": 113.79053,
+      "frp_mw": 20.01,
+      "kecerahan_k": 350.64,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 20.01,
+      "jarak_pangkalan_km": 3.96
+    },
+    {
+      "id": "FIRMS-0086",
+      "lat": -2.23091,
+      "lon": 113.79227,
+      "frp_mw": 13.76,
+      "kecerahan_k": 355.59,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 13.76,
+      "jarak_pangkalan_km": 3.96
+    },
+    {
+      "id": "FIRMS-0088",
+      "lat": -2.23048,
+      "lon": 113.79262,
+      "frp_mw": 3.0,
+      "kecerahan_k": 315.4,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.0,
+      "jarak_pangkalan_km": 3.96
+    },
+    {
+      "id": "FIRMS-0089",
+      "lat": -2.23921,
+      "lon": 113.78607,
+      "frp_mw": 12.72,
+      "kecerahan_k": 329.05,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 12.72,
+      "jarak_pangkalan_km": 4.04
+    },
+    {
+      "id": "FIRMS-0090",
+      "lat": -2.23126,
+      "lon": 113.79094,
+      "frp_mw": 3.57,
+      "kecerahan_k": 313.02,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.57,
+      "jarak_pangkalan_km": 4.05
+    },
+    {
+      "id": "FIRMS-0091",
+      "lat": -2.23547,
+      "lon": 113.78724,
+      "frp_mw": 9.8,
+      "kecerahan_k": 329.75,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 9.8,
+      "jarak_pangkalan_km": 4.12
+    },
+    {
+      "id": "FIRMS-0092",
+      "lat": -2.23424,
+      "lon": 113.78785,
+      "frp_mw": 11.95,
+      "kecerahan_k": 344.67,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 11.95,
+      "jarak_pangkalan_km": 4.13
+    },
+    {
+      "id": "FIRMS-0093",
+      "lat": -2.22838,
+      "lon": 113.79111,
+      "frp_mw": 11.0,
+      "kecerahan_k": 333.07,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 11.0,
+      "jarak_pangkalan_km": 4.24
+    },
+    {
+      "id": "FIRMS-0094",
+      "lat": -2.23354,
+      "lon": 113.78703,
+      "frp_mw": 5.42,
+      "kecerahan_k": 342.84,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.42,
+      "jarak_pangkalan_km": 4.25
+    },
+    {
+      "id": "FIRMS-0095",
+      "lat": -2.23383,
+      "lon": 113.78593,
+      "frp_mw": 4.97,
+      "kecerahan_k": 333.61,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 4.97,
+      "jarak_pangkalan_km": 4.34
+    },
+    {
+      "id": "FIRMS-0096",
+      "lat": -2.22965,
+      "lon": 113.78762,
+      "frp_mw": 3.0,
+      "kecerahan_k": 303.44,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.0,
+      "jarak_pangkalan_km": 4.45
+    },
+    {
+      "id": "FIRMS-0097",
+      "lat": -2.2706,
+      "lon": 113.8563,
+      "frp_mw": 6.09,
+      "kecerahan_k": 342.39,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 6.09,
+      "jarak_pangkalan_km": 4.51
+    },
+    {
+      "id": "FIRMS-0098",
+      "lat": -2.23199,
+      "lon": 113.78511,
+      "frp_mw": 12.72,
+      "kecerahan_k": 348.76,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 12.72,
+      "jarak_pangkalan_km": 4.52
+    },
+    {
+      "id": "FIRMS-0099",
+      "lat": -2.27002,
+      "lon": 113.85707,
+      "frp_mw": 5.33,
+      "kecerahan_k": 321.56,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 5.33,
+      "jarak_pangkalan_km": 4.56
+    },
+    {
+      "id": "FIRMS-0100",
+      "lat": -2.26911,
+      "lon": 113.85812,
+      "frp_mw": 3.96,
+      "kecerahan_k": 345.89,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 3.96,
+      "jarak_pangkalan_km": 4.63
+    },
+    {
+      "id": "FIRMS-0101",
+      "lat": -2.21741,
+      "lon": 113.83984,
+      "frp_mw": 2.93,
+      "kecerahan_k": 311.38,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.93,
+      "jarak_pangkalan_km": 4.69
+    },
+    {
+      "id": "FIRMS-0102",
+      "lat": -2.23578,
+      "lon": 113.85734,
+      "frp_mw": 3.53,
+      "kecerahan_k": 331.21,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 3.53,
+      "jarak_pangkalan_km": 4.71
+    },
+    {
+      "id": "FIRMS-0103",
+      "lat": -2.2365,
+      "lon": 113.8588,
+      "frp_mw": 2.9,
+      "kecerahan_k": 327.78,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 2.9,
+      "jarak_pangkalan_km": 4.82
+    },
+    {
+      "id": "FIRMS-0104",
+      "lat": -2.23845,
+      "lon": 113.86028,
+      "frp_mw": 4.93,
+      "kecerahan_k": 328.92,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 4.93,
+      "jarak_pangkalan_km": 4.89
+    },
+    {
+      "id": "FIRMS-0105",
+      "lat": -2.23909,
+      "lon": 113.86131,
+      "frp_mw": 3.41,
+      "kecerahan_k": 307.92,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.41,
+      "jarak_pangkalan_km": 4.97
+    },
+    {
+      "id": "FIRMS-0106",
+      "lat": -2.23511,
+      "lon": 113.86088,
+      "frp_mw": 3.28,
+      "kecerahan_k": 303.4,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.28,
+      "jarak_pangkalan_km": 5.09
+    },
+    {
+      "id": "FIRMS-0107",
+      "lat": -2.23719,
+      "lon": 113.8625,
+      "frp_mw": 4.79,
+      "kecerahan_k": 328.68,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.79,
+      "jarak_pangkalan_km": 5.17
+    },
+    {
+      "id": "FIRMS-0108",
+      "lat": -2.23559,
+      "lon": 113.86186,
+      "frp_mw": 3.41,
+      "kecerahan_k": 330.32,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.41,
+      "jarak_pangkalan_km": 5.17
+    },
+    {
+      "id": "FIRMS-0109",
+      "lat": -2.23545,
+      "lon": 113.86247,
+      "frp_mw": 5.32,
+      "kecerahan_k": 338.04,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.32,
+      "jarak_pangkalan_km": 5.24
+    },
+    {
+      "id": "FIRMS-0110",
+      "lat": -2.23922,
+      "lon": 113.8642,
+      "frp_mw": 4.98,
+      "kecerahan_k": 321.32,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.98,
+      "jarak_pangkalan_km": 5.27
+    },
+    {
+      "id": "FIRMS-0111",
+      "lat": -2.23972,
+      "lon": 113.86517,
+      "frp_mw": 3.27,
+      "kecerahan_k": 305.08,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.27,
+      "jarak_pangkalan_km": 5.36
+    },
+    {
+      "id": "FIRMS-0112",
+      "lat": -2.23572,
+      "lon": 113.86476,
+      "frp_mw": 4.98,
+      "kecerahan_k": 347.32,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.98,
+      "jarak_pangkalan_km": 5.46
+    },
+    {
+      "id": "FIRMS-0113",
+      "lat": -2.23622,
+      "lon": 113.86573,
+      "frp_mw": 3.27,
+      "kecerahan_k": 335.06,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.27,
+      "jarak_pangkalan_km": 5.54
+    },
+    {
+      "id": "FIRMS-0114",
+      "lat": -2.21575,
+      "lon": 113.85205,
+      "frp_mw": 3.01,
+      "kecerahan_k": 306.56,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.01,
+      "jarak_pangkalan_km": 5.62
+    },
+    {
+      "id": "FIRMS-0115",
+      "lat": -2.23469,
+      "lon": 113.86714,
+      "frp_mw": 5.7,
+      "kecerahan_k": 330.36,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.7,
+      "jarak_pangkalan_km": 5.75
+    },
+    {
+      "id": "FIRMS-0116",
+      "lat": -2.21225,
+      "lon": 113.8526,
+      "frp_mw": 3.01,
+      "kecerahan_k": 337.88,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.01,
+      "jarak_pangkalan_km": 5.96
+    },
+    {
+      "id": "FIRMS-0117",
+      "lat": -2.21127,
+      "lon": 113.8516,
+      "frp_mw": 3.96,
+      "kecerahan_k": 314.71,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.96,
+      "jarak_pangkalan_km": 5.98
+    },
+    {
+      "id": "FIRMS-0118",
+      "lat": -2.20492,
+      "lon": 113.84251,
+      "frp_mw": 3.1,
+      "kecerahan_k": 315.29,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.1,
+      "jarak_pangkalan_km": 6.06
+    },
+    {
+      "id": "FIRMS-0119",
+      "lat": -2.20302,
+      "lon": 113.84093,
+      "frp_mw": 3.61,
+      "kecerahan_k": 319.34,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 3.61,
+      "jarak_pangkalan_km": 6.18
+    },
+    {
+      "id": "FIRMS-0120",
+      "lat": -2.20339,
+      "lon": 113.84208,
+      "frp_mw": 3.58,
+      "kecerahan_k": 327.1,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.58,
+      "jarak_pangkalan_km": 6.2
+    },
+    {
+      "id": "FIRMS-0121",
+      "lat": -2.20647,
+      "lon": 113.86147,
+      "frp_mw": 3.09,
+      "kecerahan_k": 324.84,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.09,
+      "jarak_pangkalan_km": 7.09
+    },
+    {
+      "id": "FIRMS-0122",
+      "lat": -2.22705,
+      "lon": 113.87804,
+      "frp_mw": 3.15,
+      "kecerahan_k": 322.6,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.15,
+      "jarak_pangkalan_km": 7.2
+    },
+    {
+      "id": "FIRMS-0123",
+      "lat": -2.22542,
+      "lon": 113.87736,
+      "frp_mw": 3.38,
+      "kecerahan_k": 327.39,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 3.38,
+      "jarak_pangkalan_km": 7.21
+    },
+    {
+      "id": "FIRMS-0124",
+      "lat": -2.22006,
+      "lon": 113.87543,
+      "frp_mw": 2.73,
+      "kecerahan_k": 306.79,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.73,
+      "jarak_pangkalan_km": 7.31
+    },
+    {
+      "id": "FIRMS-0125",
+      "lat": -2.22355,
+      "lon": 113.87859,
+      "frp_mw": 3.15,
+      "kecerahan_k": 328.59,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.15,
+      "jarak_pangkalan_km": 7.43
+    },
+    {
+      "id": "FIRMS-0126",
+      "lat": -2.2232,
+      "lon": 113.87975,
+      "frp_mw": 7.07,
+      "kecerahan_k": 339.6,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.07,
+      "jarak_pangkalan_km": 7.56
+    },
+    {
+      "id": "FIRMS-0127",
+      "lat": -2.22361,
+      "lon": 113.88108,
+      "frp_mw": 10.27,
+      "kecerahan_k": 342.72,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 10.27,
+      "jarak_pangkalan_km": 7.67
+    },
+    {
+      "id": "FIRMS-0128",
+      "lat": -2.22416,
+      "lon": 113.88246,
+      "frp_mw": 5.11,
+      "kecerahan_k": 338.32,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 5.11,
+      "jarak_pangkalan_km": 7.78
+    },
+    {
+      "id": "FIRMS-0129",
+      "lat": -2.18663,
+      "lon": 113.84654,
+      "frp_mw": 4.29,
+      "kecerahan_k": 332.0,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 4.29,
+      "jarak_pangkalan_km": 8.1
+    },
+    {
+      "id": "FIRMS-0130",
+      "lat": -2.18638,
+      "lon": 113.7897,
+      "frp_mw": 3.09,
+      "kecerahan_k": 313.35,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 3.09,
+      "jarak_pangkalan_km": 8.22
+    },
+    {
+      "id": "FIRMS-0131",
+      "lat": -2.18635,
+      "lon": 113.78907,
+      "frp_mw": 4.45,
+      "kecerahan_k": 330.69,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 4.45,
+      "jarak_pangkalan_km": 8.25
+    },
+    {
+      "id": "FIRMS-0132",
+      "lat": -2.18488,
+      "lon": 113.78799,
+      "frp_mw": 4.46,
+      "kecerahan_k": 319.32,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 4.46,
+      "jarak_pangkalan_km": 8.45
+    },
+    {
+      "id": "FIRMS-0133",
+      "lat": -2.18419,
+      "lon": 113.78934,
+      "frp_mw": 3.19,
+      "kecerahan_k": 337.71,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.19,
+      "jarak_pangkalan_km": 8.46
+    },
+    {
+      "id": "FIRMS-0134",
+      "lat": -2.18203,
+      "lon": 113.84583,
+      "frp_mw": 7.34,
+      "kecerahan_k": 335.13,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.34,
+      "jarak_pangkalan_km": 8.55
+    },
+    {
+      "id": "FIRMS-0135",
+      "lat": -2.17738,
+      "lon": 113.81432,
+      "frp_mw": 2.69,
+      "kecerahan_k": 319.76,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.69,
+      "jarak_pangkalan_km": 8.56
+    },
+    {
+      "id": "FIRMS-0136",
+      "lat": -2.17676,
+      "lon": 113.81044,
+      "frp_mw": 2.69,
+      "kecerahan_k": 328.49,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.69,
+      "jarak_pangkalan_km": 8.67
+    },
+    {
+      "id": "FIRMS-0137",
+      "lat": -2.18357,
+      "lon": 113.78543,
+      "frp_mw": 3.19,
+      "kecerahan_k": 304.23,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.19,
+      "jarak_pangkalan_km": 8.7
+    },
+    {
+      "id": "FIRMS-0138",
+      "lat": -2.18177,
+      "lon": 113.78835,
+      "frp_mw": 6.17,
+      "kecerahan_k": 339.68,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.17,
+      "jarak_pangkalan_km": 8.75
+    },
+    {
+      "id": "FIRMS-0139",
+      "lat": -2.18068,
+      "lon": 113.78989,
+      "frp_mw": 3.19,
+      "kecerahan_k": 316.81,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.19,
+      "jarak_pangkalan_km": 8.8
+    },
+    {
+      "id": "FIRMS-0140",
+      "lat": -2.18017,
+      "lon": 113.78877,
+      "frp_mw": 2.77,
+      "kecerahan_k": 313.14,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 2.77,
+      "jarak_pangkalan_km": 8.9
+    },
+    {
+      "id": "FIRMS-0141",
+      "lat": -2.17743,
+      "lon": 113.84512,
+      "frp_mw": 7.34,
+      "kecerahan_k": 330.65,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.34,
+      "jarak_pangkalan_km": 9.01
+    },
+    {
+      "id": "FIRMS-0142",
+      "lat": -2.18006,
+      "lon": 113.786,
+      "frp_mw": 3.19,
+      "kecerahan_k": 340.83,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.19,
+      "jarak_pangkalan_km": 9.03
+    },
+    {
+      "id": "FIRMS-0143",
+      "lat": -2.17936,
+      "lon": 113.78378,
+      "frp_mw": 2.77,
+      "kecerahan_k": 325.11,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 2.77,
+      "jarak_pangkalan_km": 9.21
+    },
+    {
+      "id": "FIRMS-0144",
+      "lat": -2.17719,
+      "lon": 113.78765,
+      "frp_mw": 6.17,
+      "kecerahan_k": 342.68,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.17,
+      "jarak_pangkalan_km": 9.25
+    },
+    {
+      "id": "FIRMS-0145",
+      "lat": -2.17669,
+      "lon": 113.8498,
+      "frp_mw": 7.27,
+      "kecerahan_k": 339.16,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.27,
+      "jarak_pangkalan_km": 9.27
+    },
+    {
+      "id": "FIRMS-0146",
+      "lat": -2.17944,
+      "lon": 113.78209,
+      "frp_mw": 3.71,
+      "kecerahan_k": 320.17,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.71,
+      "jarak_pangkalan_km": 9.28
+    },
+    {
+      "id": "FIRMS-0147",
+      "lat": -2.17815,
+      "lon": 113.78308,
+      "frp_mw": 9.83,
+      "kecerahan_k": 333.36,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 9.83,
+      "jarak_pangkalan_km": 9.36
+    },
+    {
+      "id": "FIRMS-0148",
+      "lat": -2.17654,
+      "lon": 113.78654,
+      "frp_mw": 3.11,
+      "kecerahan_k": 330.63,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.11,
+      "jarak_pangkalan_km": 9.37
+    },
+    {
+      "id": "FIRMS-0149",
+      "lat": -2.17794,
+      "lon": 113.783,
+      "frp_mw": 6.17,
+      "kecerahan_k": 333.14,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.17,
+      "jarak_pangkalan_km": 9.39
+    },
+    {
+      "id": "FIRMS-0150",
+      "lat": -2.17532,
+      "lon": 113.78358,
+      "frp_mw": 9.54,
+      "kecerahan_k": 328.62,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 9.54,
+      "jarak_pangkalan_km": 9.62
+    },
+    {
+      "id": "FIRMS-0151",
+      "lat": -2.17464,
+      "lon": 113.78453,
+      "frp_mw": 2.77,
+      "kecerahan_k": 307.07,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 2.77,
+      "jarak_pangkalan_km": 9.65
+    },
+    {
+      "id": "FIRMS-0152",
+      "lat": -2.14499,
+      "lon": 113.81371,
+      "frp_mw": 22.04,
+      "kecerahan_k": 351.18,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 22.04,
+      "jarak_pangkalan_km": 12.16
+    },
+    {
+      "id": "FIRMS-0153",
+      "lat": -2.14392,
+      "lon": 113.82072,
+      "frp_mw": 22.04,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 22.04,
+      "jarak_pangkalan_km": 12.26
+    },
+    {
+      "id": "FIRMS-0154",
+      "lat": -2.14358,
+      "lon": 113.8197,
+      "frp_mw": 4.76,
+      "kecerahan_k": 328.55,
+      "waktu_akuisisi": "2026-08-19T06:48:00Z",
+      "prioritas": 4.76,
+      "jarak_pangkalan_km": 12.3
+    },
+    {
+      "id": "FIRMS-0155",
+      "lat": -2.1425,
+      "lon": 113.844,
+      "frp_mw": 6.89,
+      "kecerahan_k": 329.66,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 6.89,
+      "jarak_pangkalan_km": 12.72
+    },
+    {
+      "id": "FIRMS-0156",
+      "lat": -2.14002,
+      "lon": 113.82822,
+      "frp_mw": 3.43,
+      "kecerahan_k": 337.95,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.43,
+      "jarak_pangkalan_km": 12.74
+    },
+    {
+      "id": "FIRMS-0157",
+      "lat": -2.14316,
+      "lon": 113.84764,
+      "frp_mw": 4.52,
+      "kecerahan_k": 339.22,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.52,
+      "jarak_pangkalan_km": 12.75
+    },
+    {
+      "id": "FIRMS-0158",
+      "lat": -2.1394,
+      "lon": 113.81496,
+      "frp_mw": 32.69,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 32.69,
+      "jarak_pangkalan_km": 12.77
+    },
+    {
+      "id": "FIRMS-0159",
+      "lat": -2.13939,
+      "lon": 113.82434,
+      "frp_mw": 3.43,
+      "kecerahan_k": 308.47,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.43,
+      "jarak_pangkalan_km": 12.78
+    },
+    {
+      "id": "FIRMS-0160",
+      "lat": -2.14378,
+      "lon": 113.85152,
+      "frp_mw": 4.52,
+      "kecerahan_k": 329.17,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.52,
+      "jarak_pangkalan_km": 12.79
+    },
+    {
+      "id": "FIRMS-0161",
+      "lat": -2.14073,
+      "lon": 113.84167,
+      "frp_mw": 13.9,
+      "kecerahan_k": 344.62,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 13.9,
+      "jarak_pangkalan_km": 12.86
+    },
+    {
+      "id": "FIRMS-0162",
+      "lat": -2.13838,
+      "lon": 113.82197,
+      "frp_mw": 32.58,
+      "kecerahan_k": 339.17,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 32.58,
+      "jarak_pangkalan_km": 12.88
+    },
+    {
+      "id": "FIRMS-0163",
+      "lat": -2.14107,
+      "lon": 113.84601,
+      "frp_mw": 3.98,
+      "kecerahan_k": 312.93,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 3.98,
+      "jarak_pangkalan_km": 12.93
+    },
+    {
+      "id": "FIRMS-0164",
+      "lat": -2.14189,
+      "lon": 113.85096,
+      "frp_mw": 3.22,
+      "kecerahan_k": 328.22,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 3.22,
+      "jarak_pangkalan_km": 12.98
+    },
+    {
+      "id": "FIRMS-0165",
+      "lat": -2.1427,
+      "lon": 113.8559,
+      "frp_mw": 3.22,
+      "kecerahan_k": 303.47,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 3.22,
+      "jarak_pangkalan_km": 13.05
+    },
+    {
+      "id": "FIRMS-0166",
+      "lat": -2.13902,
+      "lon": 113.84431,
+      "frp_mw": 3.92,
+      "kecerahan_k": 328.32,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.92,
+      "jarak_pangkalan_km": 13.11
+    },
+    {
+      "id": "FIRMS-0167",
+      "lat": -2.13965,
+      "lon": 113.84819,
+      "frp_mw": 4.52,
+      "kecerahan_k": 341.39,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.52,
+      "jarak_pangkalan_km": 13.14
+    },
+    {
+      "id": "FIRMS-0168",
+      "lat": -2.14028,
+      "lon": 113.85207,
+      "frp_mw": 4.52,
+      "kecerahan_k": 327.23,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.52,
+      "jarak_pangkalan_km": 13.18
+    },
+    {
+      "id": "FIRMS-0169",
+      "lat": -2.13637,
+      "lon": 113.84678,
+      "frp_mw": 3.98,
+      "kecerahan_k": 328.01,
+      "waktu_akuisisi": "2026-08-20T17:30:00Z",
+      "prioritas": 3.98,
+      "jarak_pangkalan_km": 13.46
+    },
+    {
+      "id": "FIRMS-0170",
+      "lat": -2.13533,
+      "lon": 113.84295,
+      "frp_mw": 6.89,
+      "kecerahan_k": 325.7,
+      "waktu_akuisisi": "2026-08-19T05:08:00Z",
+      "prioritas": 6.89,
+      "jarak_pangkalan_km": 13.48
+    },
+    {
+      "id": "FIRMS-0171",
+      "lat": -2.30147,
+      "lon": 113.9816,
+      "frp_mw": 4.5,
+      "kecerahan_k": 318.33,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.5,
+      "jarak_pangkalan_km": 18.79
+    },
+    {
+      "id": "FIRMS-0172",
+      "lat": -2.30495,
+      "lon": 113.98104,
+      "frp_mw": 6.13,
+      "kecerahan_k": 310.46,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 6.13,
+      "jarak_pangkalan_km": 18.85
+    },
+    {
+      "id": "FIRMS-0173",
+      "lat": -2.30461,
+      "lon": 113.98151,
+      "frp_mw": 8.14,
+      "kecerahan_k": 328.51,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 8.14,
+      "jarak_pangkalan_km": 18.88
+    },
+    {
+      "id": "FIRMS-0174",
+      "lat": -2.30118,
+      "lon": 113.9838,
+      "frp_mw": 18.87,
+      "kecerahan_k": 349.24,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 18.87,
+      "jarak_pangkalan_km": 19.02
+    },
+    {
+      "id": "FIRMS-0175",
+      "lat": -2.30418,
+      "lon": 113.98321,
+      "frp_mw": 9.25,
+      "kecerahan_k": 343.26,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 9.25,
+      "jarak_pangkalan_km": 19.05
+    },
+    {
+      "id": "FIRMS-0176",
+      "lat": -2.30209,
+      "lon": 113.98542,
+      "frp_mw": 4.5,
+      "kecerahan_k": 344.2,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.5,
+      "jarak_pangkalan_km": 19.22
+    },
+    {
+      "id": "FIRMS-0177",
+      "lat": -2.30581,
+      "lon": 113.98452,
+      "frp_mw": 18.87,
+      "kecerahan_k": 367.0,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 18.87,
+      "jarak_pangkalan_km": 19.24
+    },
+    {
+      "id": "FIRMS-0178",
+      "lat": -2.30557,
+      "lon": 113.98487,
+      "frp_mw": 6.13,
+      "kecerahan_k": 352.77,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 6.13,
+      "jarak_pangkalan_km": 19.27
+    },
+    {
+      "id": "FIRMS-0179",
+      "lat": -2.30881,
+      "lon": 113.98391,
+      "frp_mw": 9.25,
+      "kecerahan_k": 337.43,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 9.25,
+      "jarak_pangkalan_km": 19.28
+    },
+    {
+      "id": "FIRMS-0180",
+      "lat": -2.30905,
+      "lon": 113.98431,
+      "frp_mw": 6.13,
+      "kecerahan_k": 329.66,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 6.13,
+      "jarak_pangkalan_km": 19.33
+    },
+    {
+      "id": "FIRMS-0181",
+      "lat": -2.30539,
+      "lon": 113.98632,
+      "frp_mw": 4.8,
+      "kecerahan_k": 342.22,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.8,
+      "jarak_pangkalan_km": 19.42
+    },
+    {
+      "id": "FIRMS-0182",
+      "lat": -2.31004,
+      "lon": 113.98557,
+      "frp_mw": 4.8,
+      "kecerahan_k": 311.12,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.8,
+      "jarak_pangkalan_km": 19.5
+    },
+    {
+      "id": "FIRMS-0183",
+      "lat": -2.30339,
+      "lon": 113.98796,
+      "frp_mw": 9.25,
+      "kecerahan_k": 344.81,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 9.25,
+      "jarak_pangkalan_km": 19.53
+    },
+    {
+      "id": "FIRMS-0184",
+      "lat": -2.30803,
+      "lon": 113.98868,
+      "frp_mw": 9.25,
+      "kecerahan_k": 330.2,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 9.25,
+      "jarak_pangkalan_km": 19.76
+    },
+    {
+      "id": "FIRMS-0185",
+      "lat": -2.30969,
+      "lon": 113.99001,
+      "frp_mw": 12.1,
+      "kecerahan_k": 338.65,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 12.1,
+      "jarak_pangkalan_km": 19.96
+    },
+    {
+      "id": "FIRMS-0186",
+      "lat": -2.31081,
+      "lon": 113.99036,
+      "frp_mw": 4.8,
+      "kecerahan_k": 324.05,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.8,
+      "jarak_pangkalan_km": 20.03
+    },
+    {
+      "id": "FIRMS-0187",
+      "lat": -2.25507,
+      "lon": 113.99952,
+      "frp_mw": 2.64,
+      "kecerahan_k": 308.6,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.64,
+      "jarak_pangkalan_km": 20.04
+    },
+    {
+      "id": "FIRMS-0188",
+      "lat": -2.30679,
+      "lon": 113.99251,
+      "frp_mw": 5.17,
+      "kecerahan_k": 310.44,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 5.17,
+      "jarak_pangkalan_km": 20.12
+    },
+    {
+      "id": "FIRMS-0189",
+      "lat": -2.31027,
+      "lon": 113.99196,
+      "frp_mw": 5.17,
+      "kecerahan_k": 344.89,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 5.17,
+      "jarak_pangkalan_km": 20.18
+    },
+    {
+      "id": "FIRMS-0190",
+      "lat": -2.30725,
+      "lon": 113.99343,
+      "frp_mw": 6.53,
+      "kecerahan_k": 336.46,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.53,
+      "jarak_pangkalan_km": 20.24
+    },
+    {
+      "id": "FIRMS-0191",
+      "lat": -2.31375,
+      "lon": 113.9914,
+      "frp_mw": 3.4,
+      "kecerahan_k": 315.43,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.4,
+      "jarak_pangkalan_km": 20.25
+    },
+    {
+      "id": "FIRMS-0192",
+      "lat": -2.30895,
+      "lon": 113.99477,
+      "frp_mw": 7.38,
+      "kecerahan_k": 335.4,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.38,
+      "jarak_pangkalan_km": 20.43
+    },
+    {
+      "id": "FIRMS-0193",
+      "lat": -2.31188,
+      "lon": 113.99415,
+      "frp_mw": 6.4,
+      "kecerahan_k": 340.21,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.4,
+      "jarak_pangkalan_km": 20.47
+    },
+    {
+      "id": "FIRMS-0194",
+      "lat": -2.31358,
+      "lon": 113.9955,
+      "frp_mw": 7.38,
+      "kecerahan_k": 342.02,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 7.38,
+      "jarak_pangkalan_km": 20.67
+    },
+    {
+      "id": "FIRMS-0195",
+      "lat": -2.31651,
+      "lon": 113.99487,
+      "frp_mw": 6.4,
+      "kecerahan_k": 335.83,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.4,
+      "jarak_pangkalan_km": 20.71
+    },
+    {
+      "id": "FIRMS-0196",
+      "lat": -2.33504,
+      "lon": 113.99772,
+      "frp_mw": 6.94,
+      "kecerahan_k": 339.56,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.94,
+      "jarak_pangkalan_km": 21.78
+    },
+    {
+      "id": "FIRMS-0197",
+      "lat": -2.33397,
+      "lon": 113.99966,
+      "frp_mw": 3.92,
+      "kecerahan_k": 318.12,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.92,
+      "jarak_pangkalan_km": 21.92
+    },
+    {
+      "id": "FIRMS-0198",
+      "lat": -2.33298,
+      "lon": 114.0001,
+      "frp_mw": 2.92,
+      "kecerahan_k": 326.72,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.92,
+      "jarak_pangkalan_km": 21.93
+    },
+    {
+      "id": "FIRMS-0199",
+      "lat": -2.33646,
+      "lon": 113.99954,
+      "frp_mw": 3.43,
+      "kecerahan_k": 332.89,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.43,
+      "jarak_pangkalan_km": 22.03
+    },
+    {
+      "id": "FIRMS-0200",
+      "lat": -2.33634,
+      "lon": 114.00095,
+      "frp_mw": 2.75,
+      "kecerahan_k": 320.38,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.75,
+      "jarak_pangkalan_km": 22.16
+    },
+    {
+      "id": "FIRMS-0201",
+      "lat": -2.33427,
+      "lon": 114.00248,
+      "frp_mw": 6.94,
+      "kecerahan_k": 338.79,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.94,
+      "jarak_pangkalan_km": 22.22
+    },
+    {
+      "id": "FIRMS-0202",
+      "lat": -2.33359,
+      "lon": 114.00391,
+      "frp_mw": 2.92,
+      "kecerahan_k": 326.96,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 2.92,
+      "jarak_pangkalan_km": 22.34
+    },
+    {
+      "id": "FIRMS-0203",
+      "lat": -2.33706,
+      "lon": 114.00336,
+      "frp_mw": 3.43,
+      "kecerahan_k": 327.0,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.43,
+      "jarak_pangkalan_km": 22.44
+    },
+    {
+      "id": "FIRMS-0204",
+      "lat": -2.33478,
+      "lon": 114.00446,
+      "frp_mw": 2.84,
+      "kecerahan_k": 321.49,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.84,
+      "jarak_pangkalan_km": 22.45
+    },
+    {
+      "id": "FIRMS-0205",
+      "lat": -2.28223,
+      "lon": 114.01972,
+      "frp_mw": 3.66,
+      "kecerahan_k": 323.2,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.66,
+      "jarak_pangkalan_km": 22.5
+    },
+    {
+      "id": "FIRMS-0206",
+      "lat": -2.28264,
+      "lon": 114.01981,
+      "frp_mw": 4.53,
+      "kecerahan_k": 330.62,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 4.53,
+      "jarak_pangkalan_km": 22.51
+    },
+    {
+      "id": "FIRMS-0207",
+      "lat": -2.27295,
+      "lon": 114.02125,
+      "frp_mw": 3.78,
+      "kecerahan_k": 335.82,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.78,
+      "jarak_pangkalan_km": 22.55
+    },
+    {
+      "id": "FIRMS-0208",
+      "lat": -2.34054,
+      "lon": 114.00281,
+      "frp_mw": 3.43,
+      "kecerahan_k": 321.17,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.43,
+      "jarak_pangkalan_km": 22.55
+    },
+    {
+      "id": "FIRMS-0209",
+      "lat": -2.27221,
+      "lon": 114.02147,
+      "frp_mw": 7.98,
+      "kecerahan_k": 356.67,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 7.98,
+      "jarak_pangkalan_km": 22.56
+    },
+    {
+      "id": "FIRMS-0210",
+      "lat": -2.33942,
+      "lon": 114.00371,
+      "frp_mw": 3.55,
+      "kecerahan_k": 310.32,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.55,
+      "jarak_pangkalan_km": 22.58
+    },
+    {
+      "id": "FIRMS-0211",
+      "lat": -2.26873,
+      "lon": 114.02202,
+      "frp_mw": 7.98,
+      "kecerahan_k": 308.59,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 7.98,
+      "jarak_pangkalan_km": 22.59
+    },
+    {
+      "id": "FIRMS-0212",
+      "lat": -2.3335,
+      "lon": 114.00724,
+      "frp_mw": 6.02,
+      "kecerahan_k": 330.3,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 6.02,
+      "jarak_pangkalan_km": 22.68
+    },
+    {
+      "id": "FIRMS-0213",
+      "lat": -2.33711,
+      "lon": 114.00576,
+      "frp_mw": 2.75,
+      "kecerahan_k": 319.84,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.75,
+      "jarak_pangkalan_km": 22.69
+    },
+    {
+      "id": "FIRMS-0214",
+      "lat": -2.27121,
+      "lon": 114.0232,
+      "frp_mw": 12.45,
+      "kecerahan_k": 347.73,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 12.45,
+      "jarak_pangkalan_km": 22.74
+    },
+    {
+      "id": "FIRMS-0215",
+      "lat": -2.34175,
+      "lon": 114.005,
+      "frp_mw": 2.75,
+      "kecerahan_k": 306.69,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.75,
+      "jarak_pangkalan_km": 22.82
+    },
+    {
+      "id": "FIRMS-0216",
+      "lat": -2.35098,
+      "lon": 114.00115,
+      "frp_mw": 3.4,
+      "kecerahan_k": 331.93,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.4,
+      "jarak_pangkalan_km": 22.9
+    },
+    {
+      "id": "FIRMS-0217",
+      "lat": -2.28673,
+      "lon": 114.02308,
+      "frp_mw": 3.36,
+      "kecerahan_k": 307.41,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.36,
+      "jarak_pangkalan_km": 22.94
+    },
+    {
+      "id": "FIRMS-0218",
+      "lat": -2.28326,
+      "lon": 114.02363,
+      "frp_mw": 3.36,
+      "kecerahan_k": 338.11,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.36,
+      "jarak_pangkalan_km": 22.94
+    },
+    {
+      "id": "FIRMS-0219",
+      "lat": -2.33813,
+      "lon": 114.00795,
+      "frp_mw": 5.28,
+      "kecerahan_k": 330.16,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 5.28,
+      "jarak_pangkalan_km": 22.95
+    },
+    {
+      "id": "FIRMS-0220",
+      "lat": -2.33558,
+      "lon": 114.00925,
+      "frp_mw": 2.84,
+      "kecerahan_k": 310.32,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 2.84,
+      "jarak_pangkalan_km": 22.97
+    },
+    {
+      "id": "FIRMS-0221",
+      "lat": -2.35357,
+      "lon": 114.0006,
+      "frp_mw": 9.24,
+      "kecerahan_k": 341.9,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 9.24,
+      "jarak_pangkalan_km": 22.98
+    },
+    {
+      "id": "FIRMS-0222",
+      "lat": -2.27283,
+      "lon": 114.02528,
+      "frp_mw": 3.31,
+      "kecerahan_k": 330.82,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.31,
+      "jarak_pangkalan_km": 22.99
+    },
+    {
+      "id": "FIRMS-0223",
+      "lat": -2.35446,
+      "lon": 114.0006,
+      "frp_mw": 3.4,
+      "kecerahan_k": 324.1,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.4,
+      "jarak_pangkalan_km": 23.03
+    },
+    {
+      "id": "FIRMS-0224",
+      "lat": -2.28302,
+      "lon": 114.02452,
+      "frp_mw": 3.66,
+      "kecerahan_k": 315.62,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.66,
+      "jarak_pangkalan_km": 23.04
+    },
+    {
+      "id": "FIRMS-0225",
+      "lat": -2.35333,
+      "lon": 114.00143,
+      "frp_mw": 4.25,
+      "kecerahan_k": 321.89,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 4.25,
+      "jarak_pangkalan_km": 23.05
+    },
+    {
+      "id": "FIRMS-0226",
+      "lat": -2.27374,
+      "lon": 114.02605,
+      "frp_mw": 3.78,
+      "kecerahan_k": 303.6,
+      "waktu_akuisisi": "2026-08-20T17:32:00Z",
+      "prioritas": 3.78,
+      "jarak_pangkalan_km": 23.09
+    },
+    {
+      "id": "FIRMS-0227",
+      "lat": -2.35158,
+      "lon": 114.00497,
+      "frp_mw": 3.47,
+      "kecerahan_k": 320.41,
+      "waktu_akuisisi": "2026-08-19T17:49:00Z",
+      "prioritas": 3.47,
+      "jarak_pangkalan_km": 23.31
+    },
+    {
+      "id": "FIRMS-0228",
+      "lat": -2.35281,
+      "lon": 114.00533,
+      "frp_mw": 9.24,
+      "kecerahan_k": 338.07,
+      "waktu_akuisisi": "2026-08-20T06:31:00Z",
+      "prioritas": 9.24,
+      "jarak_pangkalan_km": 23.41
+    }
+  ],
+  "jalur": [
+    [
+      -2.2542,
+      113.8192
+    ],
+    [
+      -2.23938,
+      113.80316
+    ],
+    [
+      -2.23705,
+      113.80036
+    ],
+    [
+      -2.23604,
+      113.79816
+    ],
+    [
+      -2.2321,
+      113.79625
+    ],
+    [
+      -2.23233,
+      113.79513
+    ],
+    [
+      -2.23541,
+      113.79427
+    ],
+    [
+      -2.23668,
+      113.79697
+    ],
+    [
+      -2.25295,
+      113.8126
+    ],
+    [
+      -2.25677,
+      113.81796
+    ],
+    [
+      -2.26135,
+      113.81868
+    ],
+    [
+      -2.2606,
+      113.82331
+    ],
+    [
+      -2.25602,
+      113.82259
+    ],
+    [
+      -2.2542,
+      113.81925
+    ],
+    [
+      -2.2542,
+      113.8192
+    ]
+  ]
+}

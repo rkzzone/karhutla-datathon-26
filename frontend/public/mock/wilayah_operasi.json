@@ -1,0 +1,10 @@
+{
+  "catatan": "Wilayah cakupan CONTOH untuk demo: satu posko, satu pangkalan drone. Posisi posko adalah posisi ANDAIAN — kami tidak memverifikasi Daops mana yang membawahi koordinat ini maupun di mana poskonya berdiri. Koordinat alert tetap penempatan simulasi seperti sebelumnya; yang berubah hanya sebarannya agar koheren untuk satu wilayah operasi.",
+  "posko": {
+    "nama": "Posko lapangan Kereng Bangkirai",
+    "lat": -2.2542,
+    "lon": 113.8192
+  },
+  "wilayah": "Palangka Raya, Kalimantan Tengah",
+  "adalah_andaian": true
+}

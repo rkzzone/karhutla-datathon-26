@@ -1,0 +1,56 @@
+# Rahasia — jangan pernah di-commit
+.env
+.env.*
+!.env.example
+
+# Dependensi & hasil build
+node_modules/
+dist/
+build/
+.vite/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Bobot model & dataset — disimpan di Hugging Face, bukan di sini.
+# Berkas ONNX kami berukuran 118 MB, melampaui batas keras GitHub 100 MB.
+*.pth
+*.pt
+*.onnx
+*.ckpt
+*.safetensors
+*.h5
+
+# Citra dan video dataset
+*.mp4
+*.avi
+*.mov
+
+# Arsip
+*.zip
+*.tar
+*.tar.gz
+*.7z
+
+# Artefak proses pengembangan
+temporary-screenshots/
+*.log
+
+# Duplikat hasil unduhan — berkas berakhiran " (1)" dan sejenisnya
+*\ \(1\).*
+*\ \(2\).*
+*\ copy.*
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+.idea/
+*.swp

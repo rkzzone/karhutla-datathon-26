@@ -1,0 +1,407 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  ===========================================================================
+  DUA TEMA
+  ===========================================================================
+  Token `ash`/`haze`/`canopy`/`satellite`/`iot` didefinisikan sebagai kanal RGB
+  di sini dan dirujuk tailwind.config.js lewat `rgb(var(--x) / <alpha-value>)`.
+  Akibatnya SELURUH komponen mengganti tema tanpa satu pun kelas `dark:` —
+  `bg-ash-900` tetap berarti "permukaan kartu" di kedua tema.
+
+  Skala Ember (smoke/ember/flame/flare) sengaja TIDAK ikut bertukar: ramp
+  Ironbow adalah elemen signature (brief Bagian 2.3) dan harus identik di kedua
+  tema. Yang bertukar hanya varian TEKS-nya lewat `--tingkat-*-teks`, karena
+  Ember asli hanya 1.6:1 di atas kertas terang — tidak terbaca.
+
+  ---------------------------------------------------------------------------
+  AUDIT KONTRAS (dihitung manual, DESIGN_BRIEF Bagian 5 mewajibkan ini)
+
+  TEMA GELAP, rasio terhadap ash-900 #1C1915:
+    haze-100  15.02  AA   teks utama          OK
+    haze-400   8.07  AA   teks sekunder       OK  ← yang diminta diverifikasi
+    haze-500   4.86  AA   teks tersier        OK (ambang tipis, jangan <13px)
+    flare     10.57  AA   boleh jadi teks
+    flame      5.85  AA   boleh jadi teks
+    ember      3.24  ✗    HANYA fill/stroke, JANGAN untuk teks
+    smoke      2.93  ✗    HANYA fill/stroke, JANGAN untuk teks
+    canopy-400 3.53  ✗    HANYA fill/stroke → teks pakai canopy-300 (7.32 AA)
+    satellite  4.70  AA   marker + teks label kecil
+    iot        4.75  AA   marker + teks label kecil
+
+  TEMA TERANG, rasio terhadap kartu #FBF8F2 / dasar #EFEAE0:
+    haze-100  17.32 / 15.31  AA
+    haze-400   7.12 /  6.30  AA   teks sekunder
+    haze-500   5.83 /  5.15  AA   (juga 4.58 di atas hover ash-800)
+    canopy-300 10.00 / 8.84  AA   teks status aman
+    satellite  6.30 /  5.57  AA
+    iot        6.89 /  6.09  AA
+    tingkat 1  5.63 /  4.98  AA   teks risiko rendah
+    tingkat 2  6.81 /  6.02  AA   teks risiko sedang
+    tingkat 3  5.71 /  5.04  AA   teks risiko tinggi
+    tingkat 4  5.38 /  4.76  AA   teks risiko kritis
+    (flare asli 1.56, flame asli 2.83 — GAGAL, karena itu ada varian teks)
+
+  Konsekuensinya dikodekan di src/lib/risk.js: setiap tingkat risiko punya
+  `isi` (fill, hex Ember apa adanya) dan `teks` (CSS var) terpisah — bukan satu
+  warna dipakai untuk keduanya.
+  ===========================================================================
+*/
+
+@layer base {
+  /* ---- TEMA GELAP (default) ---- */
+  :root {
+    color-scheme: dark;
+
+    --ash-950: 20 18 15; /* #14120F brief */
+    --ash-900: 28 25 21; /* #1C1915 brief */
+    --ash-800: 38 34 28; /* #26221C brief */
+    --ash-700: 51 46 39;
+    --ash-600: 69 62 53;
+    --ash-500: 90 81 71;
+
+    --haze-100: 242 237 228; /* #F2EDE4 brief */
+    --haze-200: 226 219 206;
+    --haze-300: 205 197 182;
+    --haze-400: 184 175 160; /* #B8AFA0 brief */
+    --haze-500: 142 134 119;
+
+    --canopy-700: 21 42 33;
+    --canopy-600: 31 58 46; /* #1F3A2E brief */
+    --canopy-500: 51 89 74;
+    --canopy-400: 74 122 94; /* #4A7A5E brief */
+    --canopy-300: 127 179 148;
+
+    --satellite: 91 138 166; /* #5B8AA6 brief */
+    --satellite-dim: 51 85 107;
+    --iot: 156 122 158; /* #9C7A9E brief */
+    --iot-dim: 94 70 97;
+
+    /* Varian TEKS skala Ember — di tema gelap sama dengan hex aslinya
+       kecuali tingkat 1 & 2 yang gagal kontras (2.93 dan 3.24). */
+    --tingkat-1-teks: #b8afa0;
+    --tingkat-2-teks: #f5c242;
+    --tingkat-3-teks: #e8752c;
+    --tingkat-4-teks: #f5c242;
+    --tingkat-aman-teks: #7fb394;
+    --aksen: 232 117 44; /* flame — lolos 5.85:1 di tema gelap */
+    --aksen-kuat: 245 194 66; /* flare — lolos 10.57:1 di tema gelap */
+    /* Bentuk warna siap-pakai (bukan kanal) untuk inline style di JSX */
+    --haze-100-warna: #f2ede4;
+
+    /* Warna marker peta — dipakai juga di dalam string HTML `L.divIcon` */
+    --marker-halo: #14120f;
+    /* Cincin pemisah marker terhadap basemap. Di peta gelap tidak diperlukan
+       (marker sudah jauh lebih terang dari latarnya), jadi dibuat transparan. */
+    --marker-kontras: rgba(0, 0, 0, 0);
+    --marker-satelit: #5b8aa6;
+    --marker-iot: #9c7a9e;
+    --marker-patroli: #b8afa0;
+    --peta-latar: #0d0c0a;
+
+    --bayang-sm: 0 1px 2px rgba(10, 8, 6, 0.55), 0 0 0 1px rgba(69, 62, 53, 0.35);
+    --bayang-md: 0 2px 4px rgba(10, 8, 6, 0.5), 0 8px 20px -6px rgba(10, 8, 6, 0.65),
+      0 0 0 1px rgba(69, 62, 53, 0.4);
+    --bayang-lg: 0 4px 8px rgba(10, 8, 6, 0.5), 0 20px 44px -12px rgba(10, 8, 6, 0.72),
+      0 0 0 1px rgba(90, 81, 71, 0.4);
+    --bayang-ember: 0 0 0 1px rgba(232, 117, 44, 0.45),
+      0 6px 24px -8px rgba(232, 117, 44, 0.35);
+
+    --kabut-atas: rgba(107, 98, 89, 0.13);
+    --kabut-samping: rgba(193, 57, 43, 0.06);
+    --kisi-garis: rgba(90, 81, 71, 0.12);
+  }
+
+  /* ---- TEMA TERANG ---- */
+  /* Bukan putih klinis: kertas hangat, tetap keluarga abu-gambut/kabut siang.
+     Peran token tidak berubah — `ash` skala permukaan, `haze` skala tinta. */
+  :root[data-tema='terang'] {
+    color-scheme: light;
+
+    --ash-950: 239 234 224; /* #EFEAE0 latar dasar */
+    --ash-900: 251 248 242; /* #FBF8F2 permukaan kartu */
+    --ash-800: 228 221 208; /* #E4DDD0 hover / terangkat */
+    --ash-700: 210 201 184;
+    --ash-600: 185 174 153;
+    --ash-500: 156 144 122;
+
+    --haze-100: 23 20 16; /* #171410 tinta utama */
+    --haze-200: 43 38 32;
+    --haze-300: 71 64 52;
+    --haze-400: 92 83 70; /* #5C5346 tinta sekunder */
+    --haze-500: 106 96 79; /* #6A604F tinta tersier */
+
+    --canopy-700: 222 233 224;
+    --canopy-600: 205 222 209;
+    --canopy-500: 90 137 110;
+    --canopy-400: 53 120 90; /* isi status aman */
+    --canopy-300: 30 70 52; /* #1E4634 teks status aman */
+
+    --satellite: 47 97 128; /* #2F6180 */
+    --satellite-dim: 168 195 210;
+    --iot: 110 74 112; /* #6E4A70 */
+    --iot-dim: 205 186 206;
+
+    /* Ember asli tidak terbaca di atas kertas: flare 1.56:1, flame 2.83:1.
+       Varian teks di bawah menjaga URUTAN hue smoke→merah→oranye→amber
+       sekaligus lolos AA. Isi/fill tetap memakai hex Ember asli. */
+    --tingkat-1-teks: #6b6259;
+    --tingkat-2-teks: #a32a1e;
+    --tingkat-3-teks: #9a4e12;
+    --tingkat-4-teks: #8a5e00;
+    --tingkat-aman-teks: #1e4634;
+    --aksen: 154 78 18; /* #9A4E12 — flame asli hanya 2.83:1 di sini */
+    --aksen-kuat: 138 94 0; /* #8A5E00 — flare asli hanya 1.56:1 di sini */
+    --haze-100-warna: #171410;
+
+    --marker-halo: #fbf8f2;
+    /* Di peta terang, cincin flare kuning nyaris lenyap — perlu pemisah gelap. */
+    --marker-kontras: #3a342a;
+    --marker-satelit: #2f6180;
+    --marker-iot: #6e4a70;
+    --marker-patroli: #6a604f;
+    --peta-latar: #e8e2d6;
+
+    --bayang-sm: 0 1px 2px rgba(60, 50, 36, 0.1), 0 0 0 1px rgba(185, 174, 153, 0.45);
+    --bayang-md: 0 1px 2px rgba(60, 50, 36, 0.08), 0 6px 16px -6px rgba(60, 50, 36, 0.16),
+      0 0 0 1px rgba(185, 174, 153, 0.5);
+    --bayang-lg: 0 2px 6px rgba(60, 50, 36, 0.1), 0 18px 38px -14px rgba(60, 50, 36, 0.24),
+      0 0 0 1px rgba(156, 144, 122, 0.5);
+    --bayang-ember: 0 0 0 1px rgba(193, 57, 43, 0.5),
+      0 6px 22px -8px rgba(193, 57, 43, 0.28);
+
+    --kabut-atas: rgba(184, 175, 160, 0.3);
+    --kabut-samping: rgba(232, 117, 44, 0.07);
+    --kisi-garis: rgba(106, 96, 79, 0.14);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-ash-950 font-sans text-body text-haze-100 antialiased;
+    background-image:
+      radial-gradient(ellipse 90% 55% at 50% -10%, var(--kabut-atas), transparent 70%),
+      radial-gradient(ellipse 60% 40% at 100% 0%, var(--kabut-samping), transparent 65%);
+    background-attachment: fixed;
+  }
+
+  /* Angka instrumen selalu tabular — koordinat tidak boleh "goyang" saat live. */
+  .font-mono,
+  code,
+  kbd {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* Fokus keyboard terlihat jelas di SEMUA elemen interaktif — brief Bagian 5. */
+  :focus-visible {
+    outline: 2px solid theme('colors.flare');
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  ::selection {
+    background: rgba(232, 117, 44, 0.3);
+  }
+
+  /* Scrollbar mengikuti sistem gelap, bukan default terang OS. */
+  * {
+    scrollbar-color: theme('colors.ash.600') transparent;
+    scrollbar-width: thin;
+  }
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: theme('colors.ash.600');
+    border-radius: 999px;
+    border: 3px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.ash.500');
+    background-clip: content-box;
+  }
+}
+
+@layer components {
+  /* Permukaan kartu standar — shadow bertoning ash, bukan shadow-md polos. */
+  .permukaan {
+    @apply rounded-lg border border-ash-700 bg-ash-900 shadow-ash-md;
+  }
+
+  /* Label metadata: huruf kecil berjarak, dipakai konsisten di 4 halaman. */
+  .label-meta {
+    @apply font-mono text-[0.6875rem] uppercase tracking-[0.14em] text-haze-500;
+  }
+
+  /* Garis kisi halus khas peta/instrumen — dipakai di panel data Halaman 4. */
+  .kisi-instrumen {
+    background-image:
+      linear-gradient(var(--kisi-garis) 1px, transparent 1px),
+      linear-gradient(90deg, var(--kisi-garis) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+}
+
+@layer utilities {
+  .animasi-denyut {
+    animation: denyut 2.4s cubic-bezier(0.22, 0.61, 0.36, 1) infinite;
+  }
+  .animasi-masuk {
+    animation: masuk 220ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+  }
+  .animasi-kilau {
+    animation: kilau 1.6s linear infinite;
+  }
+}
+
+/* Hanya transform & opacity — tidak ada transition-all di seluruh proyek. */
+@keyframes denyut {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.35);
+  }
+}
+
+@keyframes masuk {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes kilau {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* Fallback statis wajib — DESIGN_BRIEF Bagian 5. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+  .animasi-denyut {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Leaflet — chrome bawaannya selalu terang, jadi ditimpa supaya mengikuti tema
+   aktif. Di tema gelap ini mencegah kotak putih di atas peta gelap; di tema
+   terang, warnanya ikut bertukar lewat token yang sama.
+   --------------------------------------------------------------------------- */
+.leaflet-container {
+  background: var(--peta-latar);
+  font-family: theme('fontFamily.sans');
+  outline: none;
+}
+
+.leaflet-control-zoom a {
+  background: theme('colors.ash.900 / 94%') !important;
+  border-color: theme('colors.ash.600') !important;
+  color: theme('colors.haze.200') !important;
+  transition: opacity 140ms cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.leaflet-control-zoom a:hover {
+  background: theme('colors.ash.800') !important;
+  color: theme('colors.haze.100') !important;
+}
+
+.leaflet-control-attribution {
+  background: theme('colors.ash.950 / 82%') !important;
+  color: theme('colors.haze.500') !important;
+  font-size: 10px !important;
+}
+
+.leaflet-control-attribution a {
+  color: theme('colors.haze.400') !important;
+}
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+  background: theme('colors.ash.900') !important;
+  color: theme('colors.haze.100') !important;
+  border: 1px solid theme('colors.ash.600');
+  box-shadow: theme('boxShadow.ash-lg') !important;
+  border-radius: 8px;
+}
+
+.leaflet-popup-content {
+  margin: 0 !important;
+  min-width: 232px;
+}
+
+.leaflet-popup-close-button {
+  color: theme('colors.haze.400') !important;
+  padding: 8px 8px 0 0 !important;
+}
+
+.leaflet-tooltip {
+  background: theme('colors.ash.950 / 95%') !important;
+  border: 1px solid theme('colors.ash.600') !important;
+  color: theme('colors.haze.200') !important;
+  box-shadow: none !important;
+  font-family: theme('fontFamily.mono');
+  font-size: 11px;
+}
+
+.leaflet-tooltip::before {
+  display: none;
+}
+
+.marker-peta:focus-visible {
+  outline: 2px solid theme('colors.flare');
+  outline-offset: 3px;
+}
+
+/* Peredupan ubin basemap.
+   Esri Dark Gray Canvas lebih terang daripada CARTO Dark Matter yang dipakai
+   sebelum CARTO menutup basemap publiknya. Tanpa peredupan, daratannya
+   bersaing dengan skala Ember alih-alih menjadi latar — dan DESIGN_BRIEF
+   Bagian 2.1 menempatkan Ember sebagai satu-satunya tempat produk ini "berani"
+   secara visual. Label tidak ikut diredupkan sekuat itu supaya nama tempat
+   tetap terbaca. */
+.ubin-dasar {
+  filter: brightness(0.42) saturate(0.7) contrast(1.05);
+}
+.ubin-label {
+  filter: brightness(0.75) saturate(0.6);
+}
+:root[data-tema='terang'] .ubin-dasar {
+  filter: none;
+}
+:root[data-tema='terang'] .ubin-label {
+  filter: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-tema='gelap']) .ubin-dasar,
+  :root:not([data-tema='gelap']) .ubin-label {
+    filter: none;
+  }
+}

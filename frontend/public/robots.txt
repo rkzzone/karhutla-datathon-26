@@ -1,0 +1,9 @@
+# Konsol operator ini dibagikan lewat tautan langsung, bukan untuk publik.
+# Bersama header X-Robots-Tag di vercel.json, ini mencegahnya masuk indeks
+# mesin pencari.
+#
+# CATATAN: ini BUKAN kontrol akses. Siapa pun yang memegang URL tetap bisa
+# membuka halaman. Lihat bagian keamanan di README.md.
+
+User-agent: *
+Disallow: /

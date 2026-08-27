@@ -1,0 +1,29 @@
+# Stage 4 -- Kurva degradasi terkontrol (lihat ../runs/README.md)
+# Jalankan: python src/train.py --config configs/stage4_degradation.yaml
+# atau di notebooks_kaggle/03_degradation_curve.ipynb
+# CATATAN: stage ini bukan "training" biasa -- ini EVALUASI fusion_v1.pth di berbagai
+# level degradasi sintetis tau, hasilnya jadi label supervisi utk Stage 5.
+
+stage: 4
+run_id: stage4_YYYYMMDD_degradation-curve
+
+seed: 42
+
+data:
+  rffnet_root: /kaggle/input/datasets/abangbuan/flame2/FLAME2
+  image_size: 224
+  split: val   # WAJIB pakai rffnet_val.csv, BUKAN test (Bagian 3.8 #2)
+
+model:
+  checkpoint: weights_final/fusion_v1.pth   # dari Stage 2
+
+degradation:
+  tau_levels: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+  seed: 42
+
+output:
+  curve_csv: reports/degradation_curve.csv
+  curve_plot: reports/degradation_curve_plot.png
+  # dataset augmented (RGB+termal+tau) disimpan sementara utk dipakai Stage 5 --
+  # TIDAK masuk git (data besar), cuma referensi lokal
+  augmented_cache_dir: runs/stage4_YYYYMMDD_degradation-curve/augmented_cache/

@@ -1,0 +1,46 @@
+% =====================================================================
+% Bagian 7 — Kesimpulan dan Pengembangan Lanjutan  (target 0,5 halaman)
+% =====================================================================
+
+\section{Kesimpulan dan Pengembangan Lanjutan}
+
+Penelitian ini membangun sistem deteksi dini karhutla gambut berjenjang dengan
+inti model fusi RGB--termal berbasis \emph{cross-attention} yang dilatih dengan
+\emph{modality dropout}, dan mengujinya melalui protokol evaluasi ketahanan
+berbasis kurva degradasi kontinu.
+
+\textbf{Yang berhasil ditunjukkan.} Fusi lebih tahan terhadap degradasi dibanding
+jalur RGB-saja secara konsisten di ketiga partisi data, dan keunggulannya atas
+jalur termal-saja signifikan pada partisi latih dan validasi ($p = 0{,}00098$ dan
+$p = 0{,}0078$, McNemar berpasangan). Tidak ada satu pun kejadian api yang
+terlewat pada seluruh level degradasi. Mekanisme \emph{gating} berjalan dan
+skornya sampai ke operator. Model menunjukkan generalisasi \emph{zero-shot} 92\%
+ke dataset lain dan berjalan pada 117,5~ms per bingkai di CPU laptop. Seluruh
+komponen terintegrasi menjadi sistem terpasang.
+
+\textbf{Yang tidak berhasil ditunjukkan}, dilaporkan dengan bobot yang sama.
+Fusi \emph{tidak} mengungguli jalur RGB-saja pada kondisi bersih, keduanya
+menghasilkan prediksi identik pada setiap sampel. \emph{Gating} tidak
+meningkatkan akurasi. Kelas \texttt{fire\_no\_smoke} praktis absen dari data
+latih dan tidak pernah diprediksi, sehingga sistem tidak dapat mengenali api
+tanpa asap, justru rezim yang paling dekat dengan pembakaran membara.
+Kuantisasi INT8 menurunkan ukuran model 68,8\% tetapi memperlambat inferensi.
+Peringkat ketahanan berbalik pada partisi uji, dan penyebab paling mungkin
+adalah operator degradasi termal yang tidak cukup kuat, bukan ketahanan sejati.
+
+Kami menilai temuan negatif ini bukan kelemahan laporan melainkan hasilnya.
+Bahwa evaluasi kondisi bersih pada tolok ukur ini tidak memiliki daya pisah sama
+sekali adalah informasi yang berguna bagi siapa pun yang hendak membandingkan
+arsitektur fusi pada data serupa.
+
+\textbf{Pengembangan lanjutan}, diurutkan menurut kepentingan bagi validitas
+klaim: pengumpulan data gambut tropis berlabel, selama tidak ada satu pun
+bingkai gambut Indonesia, seluruh klaim tetap berstatus proksi, dan himpunan uji
+sekecil apa pun bernilai lebih besar daripada perbaikan arsitektur mana pun;
+kalibrasi operator degradasi relatif terhadap margin keputusan model, agar kurva
+ketahanan mengukur model dan bukan kelemahan operatornya; pengulangan
+multi-benih dan baseline eksternal, yang menutup dua ancaman validitas terbesar
+yang tersisa; data teranotasi untuk rezim api-tanpa-asap agar kelas yang kini
+mati dapat dipelajari; serta masukan variabel lingkungan sesuai keterbatasan
+yang diidentifikasi narasumber ahli dan pengujian pada perangkat tepi fisik
+dengan penyebutan model perangkat yang spesifik.

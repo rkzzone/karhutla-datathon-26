@@ -1,0 +1,524 @@
+{
+  "train": {
+    "split": "train",
+    "n": 552,
+    "tau": 0.0,
+    "checkpoint": "/kaggle/input/datasets/muhamaderiksetiawan/ckpt-fusion-v1/fusion_v1_legacy.pth",
+    "modality_dropout_p_di_checkpoint": 0.2,
+    "catatan_harness": "muat PIL mentah -> degradasi 0-255 -> normalisasi; modality_dropout dipaksa .eval() (perbaikan bug train.py:288)",
+    "distribusi_kelas": {
+      "no_fire": 127,
+      "fire_no_smoke": 0,
+      "fire_smoke": 425
+    },
+    "n_sampel_ber_api_atau_asap": 425,
+    "per_mode": {
+      "fusi_penuh": {
+        "accuracy": 1.0,
+        "n_benar": 552,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.999999999992126,
+            "recall": 0.999999999992126,
+            "f1": 0.999999999492126,
+            "support": 127
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999976471,
+            "recall": 0.9999999999976471,
+            "f1": 0.9999999994976472,
+            "support": 425
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666632577,
+          "recall": 0.6666666666632577,
+          "f1": 0.6666666663299244
+        },
+        "confusion_matrix": [
+          [
+            127,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            425
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.9999566376811595
+      },
+      "rgb_saja": {
+        "accuracy": 1.0,
+        "n_benar": 552,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.999999999992126,
+            "recall": 0.999999999992126,
+            "f1": 0.999999999492126,
+            "support": 127
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999976471,
+            "recall": 0.9999999999976471,
+            "f1": 0.9999999994976472,
+            "support": 425
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666632577,
+          "recall": 0.6666666666632577,
+          "f1": 0.6666666663299244
+        },
+        "confusion_matrix": [
+          [
+            127,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            425
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.9972463949275362,
+        "delta_m_vs_fusion": 0.0
+      },
+      "termal_saja": {
+        "accuracy": 0.980072463768116,
+        "n_benar": 541,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999913792,
+            "recall": 0.9133858267644615,
+            "f1": 0.9547325097812325,
+            "support": 127
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9747706421995992,
+            "recall": 0.9999999999976471,
+            "f1": 0.9872241574536537,
+            "support": 425
+          }
+        },
+        "macro": {
+          "precision": 0.6582568807303262,
+          "recall": 0.6377952755873695,
+          "f1": 0.6473188890782954
+        },
+        "confusion_matrix": [
+          [
+            116,
+            0,
+            11
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            425
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.991839072463768,
+        "delta_m_vs_fusion": 0.019927536231884035
+      }
+    }
+  },
+  "val": {
+    "split": "val",
+    "n": 240,
+    "tau": 0.0,
+    "checkpoint": "/kaggle/input/datasets/muhamaderiksetiawan/ckpt-fusion-v1/fusion_v1_legacy.pth",
+    "modality_dropout_p_di_checkpoint": 0.2,
+    "catatan_harness": "muat PIL mentah -> degradasi 0-255 -> normalisasi; modality_dropout dipaksa .eval() (perbaikan bug train.py:288)",
+    "distribusi_kelas": {
+      "no_fire": 60,
+      "fire_no_smoke": 0,
+      "fire_smoke": 180
+    },
+    "n_sampel_ber_api_atau_asap": 180,
+    "per_mode": {
+      "fusi_penuh": {
+        "accuracy": 1.0,
+        "n_benar": 240,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999833334,
+            "recall": 0.9999999999833334,
+            "f1": 0.9999999994833335,
+            "support": 60
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999944446,
+            "recall": 0.9999999999944446,
+            "f1": 0.9999999994944446,
+            "support": 180
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666592593,
+          "recall": 0.6666666666592593,
+          "f1": 0.6666666663259261
+        },
+        "confusion_matrix": [
+          [
+            60,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            180
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.9999698083333334
+      },
+      "rgb_saja": {
+        "accuracy": 1.0,
+        "n_benar": 240,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999833334,
+            "recall": 0.9999999999833334,
+            "f1": 0.9999999994833335,
+            "support": 60
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999944446,
+            "recall": 0.9999999999944446,
+            "f1": 0.9999999994944446,
+            "support": 180
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666592593,
+          "recall": 0.6666666666592593,
+          "f1": 0.6666666663259261
+        },
+        "confusion_matrix": [
+          [
+            60,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            180
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.9971023708333334,
+        "delta_m_vs_fusion": 0.0
+      },
+      "termal_saja": {
+        "accuracy": 0.9666666666666667,
+        "n_benar": 232,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999807693,
+            "recall": 0.8666666666522223,
+            "f1": 0.928571428057398,
+            "support": 60
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9574468085055455,
+            "recall": 0.9999999999944446,
+            "f1": 0.9782608690601371,
+            "support": 180
+          }
+        },
+        "macro": {
+          "precision": 0.6524822694954383,
+          "recall": 0.6222222222155556,
+          "f1": 0.6356107657058451
+        },
+        "confusion_matrix": [
+          [
+            52,
+            0,
+            8
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            180
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.98422455,
+        "delta_m_vs_fusion": 0.033333333333333326
+      }
+    }
+  },
+  "test": {
+    "split": "test",
+    "n": 200,
+    "tau": 0.0,
+    "checkpoint": "/kaggle/input/datasets/muhamaderiksetiawan/ckpt-fusion-v1/fusion_v1_legacy.pth",
+    "modality_dropout_p_di_checkpoint": 0.2,
+    "catatan_harness": "muat PIL mentah -> degradasi 0-255 -> normalisasi; modality_dropout dipaksa .eval() (perbaikan bug train.py:288)",
+    "distribusi_kelas": {
+      "no_fire": 50,
+      "fire_no_smoke": 0,
+      "fire_smoke": 150
+    },
+    "n_sampel_ber_api_atau_asap": 150,
+    "per_mode": {
+      "fusi_penuh": {
+        "accuracy": 1.0,
+        "n_benar": 200,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999800001,
+            "recall": 0.9999999999800001,
+            "f1": 0.9999999994800002,
+            "support": 50
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999933334,
+            "recall": 0.9999999999933334,
+            "f1": 0.9999999994933335,
+            "support": 150
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666577779,
+          "recall": 0.6666666666577779,
+          "f1": 0.6666666663244446
+        },
+        "confusion_matrix": [
+          [
+            50,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            150
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.999985195
+      },
+      "rgb_saja": {
+        "accuracy": 1.0,
+        "n_benar": 200,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999800001,
+            "recall": 0.9999999999800001,
+            "f1": 0.9999999994800002,
+            "support": 50
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999933334,
+            "recall": 0.9999999999933334,
+            "f1": 0.9999999994933335,
+            "support": 150
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666577779,
+          "recall": 0.6666666666577779,
+          "f1": 0.6666666663244446
+        },
+        "confusion_matrix": [
+          [
+            50,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            150
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.99725969,
+        "delta_m_vs_fusion": 0.0
+      },
+      "termal_saja": {
+        "accuracy": 1.0,
+        "n_benar": 200,
+        "per_class": {
+          "no_fire": {
+            "precision": 0.9999999999800001,
+            "recall": 0.9999999999800001,
+            "f1": 0.9999999994800002,
+            "support": 50
+          },
+          "fire_no_smoke": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "support": 0
+          },
+          "fire_smoke": {
+            "precision": 0.9999999999933334,
+            "recall": 0.9999999999933334,
+            "f1": 0.9999999994933335,
+            "support": 150
+          }
+        },
+        "macro": {
+          "precision": 0.6666666666577779,
+          "recall": 0.6666666666577779,
+          "f1": 0.6666666663244446
+        },
+        "confusion_matrix": [
+          [
+            50,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            150
+          ]
+        ],
+        "confusion_matrix_urutan_kelas": [
+          "no_fire",
+          "fire_no_smoke",
+          "fire_smoke"
+        ],
+        "confidence_rata2": 0.999389635,
+        "delta_m_vs_fusion": 0.0
+      }
+    }
+  }
+}

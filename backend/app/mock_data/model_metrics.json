@@ -1,0 +1,145 @@
+{
+  "_catatan": "Diisi dari CSV nyata tim model (Stage 2/4/5/6) pada 2026-08-08. Blok edge masih null karena tim data Stage 8 belum mengirim apa pun.",
+  "status": "terukur",
+  "diperbarui": "2026-08-08",
+  "sumber": {
+    "baseline": "Stage 2 — tim model",
+    "degradasi": "Stage 4 — tim model",
+    "gating": "Stage 5 — tim model",
+    "lokalisasi": "Stage 6 — tim model",
+    "edge": "Stage 8 — tim data"
+  },
+  "evaluasi": {
+    "split": "RFFNet val — 240 pasangan RGB/IR",
+    "split_lokalisasi": "RFFNet test — 200 pasangan, held out, dipakai sekali"
+  },
+  "baseline": [
+    {
+      "model": "RGB-saja",
+      "modalitas": "rgb",
+      "akurasi": 0.9833,
+      "delta_vs_fusi": 0.0
+    },
+    {
+      "model": "Termal-saja",
+      "modalitas": "thermal",
+      "akurasi": 0.95,
+      "delta_vs_fusi": 0.0333
+    },
+    {
+      "model": "Fusi penuh (cross-attention)",
+      "modalitas": "rgb+thermal",
+      "akurasi": 0.9833,
+      "delta_vs_fusi": null,
+      "acuan": true
+    }
+  ],
+  "degradasi": {
+    "sumbu_x": "Derajat degradasi modalitas (tau, %)",
+    "sumbu_y": "Akurasi validasi",
+    "titik": [
+      {
+        "degradasi": 0,
+        "rgb_only": 1.0,
+        "thermal_only": 0.9667,
+        "fusi": 1.0
+      },
+      {
+        "degradasi": 20,
+        "rgb_only": 0.9958,
+        "thermal_only": 0.9875,
+        "fusi": 1.0
+      },
+      {
+        "degradasi": 40,
+        "rgb_only": 0.9958,
+        "thermal_only": 0.9917,
+        "fusi": 1.0
+      },
+      {
+        "degradasi": 60,
+        "rgb_only": 0.9708,
+        "thermal_only": 0.9542,
+        "fusi": 1.0
+      },
+      {
+        "degradasi": 80,
+        "rgb_only": 0.9583,
+        "thermal_only": 0.9417,
+        "fusi": 0.9958
+      },
+      {
+        "degradasi": 100,
+        "rgb_only": 0.9458,
+        "thermal_only": 0.9208,
+        "fusi": 0.9833
+      }
+    ],
+    "penurunan_poin": {
+      "fusi": 1.67,
+      "rgb_only": 5.42,
+      "thermal_only": 4.59
+    }
+  },
+  "gating": [
+    {
+      "degradasi": 0,
+      "tanpa_gate": 1.0,
+      "dengan_gate": 1.0
+    },
+    {
+      "degradasi": 30,
+      "tanpa_gate": 1.0,
+      "dengan_gate": 1.0
+    },
+    {
+      "degradasi": 60,
+      "tanpa_gate": 1.0,
+      "dengan_gate": 0.9958
+    },
+    {
+      "degradasi": 100,
+      "tanpa_gate": 0.9917,
+      "dengan_gate": 0.9917
+    }
+  ],
+  "lokalisasi": [
+    {
+      "metode": "Attention rollout (Jalur A)",
+      "pointing_game": 0.6133,
+      "miou": null
+    },
+    {
+      "metode": "Segmentation head (Jalur B)",
+      "pointing_game": null,
+      "miou": 0.5328,
+      "disarankan": true
+    }
+  ],
+  "edge": [
+    {
+      "perangkat": "Jetson Orin Nano 8GB",
+      "presisi": "FP16",
+      "latensi_p50_ms": null,
+      "latensi_p95_ms": null,
+      "throughput_fps": null,
+      "daya_watt": null
+    },
+    {
+      "perangkat": "Jetson Orin Nano 8GB",
+      "presisi": "INT8 (TensorRT)",
+      "latensi_p50_ms": null,
+      "latensi_p95_ms": null,
+      "throughput_fps": null,
+      "daya_watt": null
+    },
+    {
+      "perangkat": "Raspberry Pi 5 + Hailo-8L",
+      "presisi": "INT8",
+      "latensi_p50_ms": null,
+      "latensi_p95_ms": null,
+      "throughput_fps": null,
+      "daya_watt": null
+    }
+  ]
+}

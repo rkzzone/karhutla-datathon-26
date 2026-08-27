@@ -1,0 +1,42 @@
+# Stage 5 -- Reliability-gated fusion (lihat ../runs/README.md)
+# Jalankan: python src/train.py --config configs/stage5_gating.yaml
+# atau di notebooks_kaggle/04_reliability_gating.ipynb
+
+stage: 5
+run_id: stage5_YYYYMMDD_gating
+
+seed: 42
+
+data:
+  # TIDAK lagi bergantung pada cache Stage 4 -- dataset degradasi dibangun
+  # ON-THE-FLY langsung dari RFFNet raw (lihat src/train.py::train_stage5,
+  # Stage5DegradedDataset). Menghindari transfer file besar antar-notebook Kaggle
+  # yang berkali-kali kena masalah auto-extract (lihat CHANGELOG.md).
+  rffnet_root: /kaggle/input/datasets/abangbuan/flame2/FLAME2
+  image_size: 224
+
+model:
+  base_checkpoint: weights_final/fusion_v1.pth   # dari Stage 2, dibekukan sebagian
+  embedding_dim: 384
+  gate_hidden_dim: 128
+  gate_shared_backbone: false
+
+training:
+  batch_size: 16
+  epochs: 30
+  lr: 0.0003
+  weight_decay: 0.01
+  gate_loss_weight: 1.0   # bobot reliability_regression_loss relatif thd loss klasifikasi
+  early_stop_patience: 8
+
+checkpoint:
+  save_every_n_epochs: 2
+  out_dir: runs/stage5_YYYYMMDD_gating
+  final_path: weights_final/fusion_v2_gated.pth
+
+ablation2:
+  # dropout saja vs dropout+gating, sepanjang kurva tau
+  output_csv: reports/ablation2_gating.csv
+
+inference_service:
+  smoke_test_output: reports/sample_output_stage5.json

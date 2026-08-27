@@ -1,0 +1,118 @@
+{
+  "perangkat_uji": {
+    "perangkat": "Intel Core Ultra 7 255H (16 core / 16 thread), 23,5 GB RAM, Windows 11",
+    "bukan_perangkat_tepi": true,
+    "catatan": "Diukur pada laptop x86 CPU, presisi fp32, batch 1, ubin 224x224, PyTorch eager (bukan ONNX/TensorRT, bukan terkuantisasi). Angka ini BUKAN latensi perangkat tepi.",
+    "torch": "2.11.0+cpu",
+    "python": "3.12.9",
+    "threads": 16,
+    "checkpoint": {
+      "fusion_v1.pth": {
+        "params_per_komponen": {
+          "rgb_encoder": 22056576,
+          "thermal_encoder": 1273256,
+          "fusion": 7100928,
+          "head_classification": 197635
+        },
+        "params_total": 30628395,
+        "ukuran_berkas_byte": 122618443,
+        "ukuran_berkas_mib": 116.9
+      },
+      "fusion_v3_localization.pth": {
+        "params_per_komponen": {
+          "rgb_encoder": 22056576,
+          "thermal_encoder": 1273256,
+          "fusion": 7100928,
+          "head_classification": 197635,
+          "gate": 115202,
+          "segmentation_head": 856261
+        },
+        "params_total": 31599858,
+        "ukuran_berkas_byte": 126463168,
+        "ukuran_berkas_mib": 120.6
+      }
+    }
+  },
+  "latensi": [
+    {
+      "checkpoint": "fusion_v1.pth",
+      "komponen": "encoder_rgb",
+      "median_ms": 25.18,
+      "mean_ms": 25.2,
+      "p90_ms": 26.88,
+      "p99_ms": 29.02,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v1.pth",
+      "komponen": "encoder_termal",
+      "median_ms": 9.4,
+      "mean_ms": 9.55,
+      "p90_ms": 10.4,
+      "p99_ms": 11.28,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v1.pth",
+      "komponen": "pipeline_penuh_fusi",
+      "median_ms": 44.72,
+      "mean_ms": 45.04,
+      "p90_ms": 47.08,
+      "p99_ms": 50.73,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v1.pth",
+      "komponen": "pipeline_rgb_saja",
+      "median_ms": 34.76,
+      "mean_ms": 35.14,
+      "p90_ms": 37.44,
+      "p99_ms": 41.39,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v3_localization.pth",
+      "komponen": "encoder_rgb",
+      "median_ms": 26.44,
+      "mean_ms": 27.07,
+      "p90_ms": 31.74,
+      "p99_ms": 34.38,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v3_localization.pth",
+      "komponen": "encoder_termal",
+      "median_ms": 11.28,
+      "mean_ms": 11.36,
+      "p90_ms": 12.63,
+      "p99_ms": 13.98,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v3_localization.pth",
+      "komponen": "pipeline_penuh_fusi",
+      "median_ms": 53.29,
+      "mean_ms": 53.61,
+      "p90_ms": 57.07,
+      "p99_ms": 62.94,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    },
+    {
+      "checkpoint": "fusion_v3_localization.pth",
+      "komponen": "pipeline_rgb_saja",
+      "median_ms": 41.92,
+      "mean_ms": 41.91,
+      "p90_ms": 44.8,
+      "p99_ms": 49.08,
+      "n_pengukuran": 100,
+      "warmup_dibuang": 10
+    }
+  ]
+}

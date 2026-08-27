@@ -1,0 +1,11 @@
+# Normalkan akhir baris supaya diff tidak berisik saat repo dipakai lintas OS.
+* text=auto eol=lf
+
+# Biner — jangan disentuh
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg text eol=lf
+*.pdf binary
+*.onnx binary
+*.pth binary

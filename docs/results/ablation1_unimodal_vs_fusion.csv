@@ -1,0 +1,4 @@
+mode,accuracy,delta_m_vs_fusion
+fusi_penuh,0.9833333333333333,
+rgb_saja,0.9833333333333333,0.0
+termal_saja,0.95,0.033333333333333326

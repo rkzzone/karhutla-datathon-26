@@ -1,0 +1,14 @@
+[
+  { "lat": -2.7148, "lon": 114.2213, "kecerahan_k": 337.4, "frp_mw": 12.8, "keyakinan": "high", "satelit": "N", "waktu_akuisisi": "2026-08-03T01:14:00Z", "siang_malam": "D" },
+  { "lat": -2.7402, "lon": 114.2688, "kecerahan_k": 329.1, "frp_mw": 7.4, "keyakinan": "nominal", "satelit": "N", "waktu_akuisisi": "2026-08-03T01:14:00Z", "siang_malam": "D" },
+  { "lat": -2.6301, "lon": 114.0955, "kecerahan_k": 318.6, "frp_mw": 3.1, "keyakinan": "low", "satelit": "N", "waktu_akuisisi": "2026-08-03T01:14:00Z", "siang_malam": "D" },
+  { "lat": -3.3821, "lon": 105.4467, "kecerahan_k": 344.9, "frp_mw": 21.6, "keyakinan": "high", "satelit": "N", "waktu_akuisisi": "2026-08-03T00:51:00Z", "siang_malam": "D" },
+  { "lat": -3.4110, "lon": 105.3902, "kecerahan_k": 322.7, "frp_mw": 5.9, "keyakinan": "nominal", "satelit": "N", "waktu_akuisisi": "2026-08-03T00:51:00Z", "siang_malam": "D" },
+  { "lat": 1.4854, "lon": 102.1032, "kecerahan_k": 331.2, "frp_mw": 9.7, "keyakinan": "nominal", "satelit": "N", "waktu_akuisisi": "2026-08-03T00:33:00Z", "siang_malam": "D" },
+  { "lat": 1.5231, "lon": 102.0447, "kecerahan_k": 316.8, "frp_mw": 2.4, "keyakinan": "low", "satelit": "N", "waktu_akuisisi": "2026-08-03T00:33:00Z", "siang_malam": "D" },
+  { "lat": -0.2913, "lon": 109.4204, "kecerahan_k": 340.5, "frp_mw": 16.2, "keyakinan": "high", "satelit": "N", "waktu_akuisisi": "2026-08-03T00:12:00Z", "siang_malam": "D" },
+  { "lat": -1.5602, "lon": 103.6011, "kecerahan_k": 335.8, "frp_mw": 11.3, "keyakinan": "high", "satelit": "N", "waktu_akuisisi": "2026-08-02T23:58:00Z", "siang_malam": "N" },
+  { "lat": -1.6015, "lon": 103.6533, "kecerahan_k": 320.4, "frp_mw": 4.6, "keyakinan": "nominal", "satelit": "N", "waktu_akuisisi": "2026-08-02T23:58:00Z", "siang_malam": "N" },
+  { "lat": -2.1044, "lon": 113.4008, "kecerahan_k": 327.9, "frp_mw": 6.8, "keyakinan": "nominal", "satelit": "N", "waktu_akuisisi": "2026-08-02T23:40:00Z", "siang_malam": "N" },
+  { "lat": 0.8123, "lon": 101.9155, "kecerahan_k": 314.2, "frp_mw": 1.9, "keyakinan": "low", "satelit": "N", "waktu_akuisisi": "2026-08-02T23:21:00Z", "siang_malam": "N" }
+]

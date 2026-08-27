@@ -1,0 +1,55 @@
+# configs/kaggle_paths.yaml
+#
+# SATU-SATUNYA tempat isi path Kaggle asli. Edit file ini SEKALI -- semua notebook
+# di notebooks_kaggle/ otomatis pakai nilai dari sini (lewat src/kaggle_paths.py),
+# jadi kamu TIDAK PERLU edit path di 6 file configs/stage*.yaml atau di dalam sel
+# notebook satu-satu lagi. Kalau nama dataset Kaggle berubah, cukup ubah di sini.
+#
+# Path di bawah yang sudah terisi TERVERIFIKASI dari sesi debug sebelumnya (bukan
+# tebakan) -- lihat komentar per baris. Yang masih "TODO-VERIFIKASI" belum ada
+# datanya/belum dicek.
+
+# --- FLAME2 53k (RGB+termal, klasifikasi) -- dataset abangbuan, TERVERIFIKASI ---
+flame2_53k:
+  dataset_root: "/kaggle/input/datasets/abangbuan/flame2-254p-rgb-thermal"   # folder yg langsung berisi "254p RGB Images/" dst
+  labels_path: "/kaggle/input/datasets/abangbuan/frame-pair-labels-txt/10) Frame Pair Labels.txt"
+  # CATATAN PENTING (akar masalah SUDAH ditemukan, bukan lagi tebakan): nama file
+  # asli "254p RGB Frame (1).jpg" -- ekstraksi digit dari nama file ikut kebawa
+  # prefix "254", bikin ID salah total (cuma 99/53451 match). Fix final: JANGAN
+  # scan folder sama sekali, baca `manifest_path` di bawah (manifest resmi tim data
+  # yang punya pemetaan frame_index -> path yang pasti benar). Lihat
+  # src/data/dataset_flame2.py untuk detail.
+
+# --- RoboFireFuseNet 992 (RGB+termal+mask) -- dataset abangbuan, TERVERIFIKASI ---
+# (isi dari FLAME2.zip yang sudah diverifikasi langsung: FLAME2/images/img_rgb_(ID).png dst)
+rffnet:
+  root: "/kaggle/input/datasets/abangbuan/flame2/FLAME2"
+
+# --- Manifest resmi tim data (Stage 0) -- SEKARANG SUDAH ADA, upload sbg Kaggle Dataset ---
+# TODO-VERIFIKASI: ganti "orang-c-manifests" sesuai nama dataset Kaggle asli
+# setelah kamu upload ke-6 file ini (flame2_train.csv, flame2_excluded_leakage.csv,
+# rffnet_train/val/test.csv, flame3_cv_subset.csv) sbg satu Kaggle Dataset.
+orang_c_manifests:
+  flame2_train: "/kaggle/input/orang-c-manifests/flame2_train.csv"
+  excluded_csv: "/kaggle/input/orang-c-manifests/flame2_excluded_leakage.csv"
+  rffnet_train: "/kaggle/input/orang-c-manifests/rffnet_train.csv"
+  rffnet_val: "/kaggle/input/orang-c-manifests/rffnet_val.csv"
+  rffnet_test: "/kaggle/input/orang-c-manifests/rffnet_test.csv"
+  flame3_cv_subset: "/kaggle/input/orang-c-manifests/flame3_cv_subset.csv"
+
+# --- FLAME3 (Stage 7, stretch) -- BELUM ADA data/path asli ---
+flame3:
+  root: "/kaggle/input/datasets/TBD-flame3"   # TODO-VERIFIKASI total, ganti begitu data ada
+
+# --- Checkpoint hasil tiap stage -- diisi begitu stage sebelumnya kelar dan
+# hasil .pth-nya di-attach ULANG sbg Kaggle Dataset baru (Kaggle tidak menyimpan
+# /kaggle/working/ antar sesi notebook berbeda kecuali disimpan+attach manual) ---
+checkpoints:
+  thermal_encoder_pretrained: "/kaggle/input/thermal-encoder-pretrained/thermal_encoder_pretrained.pth"  # dari Stage 1
+  fusion_v1: "/kaggle/input/fusion-v1/fusion_v1.pth"                                                      # dari Stage 2
+  fusion_v2_gated: "/kaggle/input/fusion-v2-gated/fusion_v2_gated.pth"                                    # dari Stage 5
+  segmentation_head_v1: "/kaggle/input/segmentation-head-v1/segmentation_head_v1.pth"                     # dari Stage 6
+
+# --- Cache augmented Stage 4, dikonsumsi Stage 5 ---
+stage4_augmented_cache:
+  dir: "/kaggle/input/stage4-augmented-cache/"   # diisi setelah Stage 4 jalan & di-attach ulang

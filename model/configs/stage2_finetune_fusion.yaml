@@ -1,0 +1,43 @@
+# Stage 2 -- Fine-tune model fusi, kontribusi inti (lihat ../runs/README.md)
+# ⚠️ Checkpoint wajib begitu stage ini selesai: kabari tim produk + share fusion_v1.pth
+# Jalankan: python src/train.py --config configs/stage2_finetune_fusion.yaml
+# atau di notebooks_kaggle/02_finetune_fusion.ipynb
+
+stage: 2
+run_id: stage2_YYYYMMDD_finetune-fusion
+
+seed: 42
+
+data:
+  # TODO-VERIFIKASI: sesuaikan path dataset Kaggle RFFNet
+  rffnet_root: /kaggle/input/datasets/abangbuan/flame2/FLAME2
+  image_size: 224
+
+model:
+  pretrained_thermal_encoder: weights_final/thermal_encoder_pretrained.pth  # dari Stage 1
+  embedding_dim: 384
+  rgb_frozen_blocks: 9
+  fusion_n_layers: 2
+  fusion_n_heads: 6
+  n_classes: 3
+
+training:
+  batch_size: 16
+  epochs: 40
+  lr: 0.0003
+  weight_decay: 0.01
+  modality_dropout_p_grid: [0.1, 0.2, 0.3]   # Ablation #1 dijalankan di ketiganya, model final pakai p=0.2
+  early_stop_patience: 10
+
+checkpoint:
+  save_every_n_epochs: 2
+  out_dir: runs/stage2_YYYYMMDD_finetune-fusion
+  final_path: weights_final/fusion_v1.pth
+
+ablation1:
+  # RGB-saja vs termal-saja vs fusi, dievaluasi di rffnet_val.csv
+  output_csv: reports/ablation1_unimodal_vs_fusion.csv
+
+inference_service:
+  # dipakai src/evaluate.py --serve, WAJIB output sesuai kontrak API Bagian 3.4
+  smoke_test_output: reports/sample_output_stage2.json

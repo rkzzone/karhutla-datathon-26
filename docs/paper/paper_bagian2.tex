@@ -1,0 +1,107 @@
+% =====================================================================
+% Bagian 2 — Studi Literatur dan Posisi Penelitian  (target 1,25 halaman)
+% Tabel 1 WAJIB memuat RFFNet sebagai prior art terdekat, dengan
+% diferensiasi moda kegagalan — BUKAN klaim "kami lebih baik".
+% =====================================================================
+
+\section{Studi Literatur dan Posisi Penelitian}
+
+\subsection{Deteksi dini karhutla dan fusi RGB--termal}
+
+Kebakaran gambut berbeda fundamental dari kebakaran hutan mineral karena
+cenderung membara di bawah permukaan (\emph{smoldering}) dengan nyala rendah dan
+asap persisten, sehingga lebih sulit dideteksi maupun dipadamkan
+\cite{ballhorn2016}. Karakteristik inilah yang membuat pemantauan berbasis citra
+optik saja sering gagal pada fase paling awal. Tolok ukur citra udara yang
+menjadi rujukan utama, FLAME \cite{flame2021}, FLAME~2 \cite{flame2_2022}, dan
+FLAME~3 \cite{flame3_2025}, seluruhnya berfokus pada kebakaran bernyala di
+hutan beriklim sedang dan tidak mencakup gambut tropis; tinjauan komprehensif
+juga menegaskan kelangkaan dataset besar dan beragam \cite{review2025}.
+
+Citra termal menangkap gradien suhu dan menembus asap yang membutakan citra
+optik, sedangkan RGB menyediakan konteks visual untuk mengenali api dan latar,
+sehingga fusi keduanya konsisten mengungguli pendekatan satu kanal
+\cite{zhang2025}. Pendekatan kami termasuk kategori \emph{feature-level fusion}
+dengan mekanisme \emph{cross-attention} \cite{vaswani2017}, \emph{backbone}
+Vision Transformer \cite{dosovitskiy2021}, dan representasi swa-awasan DINOv2
+\cite{oquab2024} yang menyediakan representasi kuat dengan kebutuhan label
+rendah.
+
+Perlu dibedakan dari pendekatan yang menghasilkan representasi mirip-termal
+secara sintetis langsung dari citra RGB \cite{synthetic2026}. Pendekatan itu
+berguna ketika sensor termal fisik tidak tersedia, namun tidak menangkap suhu
+aktual, indikator paling dini sebelum nyala atau asap tebal tampak. Konsistensi
+dengan kritik ini kami pegang sebagai batasan metodologis: kanal termal dalam
+penelitian ini tidak pernah disintesis dari RGB, termasuk pada augmentasi
+degradasi.
+
+\subsection{Ketahanan terhadap modalitas yang hilang}
+
+Kajian komprehensif pertama mengenai perilaku Transformer terhadap data tidak
+lengkap menemukan bahwa model kelas ini sensitif terhadap modalitas hilang, dan
+strategi fusi yang berbeda memengaruhi ketahanannya secara signifikan
+\cite{ma2022}. \emph{Modality dropout}, membuang modalitas secara acak dengan
+probabilitas tertentu selama pelatihan, pertama diusulkan pada pengenalan
+gestur multimodal \cite{neverova2016} dan sejak itu terbukti efektif lintas
+domain, termasuk dengan \emph{encoder} terlatih yang dibekukan dan modul fusi
+ringan \cite{dropout2025}. Dalam konteks karhutla, ketahanan ini menjadi syarat
+operasional, bukan fitur tambahan: saat asap pekat atau operasi malam hanya
+termal yang andal, sedangkan pada perangkat tanpa sensor termal hanya RGB yang
+tersedia.
+
+\subsection{Posisi penelitian dan \emph{research gap}}
+
+Tabel~\ref{tab:related} membandingkan penelitian ini dengan empat karya terdekat.
+Perbandingan disusun menurut \emph{moda kegagalan yang ditangani}, bukan menurut
+klaim performa, karena karya-karya tersebut dievaluasi pada dataset dan tugas
+berbeda sehingga angkanya tidak sebanding secara langsung.
+
+\begin{table}[!htbp]
+\caption{Perbandingan dengan karya terdekat dan posisi \emph{research gap}.}
+\label{tab:related}
+\centering
+\small
+\begin{tabular}{p{2.4cm}p{3.6cm}p{5.8cm}}
+\hline
+\textbf{Karya} & \textbf{Domain \& modalitas} & \textbf{Moda kegagalan yang ditangani} \\
+\hline
+RFFNet \cite{rffnet2026} \newline (\emph{prior art} terdekat) &
+Kebakaran hutan, RGB+termal berpasangan, anotasi piksel &
+\textbf{Oklusi parsial}: asap atau halangan menutupi sebagian pandangan
+sementara \emph{kedua sensor tetap hidup}; ditangani lewat desain arsitektur
+fusi \\
+Zhang dkk.\ \cite{zhang2025} &
+Kebakaran hutan umum (UAV), RGB+termal nyata &
+Tidak menguji ketahanan terhadap modalitas hilang; disasar untuk kebakaran
+bernyala, bukan rezim membara \\
+Transfer learning gambut \cite{peat2026} &
+Kebakaran gambut (domain terdekat), RGB saja &
+Tanpa sinyal termal; adaptasi domain lewat \emph{fine-tuning}, bukan fusi \\
+Termal sintetis \cite{synthetic2026} &
+Kebakaran umum, kanal termal disintesis dari RGB &
+Tidak menangkap suhu aktual, indikator paling dini yang justru disasar
+penelitian ini \\
+\hline
+\textbf{Penelitian ini} &
+Rezim membara sebagai sasaran rancangan, RGB+termal, drone &
+\textbf{Kehilangan modalitas total}: satu sensor mati, gagal, atau tidak
+terpasang; ditangani lewat \emph{modality dropout} eksplisit dan diukur lewat
+kurva degradasi kontinu \\
+\hline
+\end{tabular}
+\end{table}
+
+Diferensiasi terhadap RFFNet perlu dinyatakan dengan tepat karena keduanya
+bekerja pada data yang sama, anotasi piksel RFFNet juga menjadi sumber label
+penelitian ini. \textbf{Keduanya menangani moda kegagalan yang berbeda dan
+saling melengkapi, bukan bersaing.} RFFNet menjawab situasi ketika informasi
+tersedia namun tertutup sebagian; penelitian ini menjawab situasi ketika satu
+kanal informasi hilang sepenuhnya, dan sistem lapangan yang matang membutuhkan
+keduanya. Kami tidak mengklaim keunggulan performa atas RFFNet, dan perbandingan
+langsung terhadap bobot RFFNet terlatih tidak terlaksana dalam jendela waktu
+kompetisi (Subbagian~4.11).
+
+Irisan yang belum diisi keempat karya di atas adalah kombinasi tiga hal
+sekaligus: fusi RGB--termal yang dirancang tahan terhadap kehilangan sensor
+total, protokol evaluasi ketahanan yang kontinu alih-alih biner, dan lokalisasi
+yang tetap berjalan tanpa label piksel.

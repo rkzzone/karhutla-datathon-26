@@ -1,0 +1,267 @@
+{
+  "train": {
+    "n": 552,
+    "distribusi_kelas": {
+      "no_fire": 127,
+      "fire_no_smoke": 0,
+      "fire_smoke": 425
+    },
+    "kelas_ber_dukungan": [
+      "no_fire",
+      "fire_smoke"
+    ],
+    "per_mode": {
+      "fusi_penuh": {
+        "accuracy": 1.0,
+        "n_benar": 552,
+        "ci95": [
+          0.9930889307378323,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994948866,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663299244,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.9999566376811593,
+        "keyakinan_saat_salah": null
+      },
+      "rgb_saja": {
+        "accuracy": 1.0,
+        "n_benar": 552,
+        "ci95": [
+          0.9930889307378323,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994948866,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663299244,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.9972463949275362,
+        "keyakinan_saat_salah": null
+      },
+      "termal_saja": {
+        "accuracy": 0.980072463768116,
+        "n_benar": 541,
+        "ci95": [
+          0.964672264141566,
+          0.988837035298744
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9709783336174431,
+        "macro_f1_3kelas_menyesatkan": 0.6473188890782954,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 11,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.9954328724584103,
+        "keyakinan_saat_salah": 0.8150894545454546
+      }
+    },
+    "mcnemar": {
+      "fusi_penuh_vs_rgb_saja": {
+        "hanya_pertama_benar": 0,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 0,
+        "p_value": 1.0,
+        "signifikan_0.05": false,
+        "n_prediksi_berbeda": 0
+      },
+      "fusi_penuh_vs_termal_saja": {
+        "hanya_pertama_benar": 11,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 11,
+        "p_value": 0.0009765625,
+        "signifikan_0.05": true,
+        "n_prediksi_berbeda": 11
+      },
+      "rgb_saja_vs_termal_saja": {
+        "hanya_pertama_benar": 11,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 11,
+        "p_value": 0.0009765625,
+        "signifikan_0.05": true,
+        "n_prediksi_berbeda": 11
+      }
+    }
+  },
+  "val": {
+    "n": 240,
+    "distribusi_kelas": {
+      "no_fire": 60,
+      "fire_no_smoke": 0,
+      "fire_smoke": 180
+    },
+    "kelas_ber_dukungan": [
+      "no_fire",
+      "fire_smoke"
+    ],
+    "per_mode": {
+      "fusi_penuh": {
+        "accuracy": 1.0,
+        "n_benar": 240,
+        "ci95": [
+          0.9842460800584412,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994888891,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663259261,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.9999698083333333,
+        "keyakinan_saat_salah": null
+      },
+      "rgb_saja": {
+        "accuracy": 1.0,
+        "n_benar": 240,
+        "ci95": [
+          0.9842460800584412,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994888891,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663259261,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.9971023708333333,
+        "keyakinan_saat_salah": null
+      },
+      "termal_saja": {
+        "accuracy": 0.9666666666666667,
+        "n_benar": 232,
+        "ci95": [
+          0.9356151389791189,
+          0.9830145357420931
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9534161485587676,
+        "macro_f1_3kelas_menyesatkan": 0.6356107657058451,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 8,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.994330599137931,
+        "keyakinan_saat_salah": 0.691149125
+      }
+    },
+    "mcnemar": {
+      "fusi_penuh_vs_rgb_saja": {
+        "hanya_pertama_benar": 0,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 0,
+        "p_value": 1.0,
+        "signifikan_0.05": false,
+        "n_prediksi_berbeda": 0
+      },
+      "fusi_penuh_vs_termal_saja": {
+        "hanya_pertama_benar": 8,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 8,
+        "p_value": 0.0078125,
+        "signifikan_0.05": true,
+        "n_prediksi_berbeda": 8
+      },
+      "rgb_saja_vs_termal_saja": {
+        "hanya_pertama_benar": 8,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 8,
+        "p_value": 0.0078125,
+        "signifikan_0.05": true,
+        "n_prediksi_berbeda": 8
+      }
+    }
+  },
+  "test": {
+    "n": 200,
+    "distribusi_kelas": {
+      "no_fire": 50,
+      "fire_no_smoke": 0,
+      "fire_smoke": 150
+    },
+    "kelas_ber_dukungan": [
+      "no_fire",
+      "fire_smoke"
+    ],
+    "per_mode": {
+      "fusi_penuh": {
+        "accuracy": 1.0,
+        "n_benar": 200,
+        "ci95": [
+          0.9811546736227335,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994866668,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663244446,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.999985195,
+        "keyakinan_saat_salah": null
+      },
+      "rgb_saja": {
+        "accuracy": 1.0,
+        "n_benar": 200,
+        "ci95": [
+          0.9811546736227335,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994866668,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663244446,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.99725969,
+        "keyakinan_saat_salah": null
+      },
+      "termal_saja": {
+        "accuracy": 1.0,
+        "n_benar": 200,
+        "ci95": [
+          0.9811546736227335,
+          1.0
+        ],
+        "macro_f1_kelas_ber_dukungan": 0.9999999994866668,
+        "macro_f1_3kelas_menyesatkan": 0.6666666663244446,
+        "false_negative_api_terlewat": 0,
+        "false_positive_alarm_palsu": 0,
+        "recall_kejadian_api": 1.0,
+        "keyakinan_saat_benar": 0.999389635,
+        "keyakinan_saat_salah": null
+      }
+    },
+    "mcnemar": {
+      "fusi_penuh_vs_rgb_saja": {
+        "hanya_pertama_benar": 0,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 0,
+        "p_value": 1.0,
+        "signifikan_0.05": false,
+        "n_prediksi_berbeda": 0
+      },
+      "fusi_penuh_vs_termal_saja": {
+        "hanya_pertama_benar": 0,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 0,
+        "p_value": 1.0,
+        "signifikan_0.05": false,
+        "n_prediksi_berbeda": 0
+      },
+      "rgb_saja_vs_termal_saja": {
+        "hanya_pertama_benar": 0,
+        "hanya_kedua_benar": 0,
+        "n_diskordan": 0,
+        "p_value": 1.0,
+        "signifikan_0.05": false,
+        "n_prediksi_berbeda": 0
+      }
+    }
+  },
+  "pointing_game": {
+    "n": 150,
+    "sumber_n": "n_sampel_ber_api_atau_asap pada split test (TERKONFIRMASI, bukan asumsi)",
+    "accuracy": 0.6133,
+    "k_benar": 92,
+    "ci95": [
+      0.533464217179054,
+      0.6874775254471397
+    ]
+  }
+}

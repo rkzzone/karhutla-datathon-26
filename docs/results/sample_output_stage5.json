@@ -1,0 +1,26 @@
+{
+  "alert_id": "7c836467-9bc1-4d6c-8995-93d6e5006f69",
+  "timestamp": "2026-08-05T14:14:24.711507+00:00",
+  "location": {
+    "lat": 0.0,
+    "lon": 0.0
+  },
+  "prediction": {
+    "label": "no_fire",
+    "confidence": 1.0
+  },
+  "modality_reliability": {
+    "rgb": 0.8142,
+    "thermal": 0.5287
+  },
+  "localization": {
+    "heatmap_path": "",
+    "method": "attention_rollout"
+  },
+  "images": {
+    "rgb_url": "",
+    "thermal_url": ""
+  },
+  "source_trigger": "patrol_scheduled",
+  "operator_decision": null
+}

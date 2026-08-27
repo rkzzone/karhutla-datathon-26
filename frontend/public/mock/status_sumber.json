@@ -1,0 +1,9 @@
+{
+  "sumber": "batch",
+  "model_service_url": null,
+  "batch": {
+    "jumlah_bingkai": 10,
+    "checkpoint": "fusion_v3_localization.pth",
+    "dataset": "FLAME2 254p — split RFFNet val"
+  }
+}

@@ -1,0 +1,2970 @@
+{
+  "per_split": {
+    "train": {
+      "tau0.0": {
+        "n": 552,
+        "tau": 0.0,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 127,
+          "fire_no_smoke": 1,
+          "fire_smoke": 424
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9981884057971014,
+            "n_benar": 551,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9898106449093855,
+              0.9996801375286724
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9976470588235294,
+                "recall": 1.0,
+                "f1": 0.9988221436984689,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6662740478994896,
+            "macro_f1_kelas_ber_dukungan": 0.6662740478994896,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.9981884057971014,
+            "n_benar": 551,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9898106449093855,
+              0.9996801375286724
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9976470588235294,
+                "recall": 1.0,
+                "f1": 0.9988221436984689,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6662740478994896,
+            "macro_f1_kelas_ber_dukungan": 0.6662740478994896,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "termal_saja": {
+            "accuracy": 0.9782608695652174,
+            "n_benar": 540,
+            "accuracy_label_lama": 0.980072463768116,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9623897686426722,
+              0.9875213824978631
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.9133858267716536,
+                "f1": 0.9547325102880658,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9724770642201835,
+                "recall": 1.0,
+                "f1": 0.986046511627907,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6469263406386576,
+            "macro_f1_kelas_ber_dukungan": 0.6469263406386576,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 11,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 11,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 11,
+            "p_value": 0.0009765625,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 11,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 11,
+            "p_value": 0.0009765625,
+            "signifikan_0.05": true
+          }
+        }
+      },
+      "tau0.2": {
+        "n": 552,
+        "tau": 0.2,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 127,
+          "fire_no_smoke": 1,
+          "fire_smoke": 424
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9945652173913043,
+            "n_benar": 549,
+            "accuracy_label_lama": 0.9963768115942029,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9841444879452447,
+              0.9981499978932634
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9844961240310077,
+                "recall": 1.0,
+                "f1": 0.9921875,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9976359338061466,
+                "recall": 0.9952830188679245,
+                "f1": 0.9964580873671781,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.662881862455726,
+            "macro_f1_kelas_ber_dukungan": 0.662881862455726,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 2,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9952941176470588
+          },
+          "rgb_saja": {
+            "accuracy": 0.9891304347826086,
+            "n_benar": 546,
+            "accuracy_label_lama": 0.9909420289855072,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9764909171761672,
+              0.9950091237630166
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9621212121212122,
+                "recall": 1.0,
+                "f1": 0.9806949806949807,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9976190476190476,
+                "recall": 0.9882075471698113,
+                "f1": 0.9928909952606635,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6578619919852148,
+            "macro_f1_kelas_ber_dukungan": 0.6578619919852148,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 5,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9882352941176471
+          },
+          "termal_saja": {
+            "accuracy": 0.9873188405797102,
+            "n_benar": 545,
+            "accuracy_label_lama": 0.9891304347826086,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9740579335678936,
+              0.9938439590715156
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.952755905511811,
+                "f1": 0.9758064516129031,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9837587006960556,
+                "recall": 1.0,
+                "f1": 0.9918128654970759,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6558731057033264,
+            "macro_f1_kelas_ber_dukungan": 0.6558731057033264,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 6,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 3,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 3,
+            "p_value": 0.25,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 6,
+            "hanya_kedua_benar": 2,
+            "n_diskordan": 8,
+            "p_value": 0.2890625,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 6,
+            "hanya_kedua_benar": 5,
+            "n_diskordan": 11,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.4": {
+        "n": 552,
+        "tau": 0.4,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 127,
+          "fire_no_smoke": 1,
+          "fire_smoke": 424
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9927536231884058,
+            "n_benar": 548,
+            "accuracy_label_lama": 0.9945652173913043,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9815178155361105,
+              0.9971785220026229
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9769230769230769,
+                "recall": 1.0,
+                "f1": 0.9883268482490272,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9976303317535545,
+                "recall": 0.9929245283018868,
+                "f1": 0.9952718676122931,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6611995719537734,
+            "macro_f1_kelas_ber_dukungan": 0.6611995719537734,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 3,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9929411764705882
+          },
+          "rgb_saja": {
+            "accuracy": 0.9836956521739131,
+            "n_benar": 543,
+            "accuracy_label_lama": 0.9855072463768116,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9693066236005434,
+              0.9913989724393162
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9473684210526315,
+                "recall": 0.9921259842519685,
+                "f1": 0.9692307692307692,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9952267303102625,
+                "recall": 0.9834905660377359,
+                "f1": 0.9893238434163701,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6528515375490465,
+            "macro_f1_kelas_ber_dukungan": 0.6528515375490465,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 7,
+            "false_positive_alarm_palsu": 1,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9835294117647059
+          },
+          "termal_saja": {
+            "accuracy": 0.9855072463768116,
+            "n_benar": 544,
+            "accuracy_label_lama": 0.9873188405797102,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9716653398636053,
+              0.9926384044760292
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.9448818897637795,
+                "f1": 0.97165991902834,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9814814814814815,
+                "recall": 1.0,
+                "f1": 0.9906542056074767,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.654104708211939,
+            "macro_f1_kelas_ber_dukungan": 0.654104708211939,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 7,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 5,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 5,
+            "p_value": 0.0625,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 7,
+            "hanya_kedua_benar": 3,
+            "n_diskordan": 10,
+            "p_value": 0.34375,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 6,
+            "hanya_kedua_benar": 7,
+            "n_diskordan": 13,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.6": {
+        "n": 552,
+        "tau": 0.6,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 127,
+          "fire_no_smoke": 1,
+          "fire_smoke": 424
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9909420289855072,
+            "n_benar": 547,
+            "accuracy_label_lama": 0.9927536231884058,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9789732426337192,
+              0.9961249466052393
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9694656488549618,
+                "recall": 1.0,
+                "f1": 0.9844961240310077,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.997624703087886,
+                "recall": 0.9905660377358491,
+                "f1": 0.9940828402366864,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6595263214225647,
+            "macro_f1_kelas_ber_dukungan": 0.6595263214225647,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 4,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9905882352941177
+          },
+          "rgb_saja": {
+            "accuracy": 0.9782608695652174,
+            "n_benar": 540,
+            "accuracy_label_lama": 0.980072463768116,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9623897686426722,
+              0.9875213824978631
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9393939393939394,
+                "recall": 0.9763779527559056,
+                "f1": 0.9575289575289576,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9904761904761905,
+                "recall": 0.9811320754716981,
+                "f1": 0.9857819905213271,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6477703160167616,
+            "macro_f1_kelas_ber_dukungan": 0.6477703160167616,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 8,
+            "false_positive_alarm_palsu": 3,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9811764705882353
+          },
+          "termal_saja": {
+            "accuracy": 0.967391304347826,
+            "n_benar": 534,
+            "accuracy_label_lama": 0.9692028985507246,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9490466922289595,
+              0.9792755691129271
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.8661417322834646,
+                "f1": 0.9282700421940928,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9592760180995475,
+                "recall": 1.0,
+                "f1": 0.9792147806004619,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6358282742648516,
+            "macro_f1_kelas_ber_dukungan": 0.6358282742648516,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 17,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 7,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 7,
+            "p_value": 0.015625,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 17,
+            "hanya_kedua_benar": 4,
+            "n_diskordan": 21,
+            "p_value": 0.007197380065917969,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 17,
+            "hanya_kedua_benar": 11,
+            "n_diskordan": 28,
+            "p_value": 0.34492845088243484,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.8": {
+        "n": 552,
+        "tau": 0.8,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 127,
+          "fire_no_smoke": 1,
+          "fire_smoke": 424
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9782608695652174,
+            "n_benar": 540,
+            "accuracy_label_lama": 0.980072463768116,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9623897686426722,
+              0.9875213824978631
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9202898550724637,
+                "recall": 1.0,
+                "f1": 0.9584905660377357,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9975845410628019,
+                "recall": 0.9740566037735849,
+                "f1": 0.9856801909307876,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6480569189895078,
+            "macro_f1_kelas_ber_dukungan": 0.6480569189895078,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 11,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9741176470588235
+          },
+          "rgb_saja": {
+            "accuracy": 0.947463768115942,
+            "n_benar": 523,
+            "accuracy_label_lama": 0.9492753623188406,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.925567861413245,
+              0.9631747686311194
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.8837209302325582,
+                "recall": 0.8976377952755905,
+                "f1": 0.8906249999999999,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.966903073286052,
+                "recall": 0.964622641509434,
+                "f1": 0.9657615112160566,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6187955037386855,
+            "macro_f1_kelas_ber_dukungan": 0.6187955037386855,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 15,
+            "false_positive_alarm_palsu": 13,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9647058823529412
+          },
+          "termal_saja": {
+            "accuracy": 0.9601449275362319,
+            "n_benar": 530,
+            "accuracy_label_lama": 0.9619565217391305,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.94039448606507,
+              0.9735351820777179
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.8346456692913385,
+                "f1": 0.9098712446351932,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9506726457399103,
+                "recall": 1.0,
+                "f1": 0.9747126436781608,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6281946294377847,
+            "macro_f1_kelas_ber_dukungan": 0.6281946294377847,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 21,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 18,
+            "hanya_kedua_benar": 1,
+            "n_diskordan": 19,
+            "p_value": 7.62939453125e-05,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 21,
+            "hanya_kedua_benar": 11,
+            "n_diskordan": 32,
+            "p_value": 0.11018416518345475,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 21,
+            "hanya_kedua_benar": 28,
+            "n_diskordan": 49,
+            "p_value": 0.3916029105474905,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau1.0": {
+        "n": 552,
+        "tau": 1.0,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 127,
+          "fire_no_smoke": 1,
+          "fire_smoke": 424
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9836956521739131,
+            "n_benar": 543,
+            "accuracy_label_lama": 0.9855072463768116,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9693066236005434,
+              0.9913989724393162
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9407407407407408,
+                "recall": 1.0,
+                "f1": 0.9694656488549619,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9976019184652278,
+                "recall": 0.9811320754716981,
+                "f1": 0.9892984542211654,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6529213676920423,
+            "macro_f1_kelas_ber_dukungan": 0.6529213676920423,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 8,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9811764705882353
+          },
+          "rgb_saja": {
+            "accuracy": 0.9655797101449275,
+            "n_benar": 533,
+            "accuracy_label_lama": 0.967391304347826,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9468686266607493,
+              0.9778554863813627
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9037037037037037,
+                "recall": 0.9606299212598425,
+                "f1": 0.9312977099236641,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9856115107913669,
+                "recall": 0.9693396226415094,
+                "f1": 0.9774078478002379,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6362351859079673,
+            "macro_f1_kelas_ber_dukungan": 0.6362351859079673,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 13,
+            "false_positive_alarm_palsu": 5,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 0.9694117647058823
+          },
+          "termal_saja": {
+            "accuracy": 0.9510869565217391,
+            "n_benar": 525,
+            "accuracy_label_lama": 0.9528985507246377,
+            "selisih_poin": -0.18,
+            "ci95": [
+              0.9297698600316198,
+              0.9661690666122942
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.7952755905511811,
+                "f1": 0.8859649122807018,
+                "support": 127
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 1
+              },
+              "fire_smoke": {
+                "precision": 0.9401330376940134,
+                "recall": 1.0,
+                "f1": 0.9691428571428572,
+                "support": 424
+              }
+            },
+            "macro_f1_3kelas": 0.6183692564745197,
+            "macro_f1_kelas_ber_dukungan": 0.6183692564745197,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 26,
+            "salah_kelas_antar_api": 1,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 12,
+            "hanya_kedua_benar": 2,
+            "n_diskordan": 14,
+            "p_value": 0.012939453125,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 26,
+            "hanya_kedua_benar": 8,
+            "n_diskordan": 34,
+            "p_value": 0.0029350556433200836,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 25,
+            "hanya_kedua_benar": 17,
+            "n_diskordan": 42,
+            "p_value": 0.27995623852893914,
+            "signifikan_0.05": false
+          }
+        }
+      }
+    },
+    "val": {
+      "tau0.0": {
+        "n": 240,
+        "tau": 0.0,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 60,
+          "fire_no_smoke": 4,
+          "fire_smoke": 176
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9833333333333333,
+            "n_benar": 236,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9579378181116581,
+              0.9935000592781683
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9777777777777777,
+                "recall": 1.0,
+                "f1": 0.9887640449438202,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6629213483146067,
+            "macro_f1_kelas_ber_dukungan": 0.6629213483146067,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.9833333333333333,
+            "n_benar": 236,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9579378181116581,
+              0.9935000592781683
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9777777777777777,
+                "recall": 1.0,
+                "f1": 0.9887640449438202,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6629213483146067,
+            "macro_f1_kelas_ber_dukungan": 0.6629213483146067,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "termal_saja": {
+            "accuracy": 0.95,
+            "n_benar": 228,
+            "accuracy_label_lama": 0.9666666666666667,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9146517753073891,
+              0.9711696967452079
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.8666666666666667,
+                "f1": 0.9285714285714286,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9361702127659575,
+                "recall": 1.0,
+                "f1": 0.967032967032967,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6318681318681318,
+            "macro_f1_kelas_ber_dukungan": 0.6318681318681318,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 8,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 8,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 8,
+            "p_value": 0.0078125,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 8,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 8,
+            "p_value": 0.0078125,
+            "signifikan_0.05": true
+          }
+        }
+      },
+      "tau0.2": {
+        "n": 240,
+        "tau": 0.2,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 60,
+          "fire_no_smoke": 4,
+          "fire_smoke": 176
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9833333333333333,
+            "n_benar": 236,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9579378181116581,
+              0.9935000592781683
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9777777777777777,
+                "recall": 1.0,
+                "f1": 0.9887640449438202,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6629213483146067,
+            "macro_f1_kelas_ber_dukungan": 0.6629213483146067,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.9791666666666666,
+            "n_benar": 235,
+            "accuracy_label_lama": 0.9958333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9521666228373029,
+              0.9910692038853699
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9836065573770492,
+                "recall": 1.0,
+                "f1": 0.9917355371900827,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9776536312849162,
+                "recall": 0.9943181818181818,
+                "f1": 0.9859154929577464,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6592170100492764,
+            "macro_f1_kelas_ber_dukungan": 0.6592170100492764,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 1,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9944444444444445
+          },
+          "termal_saja": {
+            "accuracy": 0.9708333333333333,
+            "n_benar": 233,
+            "accuracy_label_lama": 0.9875,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9410304560608658,
+              0.9858012693274998
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.95,
+                "f1": 0.9743589743589743,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9617486338797814,
+                "recall": 1.0,
+                "f1": 0.9805013927576601,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6516201223722115,
+            "macro_f1_kelas_ber_dukungan": 0.6516201223722115,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 3,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 1,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 1,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 3,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 3,
+            "p_value": 0.25,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 3,
+            "hanya_kedua_benar": 1,
+            "n_diskordan": 4,
+            "p_value": 0.625,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.4": {
+        "n": 240,
+        "tau": 0.4,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 60,
+          "fire_no_smoke": 4,
+          "fire_smoke": 176
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9833333333333333,
+            "n_benar": 236,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9579378181116581,
+              0.9935000592781683
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9777777777777777,
+                "recall": 1.0,
+                "f1": 0.9887640449438202,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6629213483146067,
+            "macro_f1_kelas_ber_dukungan": 0.6629213483146067,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.9791666666666666,
+            "n_benar": 235,
+            "accuracy_label_lama": 0.9958333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9521666228373029,
+              0.9910692038853699
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9836065573770492,
+                "recall": 1.0,
+                "f1": 0.9917355371900827,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9776536312849162,
+                "recall": 0.9943181818181818,
+                "f1": 0.9859154929577464,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6592170100492764,
+            "macro_f1_kelas_ber_dukungan": 0.6592170100492764,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 1,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9944444444444445
+          },
+          "termal_saja": {
+            "accuracy": 0.975,
+            "n_benar": 234,
+            "accuracy_label_lama": 0.9916666666666667,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9465407405415174,
+              0.9884930355140018
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.9666666666666667,
+                "f1": 0.983050847457627,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.967032967032967,
+                "recall": 1.0,
+                "f1": 0.9832402234636871,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6554303569737714,
+            "macro_f1_kelas_ber_dukungan": 0.6554303569737714,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 2,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 1,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 1,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 2,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 2,
+            "p_value": 0.5,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 2,
+            "hanya_kedua_benar": 1,
+            "n_diskordan": 3,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.6": {
+        "n": 240,
+        "tau": 0.6,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 60,
+          "fire_no_smoke": 4,
+          "fire_smoke": 176
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9833333333333333,
+            "n_benar": 236,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9579378181116581,
+              0.9935000592781683
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9777777777777777,
+                "recall": 1.0,
+                "f1": 0.9887640449438202,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6629213483146067,
+            "macro_f1_kelas_ber_dukungan": 0.6629213483146067,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.9541666666666667,
+            "n_benar": 229,
+            "accuracy_label_lama": 0.9708333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9198060053174897,
+              0.9742175174022611
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9344262295081968,
+                "recall": 0.95,
+                "f1": 0.9421487603305784,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9608938547486033,
+                "recall": 0.9772727272727273,
+                "f1": 0.9690140845070423,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6370542816125403,
+            "macro_f1_kelas_ber_dukungan": 0.6370542816125403,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 4,
+            "false_positive_alarm_palsu": 3,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9777777777777777
+          },
+          "termal_saja": {
+            "accuracy": 0.9375,
+            "n_benar": 225,
+            "accuracy_label_lama": 0.9541666666666667,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.8994534372476064,
+              0.9617618828035297
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.8166666666666667,
+                "f1": 0.8990825688073394,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9214659685863874,
+                "recall": 1.0,
+                "f1": 0.9591280653950953,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6194035447341449,
+            "macro_f1_kelas_ber_dukungan": 0.6194035447341449,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 11,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 7,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 7,
+            "p_value": 0.015625,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 11,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 11,
+            "p_value": 0.0009765625,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 9,
+            "hanya_kedua_benar": 5,
+            "n_diskordan": 14,
+            "p_value": 0.4239501953125,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.8": {
+        "n": 240,
+        "tau": 0.8,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 60,
+          "fire_no_smoke": 4,
+          "fire_smoke": 176
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9791666666666666,
+            "n_benar": 235,
+            "accuracy_label_lama": 0.9958333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9521666228373029,
+              0.9910692038853699
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9836065573770492,
+                "recall": 1.0,
+                "f1": 0.9917355371900827,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9776536312849162,
+                "recall": 0.9943181818181818,
+                "f1": 0.9859154929577464,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6592170100492764,
+            "macro_f1_kelas_ber_dukungan": 0.6592170100492764,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 1,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9944444444444445
+          },
+          "rgb_saja": {
+            "accuracy": 0.9416666666666667,
+            "n_benar": 226,
+            "accuracy_label_lama": 0.9583333333333334,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9044798071390819,
+              0.9649375635792078
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.890625,
+                "recall": 0.95,
+                "f1": 0.9193548387096774,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9602272727272727,
+                "recall": 0.9602272727272727,
+                "f1": 0.9602272727272727,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6265273704789833,
+            "macro_f1_kelas_ber_dukungan": 0.6265273704789833,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 7,
+            "false_positive_alarm_palsu": 3,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9611111111111111
+          },
+          "termal_saja": {
+            "accuracy": 0.925,
+            "n_benar": 222,
+            "accuracy_label_lama": 0.9416666666666667,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.8845739334081344,
+              0.9520352346415408
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.7666666666666667,
+                "f1": 0.8679245283018869,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9072164948453608,
+                "recall": 1.0,
+                "f1": 0.9513513513513514,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6064252932177462,
+            "macro_f1_kelas_ber_dukungan": 0.6064252932177462,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 14,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 9,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 9,
+            "p_value": 0.00390625,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 14,
+            "hanya_kedua_benar": 1,
+            "n_diskordan": 15,
+            "p_value": 0.0009765625,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 14,
+            "hanya_kedua_benar": 10,
+            "n_diskordan": 24,
+            "p_value": 0.5412561893463135,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau1.0": {
+        "n": 240,
+        "tau": 1.0,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 60,
+          "fire_no_smoke": 4,
+          "fire_smoke": 176
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.9666666666666667,
+            "n_benar": 232,
+            "accuracy_label_lama": 0.9833333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.9356151389791189,
+              0.9830145357420931
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9375,
+                "recall": 1.0,
+                "f1": 0.967741935483871,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9772727272727273,
+                "recall": 0.9772727272727273,
+                "f1": 0.9772727272727273,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6483382209188661,
+            "macro_f1_kelas_ber_dukungan": 0.6483382209188661,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 4,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9777777777777777
+          },
+          "rgb_saja": {
+            "accuracy": 0.9291666666666667,
+            "n_benar": 223,
+            "accuracy_label_lama": 0.9458333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.8895031557540064,
+              0.9553080629628224
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.8507462686567164,
+                "recall": 0.95,
+                "f1": 0.8976377952755905,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.9595375722543352,
+                "recall": 0.9431818181818182,
+                "f1": 0.9512893982808023,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.6163090645187976,
+            "macro_f1_kelas_ber_dukungan": 0.6163090645187976,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 10,
+            "false_positive_alarm_palsu": 3,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 0.9444444444444444
+          },
+          "termal_saja": {
+            "accuracy": 0.9041666666666667,
+            "n_benar": 217,
+            "accuracy_label_lama": 0.9208333333333333,
+            "selisih_poin": -1.67,
+            "ci95": [
+              0.8603080239740112,
+              0.9352908907398955
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 0.6833333333333333,
+                "f1": 0.8118811881188119,
+                "support": 60
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 4
+              },
+              "fire_smoke": {
+                "precision": 0.8844221105527639,
+                "recall": 1.0,
+                "f1": 0.9386666666666666,
+                "support": 176
+              }
+            },
+            "macro_f1_3kelas": 0.5835159515951595,
+            "macro_f1_kelas_ber_dukungan": 0.5835159515951595,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 19,
+            "salah_kelas_antar_api": 4,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 10,
+            "hanya_kedua_benar": 1,
+            "n_diskordan": 11,
+            "p_value": 0.01171875,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 19,
+            "hanya_kedua_benar": 4,
+            "n_diskordan": 23,
+            "p_value": 0.002599477767944336,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 19,
+            "hanya_kedua_benar": 13,
+            "n_diskordan": 32,
+            "p_value": 0.37708558747544885,
+            "signifikan_0.05": false
+          }
+        }
+      }
+    },
+    "test": {
+      "tau0.0": {
+        "n": 200,
+        "tau": 0.0,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 50,
+          "fire_no_smoke": 30,
+          "fire_smoke": 120
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "termal_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.2": {
+        "n": 200,
+        "tau": 0.2,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 50,
+          "fire_no_smoke": 30,
+          "fire_smoke": 120
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "termal_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.4": {
+        "n": 200,
+        "tau": 0.4,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 50,
+          "fire_no_smoke": 30,
+          "fire_smoke": 120
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "rgb_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          },
+          "termal_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 0,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.6": {
+        "n": 200,
+        "tau": 0.6,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 50,
+          "fire_no_smoke": 30,
+          "fire_smoke": 120
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.825,
+            "n_benar": 165,
+            "accuracy_label_lama": 0.975,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7663556885175099,
+              0.8713948493372666
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9090909090909091,
+                "recall": 1.0,
+                "f1": 0.9523809523809523,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.7931034482758621,
+                "recall": 0.9583333333333334,
+                "f1": 0.8679245283018867,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6067684935609464,
+            "macro_f1_kelas_ber_dukungan": 0.6067684935609464,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 5,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 0.9666666666666667
+          },
+          "rgb_saja": {
+            "accuracy": 0.825,
+            "n_benar": 165,
+            "accuracy_label_lama": 0.975,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7663556885175099,
+              0.8713948493372666
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.9411764705882353,
+                "recall": 0.96,
+                "f1": 0.9504950495049505,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.785234899328859,
+                "recall": 0.975,
+                "f1": 0.8698884758364313,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6067945084471272,
+            "macro_f1_kelas_ber_dukungan": 0.6067945084471272,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 3,
+            "false_positive_alarm_palsu": 2,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 0.98
+          },
+          "termal_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 2,
+            "hanya_kedua_benar": 2,
+            "n_diskordan": 4,
+            "p_value": 1.0,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 5,
+            "n_diskordan": 5,
+            "p_value": 0.0625,
+            "signifikan_0.05": false
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 5,
+            "n_diskordan": 5,
+            "p_value": 0.0625,
+            "signifikan_0.05": false
+          }
+        }
+      },
+      "tau0.8": {
+        "n": 200,
+        "tau": 0.8,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 50,
+          "fire_no_smoke": 30,
+          "fire_smoke": 120
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.81,
+            "n_benar": 162,
+            "accuracy_label_lama": 0.96,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7499876129240015,
+              0.8583282847220932
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.8620689655172413,
+                "recall": 1.0,
+                "f1": 0.9259259259259259,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.7887323943661971,
+                "recall": 0.9333333333333333,
+                "f1": 0.8549618320610686,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.5936292526623315,
+            "macro_f1_kelas_ber_dukungan": 0.5936292526623315,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 8,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 0.9466666666666667
+          },
+          "rgb_saja": {
+            "accuracy": 0.77,
+            "n_benar": 154,
+            "accuracy_label_lama": 0.92,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7069169563469642,
+              0.8229065674093119
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.84,
+                "recall": 0.84,
+                "f1": 0.8399999999999999,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.7466666666666667,
+                "recall": 0.9333333333333333,
+                "f1": 0.8296296296296296,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.5565432098765432,
+            "macro_f1_kelas_ber_dukungan": 0.5565432098765432,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 8,
+            "false_positive_alarm_palsu": 8,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 0.9466666666666667
+          },
+          "termal_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 8,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 8,
+            "p_value": 0.0078125,
+            "signifikan_0.05": true
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 8,
+            "n_diskordan": 8,
+            "p_value": 0.0078125,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 16,
+            "n_diskordan": 16,
+            "p_value": 3.0517578125e-05,
+            "signifikan_0.05": true
+          }
+        }
+      },
+      "tau1.0": {
+        "n": 200,
+        "tau": 1.0,
+        "cek_konsistensi_label_lama": 0,
+        "distribusi_kelas": {
+          "no_fire": 50,
+          "fire_no_smoke": 30,
+          "fire_smoke": 120
+        },
+        "per_mode": {
+          "fusi_penuh": {
+            "accuracy": 0.805,
+            "n_benar": 161,
+            "accuracy_label_lama": 0.955,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7445595562538726,
+              0.8539447946559949
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.8596491228070176,
+                "recall": 0.98,
+                "f1": 0.9158878504672898,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.7832167832167832,
+                "recall": 0.9333333333333333,
+                "f1": 0.8517110266159696,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.5891996256944197,
+            "macro_f1_kelas_ber_dukungan": 0.5891996256944197,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 8,
+            "false_positive_alarm_palsu": 1,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 0.9466666666666667
+          },
+          "rgb_saja": {
+            "accuracy": 0.785,
+            "n_benar": 157,
+            "accuracy_label_lama": 0.935,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7229769265100339,
+              0.8362812374549242
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 0.8363636363636363,
+                "recall": 0.92,
+                "f1": 0.8761904761904761,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.7655172413793103,
+                "recall": 0.925,
+                "f1": 0.8377358490566038,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.5713087750823599,
+            "macro_f1_kelas_ber_dukungan": 0.5713087750823599,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 9,
+            "false_positive_alarm_palsu": 4,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 0.94
+          },
+          "termal_saja": {
+            "accuracy": 0.85,
+            "n_benar": 170,
+            "accuracy_label_lama": 1.0,
+            "selisih_poin": -15.0,
+            "ci95": [
+              0.7939442071583334,
+              0.89286406437758
+            ],
+            "per_class": {
+              "no_fire": {
+                "precision": 1.0,
+                "recall": 1.0,
+                "f1": 1.0,
+                "support": 50
+              },
+              "fire_no_smoke": {
+                "precision": 0.0,
+                "recall": 0.0,
+                "f1": 0.0,
+                "support": 30
+              },
+              "fire_smoke": {
+                "precision": 0.8,
+                "recall": 1.0,
+                "f1": 0.888888888888889,
+                "support": 120
+              }
+            },
+            "macro_f1_3kelas": 0.6296296296296297,
+            "macro_f1_kelas_ber_dukungan": 0.6296296296296297,
+            "kelas_ber_dukungan": [
+              "no_fire",
+              "fire_no_smoke",
+              "fire_smoke"
+            ],
+            "false_negative_api_terlewat": 0,
+            "false_positive_alarm_palsu": 0,
+            "salah_kelas_antar_api": 30,
+            "recall_deteksi_kejadian_api": 1.0
+          }
+        },
+        "mcnemar": {
+          "fusi_penuh_vs_rgb_saja": {
+            "hanya_pertama_benar": 4,
+            "hanya_kedua_benar": 0,
+            "n_diskordan": 4,
+            "p_value": 0.125,
+            "signifikan_0.05": false
+          },
+          "fusi_penuh_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 9,
+            "n_diskordan": 9,
+            "p_value": 0.00390625,
+            "signifikan_0.05": true
+          },
+          "rgb_saja_vs_termal_saja": {
+            "hanya_pertama_benar": 0,
+            "hanya_kedua_benar": 13,
+            "n_diskordan": 13,
+            "p_value": 0.000244140625,
+            "signifikan_0.05": true
+          }
+        }
+      }
+    }
+  },
+  "kurva": {
+    "train": [
+      {
+        "tau": 0.0,
+        "acc_rgb_only": 0.9981884057971014,
+        "acc_thermal_only": 0.9782608695652174,
+        "acc_fusion": 0.9981884057971014
+      },
+      {
+        "tau": 0.2,
+        "acc_rgb_only": 0.9891304347826086,
+        "acc_thermal_only": 0.9873188405797102,
+        "acc_fusion": 0.9945652173913043
+      },
+      {
+        "tau": 0.4,
+        "acc_rgb_only": 0.9836956521739131,
+        "acc_thermal_only": 0.9855072463768116,
+        "acc_fusion": 0.9927536231884058
+      },
+      {
+        "tau": 0.6,
+        "acc_rgb_only": 0.9782608695652174,
+        "acc_thermal_only": 0.967391304347826,
+        "acc_fusion": 0.9909420289855072
+      },
+      {
+        "tau": 0.8,
+        "acc_rgb_only": 0.947463768115942,
+        "acc_thermal_only": 0.9601449275362319,
+        "acc_fusion": 0.9782608695652174
+      },
+      {
+        "tau": 1.0,
+        "acc_rgb_only": 0.9655797101449275,
+        "acc_thermal_only": 0.9510869565217391,
+        "acc_fusion": 0.9836956521739131
+      }
+    ],
+    "val": [
+      {
+        "tau": 0.0,
+        "acc_rgb_only": 0.9833333333333333,
+        "acc_thermal_only": 0.95,
+        "acc_fusion": 0.9833333333333333
+      },
+      {
+        "tau": 0.2,
+        "acc_rgb_only": 0.9791666666666666,
+        "acc_thermal_only": 0.9708333333333333,
+        "acc_fusion": 0.9833333333333333
+      },
+      {
+        "tau": 0.4,
+        "acc_rgb_only": 0.9791666666666666,
+        "acc_thermal_only": 0.975,
+        "acc_fusion": 0.9833333333333333
+      },
+      {
+        "tau": 0.6,
+        "acc_rgb_only": 0.9541666666666667,
+        "acc_thermal_only": 0.9375,
+        "acc_fusion": 0.9833333333333333
+      },
+      {
+        "tau": 0.8,
+        "acc_rgb_only": 0.9416666666666667,
+        "acc_thermal_only": 0.925,
+        "acc_fusion": 0.9791666666666666
+      },
+      {
+        "tau": 1.0,
+        "acc_rgb_only": 0.9291666666666667,
+        "acc_thermal_only": 0.9041666666666667,
+        "acc_fusion": 0.9666666666666667
+      }
+    ],
+    "test": [
+      {
+        "tau": 0.0,
+        "acc_rgb_only": 0.85,
+        "acc_thermal_only": 0.85,
+        "acc_fusion": 0.85
+      },
+      {
+        "tau": 0.2,
+        "acc_rgb_only": 0.85,
+        "acc_thermal_only": 0.85,
+        "acc_fusion": 0.85
+      },
+      {
+        "tau": 0.4,
+        "acc_rgb_only": 0.85,
+        "acc_thermal_only": 0.85,
+        "acc_fusion": 0.85
+      },
+      {
+        "tau": 0.6,
+        "acc_rgb_only": 0.825,
+        "acc_thermal_only": 0.85,
+        "acc_fusion": 0.825
+      },
+      {
+        "tau": 0.8,
+        "acc_rgb_only": 0.77,
+        "acc_thermal_only": 0.85,
+        "acc_fusion": 0.81
+      },
+      {
+        "tau": 1.0,
+        "acc_rgb_only": 0.785,
+        "acc_thermal_only": 0.85,
+        "acc_fusion": 0.805
+      }
+    ]
+  }
+}

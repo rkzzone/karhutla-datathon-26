@@ -1,0 +1,36 @@
+# Stage 7 -- Regime suhu radiometrik & domain-gap + LoRA (STRETCH, bersyarat Gerbang 3)
+# (lihat ../runs/README.md). Jalankan: python src/train.py --config configs/stage7_domain_adapt.yaml
+# atau di notebooks_kaggle/06_domain_adaptation_lora.ipynb
+#
+# Per Gerbang 3 (Bagian 6): kalau waktu Hari 6 sempit, kerjakan SALAH SATU sub-bagian
+# saja (thermal_regime ATAU domain_gap_lora), jangan dua-duanya. Toggle di bawah.
+
+stage: 7
+run_id: stage7_YYYYMMDD_domain-adapt
+
+seed: 42
+
+data:
+  flame3_manifest: ../../docs/results/flame3_cv_subset.csv
+  flame3_root: /kaggle/input/datasets/TBD-flame3   # TODO-VERIFIKASI setelah data FLAME3 tersedia
+  image_size: 224
+  # TODO-VERIFIKASI rentang suhu Celsius asli begitu data tersedia (lihat src/data/dataset_flame3.py)
+  temp_min_celsius: 0.0
+  temp_max_celsius: 150.0
+
+run_which: thermal_regime   # pilih SATU: thermal_regime | domain_gap_lora
+
+thermal_regime:
+  n_bins: 3
+  output_csv: reports/thermal_regime_bins.csv
+
+domain_gap_lora:
+  base_checkpoint: weights_final/fusion_v2_gated.pth
+  n_adapt_grid: [10, 25, 50, 100]   # Bagian 3.8 #3 -- subset adaptasi & evaluasi TIDAK BOLEH overlap
+  lora_rank: 8
+  lora_alpha: 16.0
+  lora_target_layers: [qkv, proj, fc1, fc2]
+  epochs: 20
+  lr: 0.001
+  output_csv: reports/domain_gap_lora_curve.csv
+  final_path: weights_final/fusion_v3_lora_flame3.pth

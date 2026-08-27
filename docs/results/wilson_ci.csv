@@ -1,0 +1,36 @@
+sumber,kondisi,sistem,n,k_benar,akurasi,ci95_bawah,ci95_atas,lebar_ci_poin,catatan
+ablation1,bersih (harness Stage 2),fusi_penuh,240,236,0.983333,0.957938,0.9935,3.56,terkontaminasi: modality_dropout aktif saat eval (train.py:288)
+ablation1,bersih (harness Stage 2),rgb_saja,240,236,0.983333,0.957938,0.9935,3.56,
+ablation1,bersih (harness Stage 2),termal_saja,240,228,0.95,0.914652,0.97117,5.65,
+degradation_curve,tau=0.0,rgb_saja,240,240,1.0,0.984246,1.0,1.58,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.0,termal_saja,240,232,0.966667,0.935615,0.983015,4.74,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.0,fusi_penuh,240,240,1.0,0.984246,1.0,1.58,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.2,rgb_saja,240,239,0.995833,0.97678,0.999264,2.25,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.2,termal_saja,240,237,0.9875,0.9639,0.99574,3.18,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.2,fusi_penuh,240,240,1.0,0.984246,1.0,1.58,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.4,rgb_saja,240,239,0.995833,0.97678,0.999264,2.25,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.4,termal_saja,240,238,0.991667,0.97013,0.997712,2.76,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.4,fusi_penuh,240,240,1.0,0.984246,1.0,1.58,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.6,rgb_saja,240,233,0.970833,0.94103,0.985801,4.48,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.6,termal_saja,240,229,0.954167,0.919806,0.974218,5.44,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.6,fusi_penuh,240,240,1.0,0.984246,1.0,1.58,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.8,rgb_saja,240,230,0.958333,0.925013,0.977213,5.22,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.8,termal_saja,240,226,0.941667,0.90448,0.964938,6.05,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=0.8,fusi_penuh,240,239,0.995833,0.97678,0.999264,2.25,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=1.0,rgb_saja,240,227,0.945833,0.909545,0.968075,5.85,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=1.0,termal_saja,240,221,0.920833,0.879672,0.948735,6.91,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+degradation_curve,tau=1.0,fusi_penuh,240,236,0.983333,0.957938,0.9935,3.56,"fusion_v1.pth, tau sama utk kedua modalitas, seed 42+i"
+ablation2,tau=0.0,tanpa_gate,240,240,1.0,0.984246,1.0,1.58,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=0.0,dengan_gate,240,240,1.0,0.984246,1.0,1.58,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=0.3,tanpa_gate,240,240,1.0,0.984246,1.0,1.58,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=0.3,dengan_gate,240,240,1.0,0.984246,1.0,1.58,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=0.6,tanpa_gate,240,240,1.0,0.984246,1.0,1.58,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=0.6,dengan_gate,240,239,0.995833,0.97678,0.999264,2.25,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=1.0,tanpa_gate,240,238,0.991667,0.97013,0.997712,2.76,"fusion_v2_gated.pth, seed 100+i"
+ablation2,tau=1.0,dengan_gate,240,238,0.991667,0.97013,0.997712,2.76,"fusion_v2_gated.pth, seed 100+i"
+ablation3,"test, sampel ber-api/asap",attention_rollout (Jalur A),150,92,0.6133,0.533464,0.687478,15.4,ASUMSI n=150 (0.6133 = 92/150) -- KONFIRMASI ke tim model
+domain_gap_lora,N_adapt=0,fusi+LoRA (FLAME3),100,92,0.92,0.850019,0.958907,10.89,seed training TIDAK dikunci -- bervariasi antar-run
+domain_gap_lora,N_adapt=10,fusi+LoRA (FLAME3),100,92,0.92,0.850019,0.958907,10.89,seed training TIDAK dikunci -- bervariasi antar-run
+domain_gap_lora,N_adapt=25,fusi+LoRA (FLAME3),100,95,0.95,0.88825,0.978456,9.02,seed training TIDAK dikunci -- bervariasi antar-run
+domain_gap_lora,N_adapt=50,fusi+LoRA (FLAME3),100,100,1.0,0.963007,1.0,3.7,seed training TIDAK dikunci -- bervariasi antar-run
+domain_gap_lora,N_adapt=100,fusi+LoRA (FLAME3),100,86,0.86,0.778628,0.914737,13.61,seed training TIDAK dikunci -- bervariasi antar-run

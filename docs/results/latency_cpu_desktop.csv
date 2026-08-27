@@ -1,0 +1,9 @@
+checkpoint,komponen,median_ms,mean_ms,p90_ms,p99_ms,n_pengukuran,warmup_dibuang
+fusion_v1.pth,encoder_rgb,25.18,25.2,26.88,29.02,100,10
+fusion_v1.pth,encoder_termal,9.4,9.55,10.4,11.28,100,10
+fusion_v1.pth,pipeline_penuh_fusi,44.72,45.04,47.08,50.73,100,10
+fusion_v1.pth,pipeline_rgb_saja,34.76,35.14,37.44,41.39,100,10
+fusion_v3_localization.pth,encoder_rgb,26.44,27.07,31.74,34.38,100,10
+fusion_v3_localization.pth,encoder_termal,11.28,11.36,12.63,13.98,100,10
+fusion_v3_localization.pth,pipeline_penuh_fusi,53.29,53.61,57.07,62.94,100,10
+fusion_v3_localization.pth,pipeline_rgb_saja,41.92,41.91,44.8,49.08,100,10

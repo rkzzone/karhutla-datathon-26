@@ -1,0 +1,45 @@
+# Stage 6 -- Localization: weak-supervision (Jalur A) vs full-supervision (Jalur B)
+# (lihat ../runs/README.md). Jalankan: python src/train.py --config configs/stage6_localization.yaml
+# atau di notebooks_kaggle/05_localization_ablation.ipynb
+#
+# ⚠️ rffnet_test.csv HANYA disentuh SEKALI di stage ini, untuk evaluasi final
+# perbandingan Jalur A vs B (Bagian 3.8 #2). Jangan jalankan evaluate_test berulang.
+
+stage: 6
+run_id: stage6_YYYYMMDD_localization
+
+seed: 42
+
+data:
+  rffnet_root: /kaggle/input/datasets/abangbuan/flame2/FLAME2
+  image_size: 224
+
+model:
+  base_checkpoint: weights_final/fusion_v2_gated.pth   # dari Stage 5
+
+jalur_a_attention_rollout:
+  enabled: true
+  threshold_percentile: 90   # ambang buat ubah attention map jadi heatmap biner
+
+jalur_b_segmentation_head:
+  enabled: true
+  freeze_encoder: true       # encoder beku, cuma head segmentasi yg dilatih
+  batch_size: 16
+  epochs: 30
+  lr: 0.0005
+  weight_decay: 0.01
+  early_stop_patience: 8
+
+evaluation:
+  # SEKALI SAJA -- lihat peringatan di atas
+  test_split: test
+  metric: [pointing_game_accuracy, iou]
+  output_csv: reports/ablation3_localization_weak_vs_full.csv
+
+checkpoint:
+  out_dir: runs/stage6_YYYYMMDD_localization
+  final_path_segmentation_head: weights_final/segmentation_head_v1.pth
+
+inference_service:
+  # method dipilih SETELAH lihat hasil ablation3 -- isi manual: attention_rollout | segmentation_head
+  production_method: TBD

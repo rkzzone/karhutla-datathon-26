@@ -1,0 +1,92 @@
+[
+  {
+    "urut": 1,
+    "frame_index": 14340,
+    "kelas_label": "fire_smoke",
+    "rgb": "samples/rgb_001.jpg",
+    "thermal": "samples/thermal_001.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (14340).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (14340).jpg"
+  },
+  {
+    "urut": 2,
+    "frame_index": 21801,
+    "kelas_label": "fire_smoke",
+    "rgb": "samples/rgb_002.jpg",
+    "thermal": "samples/thermal_002.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (21801).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (21801).jpg"
+  },
+  {
+    "urut": 3,
+    "frame_index": 28051,
+    "kelas_label": "fire_smoke",
+    "rgb": "samples/rgb_003.jpg",
+    "thermal": "samples/thermal_003.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (28051).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (28051).jpg"
+  },
+  {
+    "urut": 4,
+    "frame_index": 35513,
+    "kelas_label": "fire_smoke",
+    "rgb": "samples/rgb_004.jpg",
+    "thermal": "samples/thermal_004.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (35513).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (35513).jpg"
+  },
+  {
+    "urut": 5,
+    "frame_index": 15183,
+    "kelas_label": "fire_no_smoke",
+    "rgb": "samples/rgb_005.jpg",
+    "thermal": "samples/thermal_005.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (15183).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (15183).jpg"
+  },
+  {
+    "urut": 6,
+    "frame_index": 39174,
+    "kelas_label": "fire_no_smoke",
+    "rgb": "samples/rgb_006.jpg",
+    "thermal": "samples/thermal_006.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (39174).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (39174).jpg"
+  },
+  {
+    "urut": 7,
+    "frame_index": 46830,
+    "kelas_label": "fire_no_smoke",
+    "rgb": "samples/rgb_007.jpg",
+    "thermal": "samples/thermal_007.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (46830).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (46830).jpg"
+  },
+  {
+    "urut": 8,
+    "frame_index": 116,
+    "kelas_label": "no_fire",
+    "rgb": "samples/rgb_008.jpg",
+    "thermal": "samples/thermal_008.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (116).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (116).jpg"
+  },
+  {
+    "urut": 9,
+    "frame_index": 4975,
+    "kelas_label": "no_fire",
+    "rgb": "samples/rgb_009.jpg",
+    "thermal": "samples/thermal_009.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (4975).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (4975).jpg"
+  },
+  {
+    "urut": 10,
+    "frame_index": 9597,
+    "kelas_label": "no_fire",
+    "rgb": "samples/rgb_010.jpg",
+    "thermal": "samples/thermal_010.jpg",
+    "src_rgb": "FLAME2/254p RGB Images/254p RGB Frame (9597).jpg",
+    "src_thermal": "FLAME2/254p Thermal Images/254p Thermal Frame (9597).jpg"
+  }
+]

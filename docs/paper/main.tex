@@ -1,0 +1,49 @@
+% =====================================================================
+% Paper semifinal Datathon 2026 — berkas utama
+%
+% Kompilasi: pdflatex main.tex  (dua kali, untuk referensi silang)
+%
+% MEMBUTUHKAN nips15submit_e.sty di folder yang sama. Berkas itu bagian dari
+% paket gaya NIPS 2015 dan tidak tersedia di CTAN — unduh dari arsip gaya
+% konferensi, sama seperti yang dipakai saat concept paper penyisihan.
+%
+% Batas 12 halaman dihitung dari judul sampai akhir Bagian 7.
+% Daftar pustaka dan lampiran TIDAK dihitung.
+% =====================================================================
+
+\documentclass{article}
+\usepackage{nips15submit_e,times}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{booktabs}
+
+% Placeholder data yang belum masuk — harus NOL sebelum submit.
+\newcommand{\needdata}[1]{\textbf{[BUTUH DATA: #1]}}
+
+\nipsfinalcopy % aktifkan untuk versi final
+
+\begin{document}
+
+\input{paper_abstrak}
+
+\input{paper_bagian1}
+\input{paper_bagian2}
+\input{paper_bagian3}
+\input{paper_bagian4}
+\input{paper_bagian5}
+\input{paper_bagian6}
+\input{paper_bagian7}
+
+% ---- batas 12 halaman berakhir di sini ----
+
+\input{refs}
+
+% \appendix
+% \input{lampiran}   % Lampiran A–L, tidak dihitung batas halaman
+
+\end{document}

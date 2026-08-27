@@ -1,0 +1,86 @@
+% =====================================================================
+% Bagian 5 — Validasi Pengguna dan Kelayakan Adopsi  (target 1,0 halaman)
+% Detail didorong ke Lampiran D (heuristik) dan E (biaya).
+% Subbagian Validasi Ahli: \input{template_validasi_ahli} setelah 5.1.
+% =====================================================================
+
+\section{Validasi Pengguna dan Kelayakan Adopsi}
+
+\subsection{Uji pengguna dan iterasi yang dihasilkannya}
+
+Sebelum uji dengan pengguna, antarmuka melewati 19 putaran evaluasi heuristik
+\cite{nielsen1990} dan audit aksesibilitas terinstrumentasi yang menghasilkan
+sepuluh perubahan; empat di antaranya menyangkut cacat yang hanya terdeteksi
+lewat pengukuran, kegagalan ambang kontras WCAG dan pemisahan warna di bawah
+$\Delta E = 4{,}3$ pada protanopia (Lampiran~\ref{app:heuristik}). Evaluasi
+heuristik adalah metode yang sah, tetapi ia \textbf{melengkapi, bukan
+menggantikan} uji dengan pengguna, dan kami tidak menyajikannya sebagai
+demikian.
+
+Uji pengguna dijalankan pada tiga partisipan di luar tim yang belum pernah
+melihat produk ini, dengan metode \emph{think-aloud} dan lima tugas tanpa
+petunjuk cara mengerjakan. Dua tugas, menentukan \emph{alert} prioritas dan
+menandai keputusan, lancar pada ketiganya sehingga tidak diubah. Tiga tugas
+lain memunculkan kesulitan, dan ketiganya menghasilkan perubahan antarmuka yang
+tercatat pada log putaran kerja (Tabel~\ref{tab:iterasi}).
+
+\begin{table}[!htbp]
+\caption{Temuan uji pengguna dan perubahan antarmuka yang dihasilkannya.}
+\label{tab:iterasi}
+\centering
+\small
+\begin{tabular}{p{2.9cm}p{4.2cm}p{4.6cm}}
+\hline
+\textbf{Kesulitan} & \textbf{Bukti} & \textbf{Perubahan} \\
+\hline
+Membedakan sumber pemicu di peta &
+Satu partisipan gagal total tanpa bantuan setelah 35 detik dan empat salah
+klik; satu lainnya berhasil namun lambat &
+Legenda warna tetap ditambahkan di peta \\
+Memahami keadaan data yang belum dianalisis &
+Satu partisipan menyangka aplikasi rusak dan berpindah halaman &
+Tanda "---" diganti label eksplisit beserta ikon, warna netral yang berbeda
+dari warna galat \\
+Menafsirkan lencana modalitas &
+Dua partisipan menjawab benar namun ragu; satu sempat keliru lalu mengoreksi
+diri &
+Tooltip singkat ditambahkan pada lencana modalitas \\
+\hline
+\end{tabular}
+\end{table}
+
+Kegagalan total diprioritaskan di atas kesulitan yang sekadar memperlambat.
+Keterbatasannya kami catat pada Bagian~\ref{sec:keterbatasan}: tiga partisipan
+bukan operator posko, dan pengujian dilakukan tanpa tekanan waktu.
+
+% ---------------------------------------------------------------------
+% SISIPKAN DI SINI:  \input{template_validasi_ahli}
+% ---------------------------------------------------------------------
+
+\subsection{Kelayakan adopsi dan struktur biaya}
+
+Sistem dirancang menambah lapisan konfirmasi pada alur kerja yang sudah berjalan,
+bukan menggantikannya, dan dioperasikan oleh operator posko, bukan tenaga khusus
+pembelajaran mesin. Jalur adopsi empat tahap, aspek kelayakan implementasi
+beserta status verifikasinya, dan tiga dasar skalabilitas yang terukur diuraikan
+pada Lampiran~\ref{app:adopsi}. Ketahanan modalitas berkontribusi pada kelayakan adopsi,
+tetapi perlu dirumuskan dengan tepat: narasumber ahli menyatakan drone berkamera
+inframerah sudah banyak dipakai, sehingga argumen "armada eksisting mayoritas
+tanpa sensor termal" \textbf{tidak kami pakai}. Rumusan yang didukung bukti
+adalah bahwa ketahanan modalitas menurunkan syarat perangkat keras minimum dan
+menjaga sistem tetap memberi keluaran ketika sensor termal mati, gagal, atau
+tidak terpasang pada sebagian armada.
+
+Tiga sifat struktur biaya lebih penting daripada angka absolutnya
+(Lampiran~\ref{app:biaya}): tidak ada biaya per-inferensi karena model berjalan
+di perangkat sendiri, sehingga menambah frekuensi patroli tidak menambah biaya
+perangkat lunak sama sekali; biaya berulang satu-satunya adalah hosting, dan itu
+pun nol pada skala pilot; dan belanja modal, perangkat tepi serta sensor
+termal, bersifat opsional, bukan syarat untuk mulai.
+
+Seluruh fitur yang diklaim dapat diperiksa langsung pada \emph{deployment} yang
+berjalan: klasifikasi, skor keandalan modalitas, dan peta lokalisasi berasal dari
+keluaran model nyata yang ditandai otomatis oleh penanda sumber data, sementara
+lapisan hotspot menarik data satelit langsung, pada satu verifikasi, 2.467 titik
+terdeteksi dan 400 titik ber-FRP tertinggi disajikan dengan jumlah total tetap
+dinyatakan (Lampiran~\ref{app:firms}).
